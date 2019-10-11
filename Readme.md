@@ -3,7 +3,7 @@ Many thanks for [rclone](https://rclone.org/) and [folderclone](https://github.c
 
 - [x] create service accounts using script
 - [x] add massive service accounts into rclone config file
-- [x] add service accounts into groups for your organization
+- [x] add massive service accounts into groups for your organization
 - [x] automatically switch accounts when rclone copy/move/sync 
 
 Step 1. Copy code to your VPS or local machine
