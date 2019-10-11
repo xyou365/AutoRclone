@@ -53,7 +53,7 @@ Here we use Google Groups to manager our service accounts considering the
 
 3. Run `python3 massadd.py -p ./accounts -c credentials/*.json -g sa@yourdomain.com`
 
-_For meaning of above flags, please run `python3 massadd -h`_
+_For meaning of above flags, please run `python3 massadd.py -h`_
 
 Step 5. Add service accounts or google groups (created in Step 4) into Team Drive
 ---------------------------------
