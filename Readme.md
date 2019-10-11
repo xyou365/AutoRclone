@@ -61,11 +61,13 @@ Run the following command `python3 masshare.py -d SharedTeamDriveFolderID`
 
 Step 6. Start your task
 ---------------------------------
-Let us rclone copy hundreds of TB resource using service accounts from publicly shared folder or other folder into you Team Drive (with service accounts inside)
+Edit the `rclone_sa.py` using your editor `vim rclone_sa.py`.
+
+Let us `rclone copy` hundreds of TB resource using service accounts from publicly shared folder or other Team Drive into you Team Drive (with service accounts inside)
 
 `python3 rclone_sa.py 1 1000`
 
-rclone copy automatically using 1K accounts.
+rclone copy automatically using 1K accounts. 
 
 
 
