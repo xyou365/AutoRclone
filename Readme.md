@@ -67,7 +67,7 @@ Let us `rclone copy` hundreds of TB resource using service accounts from publicl
 
 `python3 rclone_sa.py 1 1000`
 
-rclone copy automatically using 1K accounts. 
+Begin your `rclone copy` tasks automatically using 1K accounts. Run this command `tail -f log_rclone.txt` to see what happens in details.  
 
 
 

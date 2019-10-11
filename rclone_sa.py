@@ -7,15 +7,18 @@ import os, re, sys, io, subprocess
 from signal import signal, SIGINT
 import json, time
 
-screen_name = "wrcb"
-L_src = "%s:#Anime_Source/'Others - (4172 Files, 10.064 TBytes)'"
-L_dst = "%s:Others"
-logfile = "log_u2.txt"
-
+# =================modify here=================
+screen_name = "wrc" # watch rc
+L_src = "%s:path_to_your_src_folder" # your src dir
+L_dst = "%s:path_to_your_dst_folder" # your dst dir
+logfile = "log_rclone.txt"           # log file: tail -f log_rclone.txt
 START = 1
 END = 399
+
+# change it when u know what are u doing
 SIZE_GB_MAX = 735
 CNT_403_RETRY = 600
+# =================modify here=================
 
 if len(sys.argv)==3:
     _,s1,s2 = sys.argv
