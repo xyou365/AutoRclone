@@ -3,8 +3,7 @@
 # Author Telegram https://t.me/CodyDoby
 # Inbox  codyd@qq.com
 
-import subprocess
-import os, re, sys, io
+import os, re, sys, io, subprocess
 from signal import signal, SIGINT
 import json, time
 
