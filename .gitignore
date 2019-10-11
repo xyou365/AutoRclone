@@ -7,5 +7,6 @@ credentials/*
 
 # exception to the rule
 !credentials/.gsuite_only.txt
+!credentials/.keep
 !accounts/.keep
 !controller/.keep
