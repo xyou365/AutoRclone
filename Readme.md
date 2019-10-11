@@ -49,7 +49,7 @@ Here we use Google Groups to manager our service accounts considering the
 
 1. Turn on the Directory API following [official steps](https://developers.google.com/admin-sdk/directory/v1/quickstart/python) (save the generated json file to folder `credentials`).
 
-2. Create groups for your organization [in the Admin console](https://support.google.com/a/answer/33343?hl=en). After create a group, you will have a address for example`sa@yourdomain.com`.
+2. Create groups for your organization [in the Admin console](https://support.google.com/a/answer/33343?hl=en). After create a group, you will have an address for example`sa@yourdomain.com`.
 
 3. Run `python3 massadd.py -p ./accounts -c credentials/*.json -g sa@yourdomain.com`
 
