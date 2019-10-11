@@ -1,0 +1,71 @@
+# AutoRclone: rclone copy/move/sync (automatically) with service accounts
+Many thanks for [rclone](https://rclone.org/) and [folderclone](https://github.com/Spazzlo/folderclone).
+
+- [x] create service accounts
+- [x] add massive service accounts into rclone config file
+- [x] add service accounts into groups for your organization
+- [x] automatically switch accounts when rclone copy/move/sync 
+
+Step 1. Copy code to your VPS or local machine
+---------------------------------
+Run command 
+`sudo git clone https://github.com/xyou365/AutoRclone 
+&& cd AutoRclone 
+&& sudo pip3 install -r requirements.txt`
+
+Step 2. Generate service accounts (sa) required
+---------------------------------
+Let us create as many service accounts as possible following [official steps of folderclone](https://github.com/Spazzlo/folderclone/blob/master/README_multifolderclone.md#steps-to-setup-multifactorypy). 
+
+After you finished, there will be many json files in folder `accounts`.
+
+[What is service account](https://cloud.google.com/iam/docs/service-accounts).
+
+[How to use service account in rclone](https://rclone.org/drive/#service-account-support).
+
+
+Step 3. Add service accounts into rclone config file
+---------------------------------
+For convenient, we use script to write (directly) the service accounts generated in **Step 2** into rclone config file.
+
+Run command `python3 gen_rclone_cfg.py -t SharedTeamDriveFolderID`
+```
+Done. Generated rclone config file is successfully saved to ./rclone.conf
+
+Your default rclone Configuration file is stored at:
+C:\Vim\Neovim\share\rclone\rclone.conf
+
+You can
+* directly replace your default rclone config file with the generated file ./rclone.conf
+* or append content in generated config file to default config file
+```
+
+Step 4. Add service accounts to groups for your organization (Optional)
+---------------------------------
+_Support that you are GSuite admin (domain admin or normal admin)_
+
+Here we use Google Groups to manager our service accounts considering the  
+[Official limits to the members of Team Drive](https://support.google.com/a/answer/7338880?hl=en) (Limit for individuals and groups directly added as members: 600).
+
+1. Turn on the Directory API following [official steps](https://developers.google.com/admin-sdk/directory/v1/quickstart/python) (save the generated json file to folder `credentials`).
+
+2. Create groups for your organization [in the Admin console](https://support.google.com/a/answer/33343?hl=en). After create a group, you will have a address for example`sa@yourdomain.com`.
+
+3. Run `python3 massadd.py -p ./accounts -c credentials/*.json -g sa@yourdomain.com`
+
+_For meaning of above flags, please run `python3 massadd -h`_
+
+Step 5. Add service accounts or google groups (created in Step 4) into Team Drive
+---------------------------------
+Run the following command `python3 masshare.py -d SharedTeamDriveFolderID`
+
+Step 6. Start your task
+---------------------------------
+Let us rclone copy hundreds of TB resource using service accounts from publicly shared folder or other folder into you Team Drive (with service accounts inside)
+
+`python3 rclone_sa.py 1 1000`
+
+rclone copy automatically using 1K accounts.
+
+
+
