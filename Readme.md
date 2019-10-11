@@ -1,4 +1,4 @@
-# AutoRclone: rclone copy/move/sync (automatically) with service accounts
+# AutoRclone: rclone copy/move/sync (automatically) with service accounts (Still in the beta stage)
 Many thanks for [rclone](https://rclone.org/) and [folderclone](https://github.com/Spazzlo/folderclone).
 
 - [x] create service accounts using script
