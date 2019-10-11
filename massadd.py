@@ -44,12 +44,12 @@ print(group.members())
 
 batch = group.new_batch_http_request()
 
-aa = glob.glob('%s/*.json' % acc_dir)
+sa = glob.glob('%s/*.json' % acc_dir)
 
-# aa = aa[0:5]
+# sa = sa[0:5]
 
-pbar = progress.bar.Bar("Readying accounts",max=len(aa))
-for i in aa:
+pbar = progress.bar.Bar("Readying accounts",max=len(sa))
+for i in sa:
 	ce = json.loads(open(i,'r').read())['client_email']
 	
 	body = {"email": ce, "role": "MEMBER"}
