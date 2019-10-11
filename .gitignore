@@ -1,8 +1,8 @@
 # exclude everything
-.idea
-accounts/*
-controller/*
-credentials/*
+/.idea
+/accounts/*
+/controller/*
+/credentials/*
 ./rclone.conf
 
 # exception to the rule
