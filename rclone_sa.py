@@ -10,8 +10,8 @@ import json, time
 # =================modify here=================
 screen_name = "wrc" # watch rc
 # please check the prefix which set before in your rclone config file
-src_prefix_string = 'sa'
-dst_prefix_string = 'sb'
+src_prefix_string = 'tdsrc'
+dst_prefix_string = 'tddst'
 
 L_src = "%s:path_to_your_src_folder" # your src dir
 L_dst = "%s:path_to_your_dst_folder" # your dst dir

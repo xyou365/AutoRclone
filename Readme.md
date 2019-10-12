@@ -28,7 +28,7 @@ Step 3. Add service accounts into rclone config file
 ---------------------------------
 For convenient, we use script to write (directly) the service accounts generated in **Step 2** into rclone config file.
 
-Run command `python3 gen_rclone_cfg.py -p sa -t SharedTeamDriveFolderID`
+Run command `python3 gen_rclone_cfg.py -p tdsrc -t SharedTeamDriveFolderID`
 ```
 Done. Generated rclone config file is successfully saved to ./rclone.conf
 
@@ -39,7 +39,7 @@ You can
 * directly replace your default rclone config file with the generated file ./rclone.conf
 * or append content in generated config file to default config file
 ```
-If you need more items, just run again with different parameters: `python3 gen_rclone_cfg.py -p sb -t SharedTeamDriveFolderOtherID`
+If you need more items, just run again with different parameters: `python3 gen_rclone_cfg.py -p tddst -t SharedTeamDriveFolderOtherID`
 
 Step 4. Add service accounts to groups for your organization (Optional)
 ---------------------------------
@@ -62,7 +62,7 @@ Add the group address `sa@yourdomain.com` to your Team Drive.
  
 If you are not Gsuite admin or do not care about the member limitation of Team Drive, just run the following command `python3 masshare.py -d SharedTeamDriveFolderID` to add service accounts into Team Drive.
 
-Step 6. Start your task
+Step 6. Start your task (copy from Team Drive tdsrc to tddst)
 ---------------------------------
 _Please check in this way `rclone lsd sa001:` (or some other label for example `sb001`). Make sure it is okay_
 
