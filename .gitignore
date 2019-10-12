@@ -1,7 +1,7 @@
 # exclude everything
 /.idea
 /accounts/*
-/controller/*
+# /controller/*
 /credentials/*
 rclone.conf
 
@@ -9,4 +9,4 @@ rclone.conf
 !credentials/.gsuite_only.txt
 !credentials/.keep
 !accounts/.keep
-!controller/.keep
+# !controller/.keep
