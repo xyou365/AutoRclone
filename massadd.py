@@ -24,7 +24,7 @@ parsereq.add_argument('--groupaddr','-g',help='The address of groups for your or
 args = parse.parse_args()
 acc_dir = args.path
 gaddr = args.groupaddr
-contrs = glob.glob(args.controller)
+credentials = glob.glob(args.credentials)
 
 creds = None
 if os.path.exists('token.pickle'):
@@ -35,7 +35,7 @@ if not creds or not creds.valid:
 	if creds and creds.expired and creds.refresh_token:
 		creds.refresh(Request())
 	else:
-		flow = InstalledAppFlow.from_client_secrets_file(contrs[0], scopes=[
+		flow = InstalledAppFlow.from_client_secrets_file(credentials[0], scopes=[
 			'https://www.googleapis.com/auth/admin.directory.group',
 			'https://www.googleapis.com/auth/admin.directory.group.member'
 		])
