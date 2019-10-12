@@ -1,3 +1,8 @@
+# auto rclone
+#
+# Author Telegram https://t.me/CodyDoby
+# Inbox  codyd@qq.com
+
 import sys, os, glob
 import argparse
 import subprocess
@@ -41,7 +46,7 @@ def main():
     try:
         output = subprocess.check_output(locate_cmd, shell=True).decode('utf-8')
     except:
-        return print("\nExit. Please install rclone first: https://rclone.org/downloads/#script-download-and-install")
+        return print("\nExit. Please install rclone firstly: https://rclone.org/downloads/#script-download-and-install")
 
     default_rclone_config_file = output.replace('\0', '')
     print("Your default rclone {}\n"
@@ -49,10 +54,6 @@ def main():
           "* directly replace your default rclone config file with the generated file {} \n"
           "* or append content in generated config file to default "
           "config file\n".format(str(default_rclone_config_file), output_of_config_file))
-
-
-
-
 
 
 if __name__ == "__main__":

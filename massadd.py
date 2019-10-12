@@ -1,3 +1,8 @@
+# auto rclone
+#
+# Author Telegram https://t.me/CodyDoby
+# Inbox  codyd@qq.com
+
 from google.oauth2.service_account import Credentials
 import googleapiclient.discovery, json, progress.bar, glob, sys, argparse, time
 from google_auth_oauthlib.flow import InstalledAppFlow
