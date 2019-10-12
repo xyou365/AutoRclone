@@ -1,4 +1,5 @@
 # auto rclone
+# Add service accounts into rclone config file
 #
 # Author Telegram https://t.me/CodyDoby
 # Inbox  codyd@qq.com
@@ -32,13 +33,16 @@ def main():
     with open(output_of_config_file, 'a+') as fp:
 
         for i, filename in enumerate(sa_files):
+
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+            filename = os.path.join(dir_path, filename)
             filename = filename.replace(os.sep, '/')
 
             try:
                 fp.write('[{}{:03d}]\n'
                          'type = drive\n'
                          'scope = drive\n'
-                         'service_account_file = ./{}\n'
+                         'service_account_file = {}\n'
                          'team_drive = {}\n\n'.format(args.prefix, i, filename, args.team_drive_id))
             except:
                 return print("failed to write to {}".format(output_of_config_file))
