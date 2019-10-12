@@ -75,11 +75,10 @@ _Please check in this way `rclone lsd sa001:` (or some other label for example `
 
 Edit the `rclone_sa.py` using your editor `vim rclone_sa.py`.
 
-Let us `rclone copy` hundreds of TB resource using service accounts from publicly shared folder or other Team Drive into you Team Drive (with service accounts inside)
-
+Let us `rclone copy` hundreds of TB resource using service accounts from source Team Drive `tdsrc` into you destination Team Drive `tddst` using sa accounts 1 to 1000
 `python3 rclone_sa.py 1 1000`
 
-Begin your `rclone copy` tasks automatically using 1K accounts. Run this command `tail -f log_rclone.txt` to see what happens in details.
+Run this command `tail -f log_rclone.txt` to see what happens in details.
 
 ![](AutoRclone.jpg)
 
