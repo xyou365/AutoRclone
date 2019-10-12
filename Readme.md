@@ -28,7 +28,7 @@ Step 3. Add service accounts into rclone config file
 ---------------------------------
 For convenient, we use script to write (directly) the service accounts generated in **Step 2** into rclone config file.
 
-Run command `python3 gen_rclone_cfg.py -t SharedTeamDriveFolderID`
+Run command `python3 gen_rclone_cfg.py -p sa -t SharedTeamDriveFolderID`
 ```
 Done. Generated rclone config file is successfully saved to ./rclone.conf
 

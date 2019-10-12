@@ -13,6 +13,8 @@ def parse_args():
                         help='the id of team dirve')
     parser.add_argument('-f', '--service_account_folder', type=str, default="accounts",
                         help='folder of service account files')
+    parser.add_argument('-p', '--prefix', type=str, default="sa",
+                        help='prefix of generated labels in rclone config file.')
     parser.add_argument('-o', '--output_of_config_file', type=str, default="./rclone.conf",
                         help='folder of service account files')
 
@@ -32,11 +34,11 @@ def main():
             filename = filename.replace(os.sep, '/')
 
             try:
-                fp.write('[sa{:03d}]\n'
+                fp.write('[{}{:03d}]\n'
                          'type = drive\n'
                          'scope = drive\n'
                          'service_account_file = ./{}\n'
-                         'team_drive = {}\n\n'.format(i, filename, args.team_drive_id))
+                         'team_drive = {}\n\n'.format(args.prefix, i, filename, args.team_drive_id))
             except:
                 return print("failed to write to {}".format(output_of_config_file))
 
