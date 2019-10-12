@@ -64,6 +64,8 @@ If you are not Gsuite admin or do not care about the member limitation of Team D
 
 Step 6. Start your task
 ---------------------------------
+_Please check in this way `rclone lsd sa001:` (or some other label for example `sb001`). Make sure it is okay_
+
 Edit the `rclone_sa.py` using your editor `vim rclone_sa.py`.
 
 Let us `rclone copy` hundreds of TB resource using service accounts from publicly shared folder or other Team Drive into you Team Drive (with service accounts inside)
