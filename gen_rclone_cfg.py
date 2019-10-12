@@ -28,7 +28,8 @@ def main():
     sa_files = glob.glob(os.path.join(args.service_account_folder, '*.json'))
 
     output_of_config_file = args.output_of_config_file
-    with open(output_of_config_file, 'w') as fp:
+
+    with open(output_of_config_file, 'a+') as fp:
 
         for i, filename in enumerate(sa_files):
             filename = filename.replace(os.sep, '/')
