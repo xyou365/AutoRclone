@@ -8,10 +8,11 @@ Many thanks for [rclone](https://rclone.org/) and [folderclone](https://github.c
 
 Step 1. Copy code to your VPS or local machine
 ---------------------------------
-Run command 
-`sudo git clone https://github.com/xyou365/AutoRclone 
-&& cd AutoRclone 
-&& sudo pip3 install -r requirements.txt`
+After you have install the `screen` and latest `rclone`,
+run command 
+```
+sudo git clone https://github.com/xyou365/AutoRclone && cd AutoRclone && sudo pip3 install -r requirements.txt
+```
 
 Step 2. Generate service accounts (sa) required
 ---------------------------------
@@ -19,7 +20,7 @@ Let us create as many service accounts as possible following [official steps of 
 
 After you finished, there will be many json files in folder `accounts`.
 
-[What is service account](https://cloud.google.com/iam/docs/service-accounts).
+[What is service account](https://cloud.google.com/iam/docs/service-accounts)
 
 [How to use service account in rclone](https://rclone.org/drive/#service-account-support).
 
@@ -28,7 +29,9 @@ Step 3. Add service accounts into rclone config file
 ---------------------------------
 For convenient, we use script to write (directly) the service accounts generated in **Step 2** into rclone config file.
 
-To set source Team Drive, run command `python3 gen_rclone_cfg.py -p tdsrc -t SharedTeamDriveSrcID`
+- To set source Team Drive, run command `python3 gen_rclone_cfg.py -p tdsrc -t SharedTeamDriveSrcID`
+
+- To set destination Team Drive, run again with different parameters: `python3 gen_rclone_cfg.py -p tddst -t SharedTeamDriveDstID`
 ```
 Done. Generated rclone config file is successfully saved to ./rclone.conf
 
@@ -39,9 +42,8 @@ You can
 * directly replace your default rclone config file with the generated file ./rclone.conf
 * or append content in generated config file to default config file
 ```
-To set destination Team Drive, run again with different parameters: `python3 gen_rclone_cfg.py -p tddst -t SharedTeamDriveDstID`
 
-Step 4. Add service accounts to groups for your organization (Optional)
+Step 4. Add service accounts to Google Groups (Optional)
 ---------------------------------
 _Support that you are GSuite admin (domain admin or normal admin)_
 
@@ -56,7 +58,7 @@ Here we use Google Groups to manager our service accounts considering the
 
 _For meaning of above flags, please run `python3 massadd.py -h`_
 
-Step 5. Add service accounts or google groups (created in Step 4) into both of your Team Drive
+Step 5. Add service accounts or google groups (created in Step 4) into Team Drive tdsrc and tddst
 ---------------------------------
 Add the group address `sa@yourdomain.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
