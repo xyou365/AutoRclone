@@ -61,8 +61,13 @@ Step 5. Add service accounts or google groups (created in Step 4) into both of y
 Add the group address `sa@yourdomain.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
 If you are not Gsuite admin or do not care about the member limitation of Team Drive, 
-just run the following command `python3 masshare.py -d SharedTeamDriveSrcID` to add service accounts into your source Team Drive.
-And run `python3 masshare.py -d SharedTeamDriveDstID` to add service accounts into your destination Team Drive.
+just use script of folderclone to add sa accounts into Team Drive.
+
+- Add service accounts into your source Team Drive: 
+`python3 masshare.py -d SharedTeamDriveSrcID`
+
+- Add service accounts into your destination Team Drive:
+And run `python3 masshare.py -d SharedTeamDriveDstID`
 
 Step 6. Start your task (copy from Team Drive tdsrc to tddst)
 ---------------------------------
