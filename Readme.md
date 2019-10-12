@@ -71,7 +71,7 @@ And run `python3 masshare.py -d SharedTeamDriveDstID`
 
 Step 6. Start your task (copy from Team Drive tdsrc to tddst)
 ---------------------------------
-_Please check in this way `rclone lsd sa001:` (or some other label for example `sb001`). Make sure it is okay_
+_Please check in this way `rclone lsd tdsrc001:` and `rclone lsd tddst001:`). Make sure it is okay._
 
 Edit the `rclone_sa.py` using your editor `vim rclone_sa.py`.
 
