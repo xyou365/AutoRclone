@@ -3,7 +3,7 @@
 /accounts/*
 /controller/*
 /credentials/*
-./rclone.conf
+rclone.conf
 
 # exception to the rule
 !credentials/.gsuite_only.txt
