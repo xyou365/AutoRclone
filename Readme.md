@@ -74,7 +74,9 @@ Begin your `rclone copy` tasks automatically using 1K accounts. Run this command
 
 ![](AutoRclone.jpg)
 
-[Blog（中文）](https://www.gfan.loan/?p=235) | [Telegram Group](https://t.me/AutoRclone) | [Telegram Channel](https://t.me/gdurl)  
+Let's talk about this project in Telegram Group [AutoRclone](https://t.me/AutoRclone)
+
+[Blog（中文）](https://www.gfan.loan/?p=235) | [Google Drive Group](https://t.me/google_drive) | [Google Drive Channel](https://t.me/gdurl)  
 
 
 
