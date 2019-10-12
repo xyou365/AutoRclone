@@ -18,7 +18,9 @@ Step 2. Generate service accounts (sa) required
 ---------------------------------
 Let us create as many service accounts as possible following [official steps of folderclone](https://github.com/Spazzlo/folderclone/blob/master/README_multifolderclone.md#steps-to-setup-multifactorypy). 
 
-After you finished, there will be many json files in folder `accounts`.
+After you finished, there will be many json files in one folder named `accounts`. 
+
+Just copy all json files into our folder `accounts`.
 
 [What is service account](https://cloud.google.com/iam/docs/service-accounts)
 

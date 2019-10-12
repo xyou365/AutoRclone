@@ -16,7 +16,7 @@ stt = time.time()
 
 parse = argparse.ArgumentParser(description='A tool to add service accounts to groups for your organization from a folder containing credential files.')
 parse.add_argument('--path','-p',default='accounts',help='Specify an alternative path to the service accounts folder.')
-parse.add_argument('--controller','-c',default='credentials/*.json',help='Specify the relative path for the controller file.')
+parse.add_argument('--credentials','-c',default='credentials/*.json',help='Specify the relative path for the controller file.')
 parsereq = parse.add_argument_group('required arguments')
 # service-account@googlegroups.com
 parsereq.add_argument('--groupaddr','-g',help='The address of groups for your organization.', required=True)
