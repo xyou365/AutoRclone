@@ -9,8 +9,13 @@ import json, time
 
 # =================modify here=================
 screen_name = "wrc" # watch rc
+# please check the prefix which set before in your rclone config file
+src_prefix_string = 'sa'
+dst_prefix_string = 'sb'
+
 L_src = "%s:path_to_your_src_folder" # your src dir
 L_dst = "%s:path_to_your_dst_folder" # your dst dir
+
 logfile = "log_rclone.txt"           # log file: tail -f log_rclone.txt
 START = 1
 END = 399
@@ -56,8 +61,8 @@ def main():
         with open('current_sa.txt', 'w') as fp:
             fp.write(str(id)+'\n')
 
-        acc_src = "sa" + "{0:03d}".format(id) + "s"
-        acc_des = "sa" + "{0:03d}".format(id)
+        acc_src = src_prefix_string + "{0:03d}".format(id)
+        acc_des = dst_prefix_string + "{0:03d}".format(id)
         open_cmd = "screen -d -m -S %s " \
                    "rclone copy --drive-server-side-across-configs --rc -vv --ignore-existing " \
                    "--tpslimit 6 --transfers 6 --drive-chunk-size 32M --fast-list " \
