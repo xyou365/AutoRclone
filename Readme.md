@@ -39,7 +39,7 @@ You can
 * directly replace your default rclone config file with the generated file ./rclone.conf
 * or append content in generated config file to default config file
 ```
-If you need more items, just run again with different parameters: `python3 gen_rclone_cfg.py -p saOther -t SharedTeamDriveFolderOtherID`
+If you need more items, just run again with different parameters: `python3 gen_rclone_cfg.py -p sb -t SharedTeamDriveFolderOtherID`
 
 Step 4. Add service accounts to groups for your organization (Optional)
 ---------------------------------
