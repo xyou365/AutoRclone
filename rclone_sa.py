@@ -84,10 +84,9 @@ def main():
             try:
                 response = subprocess.check_output(cmd, shell=True)
                 cnt_error = 0
-            except subprocess.CalledProcessError as error:
+            except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
-                continue
 
             if cnt_error >= 3:
                 print('3 times over')
