@@ -35,7 +35,9 @@ elif len(sys.argv)==2:
 
 def handler(signal_received, frame):
 
-    kill_cmd = "screen -r -S %s -X quit" % screen_name 
+    kill_cmd = "screen -r -S %s -X quit" % screen_name
+    # TODO for windows:
+    # taskkill /IM "rclone.exe" /F
     try:
         subprocess.check_call(kill_cmd, shell=True)
     except:
@@ -49,8 +51,8 @@ def main():
 
     id = START
 
-    start = time.time()
-    print("Start: " + str(start))
+    time_start = time.time()
+    print("Start: " + str(time_start))
 
     while id<=END+1:
 
@@ -67,6 +69,8 @@ def main():
                    "rclone copy --drive-server-side-across-configs --rc -vv --ignore-existing " \
                    "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list " \
                    "--log-file=%s %s %s" % (screen_name, logfile, src_label+src_folder, dst_label+dst_folder)
+        # TODO for windows:
+        # directly rclone copy (no screen -d -m -s %s)
         print(open_cmd)
 
         try:
@@ -87,10 +91,11 @@ def main():
             except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
+                if cnt_error >= 3:
+                    print('3 times over')
+                    return
 
-            if cnt_error >= 3:
-                print('3 times over')
-                return
+                continue
 
             response_processed = response.decode('utf-8').replace('\0', '')
             response_processed_json = json.loads(response_processed)
@@ -115,6 +120,8 @@ def main():
             if size_GB_done >= SIZE_GB_MAX or cnt_403_retry >= CNT_403_RETRY:
 
                 kill_cmd = "screen -r -S %s -X quit" % screen_name
+                # TODO for windows:
+                # taskkill /IM "rclone.exe" /F
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
@@ -123,8 +130,8 @@ def main():
             time.sleep(2)
         id = id + 1
 
-        stop = time.time()
-        print(str((stop - start) / 60 / 60) + "小时")
+        time_stop = time.time()
+        print(str((time_stop - time_start) / 60 / 60) + "小时")
 
 
 if __name__ == "__main__":

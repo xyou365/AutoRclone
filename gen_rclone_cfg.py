@@ -12,7 +12,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Generate rclone config file.")
     parser.add_argument('-t', '--team_drive_id', type=str, required=True,
                         help='the id of team dirve')
-    parser.add_argument('-f', '--service_account_folder', type=str, default="accounts",
+    parser.add_argument('-s', '--service_account_folder', type=str, default="accounts",
                         help='folder of service account files')
     parser.add_argument('-p', '--prefix', type=str, default="sa",
                         help='prefix of generated labels in rclone config file.')
