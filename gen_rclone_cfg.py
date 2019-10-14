@@ -58,7 +58,7 @@ def main():
     default_rclone_config_file = output.replace('\0', '')
     print("Your default rclone {}\n"
           "You can\n"
-          "* copy content in generated config file ({}) into default "
+          "* copy content in generated config file ({}) into your default "
           "config file\n".format(str(default_rclone_config_file), output_of_config_file))
 
     # "* directly replace your default rclone config file with the generated file {} \n"

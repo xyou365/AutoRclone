@@ -13,10 +13,10 @@ screen_name = "wrc" # watch rc
 src_prefix_string = 'tdsrc'
 dst_prefix_string = 'tddst'
 
-L_src = "path_to_your_src_folder" # your src dir, if you are in root folder, change directly to ""
-L_dst = "path_to_your_dst_folder" # your dst dir
+src_folder = "path_to_your_src_folder" # your src dir, if you are in root folder, change directly to ""
+dst_folder = "path_to_your_dst_folder" # your dst dir
 
-logfile = "log_rclone.txt"           # log file: tail -f log_rclone.txt
+logfile = "log_rclone.txt"             # log file: tail -f log_rclone.txt
 START = 1
 END = 399
 
@@ -61,17 +61,17 @@ def main():
         with open('current_sa.txt', 'w') as fp:
             fp.write(str(id)+'\n')
 
-        acc_src = src_prefix_string + "{0:03d}".format(id) + ":"
-        acc_dst = dst_prefix_string + "{0:03d}".format(id) + ":"
+        src_label = src_prefix_string + "{0:03d}".format(id) + ":"
+        dst_label = dst_prefix_string + "{0:03d}".format(id) + ":"
         open_cmd = "screen -d -m -S %s " \
                    "rclone copy --drive-server-side-across-configs --rc -vv --ignore-existing " \
-                   "--tpslimit 6 --transfers 6 --drive-chunk-size 32M --fast-list " \
-                   "--log-file=%s %s %s" % (screen_name, logfile, acc_src+L_src, acc_dst+L_dst)
+                   "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list " \
+                   "--log-file=%s %s %s" % (screen_name, logfile, src_label+src_folder, dst_label+dst_folder)
         print(open_cmd)
 
         try:
             subprocess.check_call(open_cmd, shell=True)
-            print(">> Let us go %s" % acc_dst)
+            print(">> Let us go %s" % src_label)
             time.sleep(10)
         except subprocess.CalledProcessError as error:
             return print("error: " + str(error.output))
@@ -101,7 +101,7 @@ def main():
             size_GB_done = int(int(response_processed_json['bytes']) * 9.31322e-10)
             speed_now = float(int(response_processed_json['speed']) * 9.31322e-10 * 1024)
 
-            print("%s: %dGB Done @ %fMB/s" % (acc_dst, size_GB_done, speed_now), end="\r")
+            print("%s: %dGB Done @ %fMB/s" % (dst_label, size_GB_done, speed_now), end="\r")
 
             # continually no ...
             if size_GB_done - size_GB_done_before == 0:
@@ -111,7 +111,7 @@ def main():
 
             size_GB_done_before = size_GB_done
 
-            # Todo Stop by error info
+            # Stop by error (403) info
             if size_GB_done >= SIZE_GB_MAX or cnt_403_retry >= CNT_403_RETRY:
 
                 kill_cmd = "screen -r -S %s -X quit" % screen_name
