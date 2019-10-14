@@ -13,8 +13,8 @@ screen_name = "wrc" # watch rc
 src_prefix_string = 'tdsrc'
 dst_prefix_string = 'tddst'
 
-L_src = "%s:path_to_your_src_folder" # your src dir, if you are in root folder, change directly to "%s:"
-L_dst = "%s:path_to_your_dst_folder" # your dst dir
+L_src = "path_to_your_src_folder" # your src dir, if you are in root folder, change directly to ""
+L_dst = "path_to_your_dst_folder" # your dst dir
 
 logfile = "log_rclone.txt"           # log file: tail -f log_rclone.txt
 START = 1
@@ -61,12 +61,12 @@ def main():
         with open('current_sa.txt', 'w') as fp:
             fp.write(str(id)+'\n')
 
-        acc_src = src_prefix_string + "{0:03d}".format(id)
-        acc_dst = dst_prefix_string + "{0:03d}".format(id)
+        acc_src = src_prefix_string + "{0:03d}".format(id) + ":"
+        acc_dst = dst_prefix_string + "{0:03d}".format(id) + ":"
         open_cmd = "screen -d -m -S %s " \
                    "rclone copy --drive-server-side-across-configs --rc -vv --ignore-existing " \
                    "--tpslimit 6 --transfers 6 --drive-chunk-size 32M --fast-list " \
-                   "--log-file=%s %s %s" % (screen_name, logfile, L_src%acc_src, L_dst%acc_dst)
+                   "--log-file=%s %s %s" % (screen_name, logfile, acc_src+L_src, acc_dst+L_dst)
         print(open_cmd)
 
         try:
