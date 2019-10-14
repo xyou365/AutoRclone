@@ -15,8 +15,8 @@ _Before everything, install python3. Because we use python as our programing lan
 ```
 sudo git clone https://github.com/xyou365/AutoRclone && cd AutoRclone && sudo pip3 install -r requirements.txt
 ```
-**For Windows system**: Directly download this project then install latest `rclone`. Then run this command 
-in your cmd windows
+**For Windows system**: Directly download this project then install latest `rclone`. 
+Then run this command (type in cmd command windows or PowerShell windows) in our project folder
 ```
 pip3 install -r requirements.txt
 ```
@@ -48,8 +48,7 @@ Your default rclone Configuration file is stored at:
 C:\Vim\Neovim\share\rclone\rclone.conf
 
 You can
-* directly replace your default rclone config file with the generated file ./rclone.conf
-* or append content in generated config file to default config file
+* copy content in generated config file (./rclone.conf) to default config file
 ```
 
 Step 4. Add service accounts to Google Groups (Optional)
