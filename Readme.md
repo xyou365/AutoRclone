@@ -17,7 +17,7 @@ _Before everything, install python3. Because we use python as our programing lan
 and [latest rclone](https://rclone.org/downloads/#script-download-and-install). 
 If in Debian/Ubuntu, directly use this command
 ```
-suto apt-get install screen && sudo apt-get install git && sudo apt-get install curl
+sudo apt-get install screen git
 curl https://rclone.org/install.sh | sudo bash
 ```
 After all requirements above are successfully installed, run this command
