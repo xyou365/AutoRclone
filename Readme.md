@@ -9,10 +9,16 @@ Many thanks for [rclone](https://rclone.org/) and [folderclone](https://github.c
 
 Step 1. Copy code to your VPS or local machine
 ---------------------------------
-After you have install the `screen` and latest `rclone`,
-run command 
+_Before everything, install python3. Because we use python as our programing language._
+
+**For Linux system**: After you have installed `screen`, `git` and latest `rclone`, run command
 ```
 sudo git clone https://github.com/xyou365/AutoRclone && cd AutoRclone && sudo pip3 install -r requirements.txt
+```
+**For Windows system**: Directly download this project then install `python3` and `rclone`. Then run this command 
+in your cmd windows
+```
+pip3 install -r requirements.txt
 ```
 
 Step 2. Generate service accounts (sa) required
