@@ -9,13 +9,14 @@ import json, time
 import platform
 
 # =================modify here=================
-screen_name = "wrc" # watch rc
+# if have many tasks, can run this script but with different screen name, e.g., wrc1, wrc2 ... wrcN
+screen_name = "wrc"
 # please check the prefix which set before in your rclone config file
 src_prefix_string = 'tdsrc'
 dst_prefix_string = 'tddst'
 
-src_folder = "path_to_your_src_folder" # your src dir, if you are in root folder, change directly to ""
-dst_folder = "path_to_your_dst_folder" # your dst dir
+src_folder = "path_to_your_src_folder" # your source directory, if you are in root folder, change directly to ""
+dst_folder = "path_to_your_dst_folder" # your destination directory
 
 logfile = "log_rclone.txt"             # log file: tail -f log_rclone.txt
 START = 1
@@ -33,8 +34,10 @@ elif len(sys.argv)==2:
     _,s1 = sys.argv
     START = int(s1)
 
+
 def is_windows():
     return platform.system() == 'Windows'
+
 
 def handler(signal_received, frame):
 
@@ -97,7 +100,7 @@ def main():
                 # continually ...
                 cnt_error = cnt_error + 1
                 if cnt_error >= 3:
-                    print('3 times over')
+                    print('No rclone task detected. Check your rclone cmd.')
                     return
 
                 continue
@@ -128,6 +131,7 @@ def main():
                     kill_cmd = 'taskkill /IM "rclone.exe" /F'
                 else:
                     kill_cmd = "screen -r -S %s -X quit" % screen_name
+
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
