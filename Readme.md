@@ -5,7 +5,7 @@ Many thanks for [rclone](https://rclone.org/) and [folderclone](https://github.c
 - [x] add massive service accounts into rclone config file
 - [x] add massive service accounts into groups for your organization
 - [x] automatically switch accounts when rclone copy/move/sync 
-- [x] windows supported
+- [x] Windows system supported
 
 Step 1. Copy code to your VPS or local machine
 ---------------------------------
