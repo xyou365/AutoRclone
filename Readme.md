@@ -11,11 +11,20 @@ Step 1. Copy code to your VPS or local machine
 ---------------------------------
 _Before everything, install python3. Because we use python as our programing language._
 
-**For Linux system**: After you have installed `screen`, `git` and latest `rclone`, run command
+**For Linux system**: Installed 
+[screen](https://www.interserver.net/tips/kb/using-screen-to-attach-and-detach-console-sessions/),
+`git` 
+and [latest rclone](https://rclone.org/downloads/#script-download-and-install). 
+If in Debian/Ubuntu, directly use this command
+```
+suto apt-get install screen && sudo apt-get install git && sudo apt-get install curl
+curl https://rclone.org/install.sh | sudo bash
+```
+After all requirements above are successfully installed, run this command
 ```
 sudo git clone https://github.com/xyou365/AutoRclone && cd AutoRclone && sudo pip3 install -r requirements.txt
 ```
-**For Windows system**: Directly download this project then install latest `rclone`. 
+**For Windows system**: Directly download this project then [install latest rclone](https://rclone.org/downloads/). 
 Then run this command (type in cmd command windows or PowerShell windows) in our project folder
 ```
 pip3 install -r requirements.txt
