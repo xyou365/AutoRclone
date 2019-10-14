@@ -11,7 +11,7 @@ import platform
 # =================modify here=================
 # if have many tasks, can run this script but with different screen name, e.g., wrc1, wrc2 ... wrcN
 screen_name = "wrc"
-# please check the prefix which set before in your rclone config file
+# please check the prefix which is set before in your rclone config file
 src_prefix_string = 'tdsrc'
 dst_prefix_string = 'tddst'
 
@@ -85,8 +85,8 @@ def main():
             subprocess.check_call(open_cmd, shell=True)
             print(">> Let us go %s" % src_label)
             time.sleep(10)
-        except subprocess.CalledProcessError as error:
-            return print("error: " + str(error.output))
+        except subprocess.SubprocessError as error:
+            return print("error: " + str(error))
 
         cnt_error = 0
         cnt_403_retry = 0
