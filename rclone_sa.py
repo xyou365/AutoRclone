@@ -6,6 +6,7 @@
 import os, re, sys, io, subprocess
 from signal import signal, SIGINT
 import json, time
+import platform
 
 # =================modify here=================
 screen_name = "wrc" # watch rc
@@ -32,12 +33,16 @@ elif len(sys.argv)==2:
     _,s1 = sys.argv
     START = int(s1)
 
+def is_windows():
+    return platform.system() == 'Windows'
 
 def handler(signal_received, frame):
 
-    kill_cmd = "screen -r -S %s -X quit" % screen_name
-    # TODO for windows:
-    # taskkill /IM "rclone.exe" /F
+    if is_windows():
+        kill_cmd = 'taskkill /IM "rclone.exe" /F'
+    else:
+        kill_cmd = "screen -r -S %s -X quit" % screen_name
+
     try:
         subprocess.check_call(kill_cmd, shell=True)
     except:
@@ -65,12 +70,12 @@ def main():
 
         src_label = src_prefix_string + "{0:03d}".format(id) + ":"
         dst_label = dst_prefix_string + "{0:03d}".format(id) + ":"
-        open_cmd = "screen -d -m -S %s " \
-                   "rclone copy --drive-server-side-across-configs --rc -vv --ignore-existing " \
+        open_cmd = "rclone copy --drive-server-side-across-configs --rc -vv --ignore-existing " \
                    "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list " \
-                   "--log-file=%s %s %s" % (screen_name, logfile, src_label+src_folder, dst_label+dst_folder)
-        # TODO for windows:
-        # directly rclone copy (no screen -d -m -s %s)
+                   "--log-file=%s %s %s" % (logfile, src_label+src_folder, dst_label+dst_folder)
+        if not is_windows():
+            open_cmd = "screen -d -m -S {} ".format(screen_name) + open_cmd
+
         print(open_cmd)
 
         try:
@@ -119,9 +124,10 @@ def main():
             # Stop by error (403) info
             if size_GB_done >= SIZE_GB_MAX or cnt_403_retry >= CNT_403_RETRY:
 
-                kill_cmd = "screen -r -S %s -X quit" % screen_name
-                # TODO for windows:
-                # taskkill /IM "rclone.exe" /F
+                if is_windows():
+                    kill_cmd = 'taskkill /IM "rclone.exe" /F'
+                else:
+                    kill_cmd = "screen -r -S %s -X quit" % screen_name
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
