@@ -183,7 +183,7 @@ def main():
 
         try:
             subprocess.check_call(open_cmd, shell=True)
-            print(">> Let us go %s" % dst_label)
+            print(">> Let us go {} {}".format(dst_label, time.strftime("%H:%M:%S")))
             time.sleep(10)
         except subprocess.SubprocessError as error:
             return print("error: " + str(error))
@@ -239,10 +239,10 @@ def main():
             time.sleep(2)
         id = id + 1
 
-        time_stop = time.time()
-        hours, rem = divmod((time_stop - time_start), 3600)
-        minutes, sec = divmod(rem, 60)
-        print("Elapsed Time: {:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
+    time_stop = time.time()
+    hours, rem = divmod((time_stop - time_start), 3600)
+    minutes, sec = divmod(rem, 60)
+    print("Elapsed Time: {:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
 
 
 if __name__ == "__main__":
