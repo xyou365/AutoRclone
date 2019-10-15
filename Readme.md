@@ -32,7 +32,7 @@ pip3 install -r requirements.txt
 Step 2. Generate service accounts
 ---------------------------------
 Let us create as many service accounts as possible following steps
-of [official steps of folderclone](https://github.com/Spazzlo/folderclone). (**Note**: with new version of folderclone, You can skip our **Step 4** directly)
+of [official steps of folderclone](https://github.com/Spazzlo/folderclone). (**Note**: With new version of folderclone, you can skip our **Step 4** directly)
 
 After you finished, there will be many json files in one folder named `accounts`. 
 
