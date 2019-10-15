@@ -163,7 +163,7 @@ def main():
 
         open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing " \
                     "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list " \
-                    "--log-file={} {} {}".format(logfile,
+                    "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile,
                                                 src_full_path,
                                                 dst_full_path)
 
