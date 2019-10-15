@@ -77,7 +77,7 @@ Step 5. Start your task
 Let us `rclone copy` hundreds of TB resource using service accounts.
 
 * For remote operation
-- [x] publicly shared folder to Team Drive
+- [x] publicly shared folder to Team Drive ([Existing bug](https://forum.rclone.org/t/rclone-cannot-see-all-files-folder-in-public-shared-folder/12351))
 - [x] Team Drive to Team Drive
 - [x] publicly shared folder to publicly shared folder (with write privilege)
 - [x] Team Drive to publicly shared folder
