@@ -12,6 +12,7 @@ rclone_sa.py
 log_rclone.txt
 log*.txt
 current_sa.txt
+accounts.zip
 
 # exception to the rule
 !credentials/.gsuite_only.txt
