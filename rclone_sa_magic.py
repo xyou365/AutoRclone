@@ -201,7 +201,7 @@ def main():
                 cnt_error = cnt_error + 1
                 if cnt_error >= 5:
                     print('No rclone task detected (possibly done). Check your rclone cmd.')
-                    return
+                    break
 
                 continue
 
