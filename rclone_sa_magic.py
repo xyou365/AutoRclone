@@ -59,9 +59,9 @@ def parse_args():
                         help='the id of destination. Team Drive id or publicly shared folder id')
 
     parser.add_argument('-sp', '--source_path', type=str, default="",
-                        help='the folder path of source')
+                        help='the folder path of source. In Google Drive or local.')
     parser.add_argument('-dp', '--destination_path', type=str, default="",
-                        help='the folder path of destination')
+                        help='the folder path of destination. In Google Drive.')
 
     parser.add_argument('-b', '--begin_sa_id', type=int, default=1,
                         help='the begin id of sa for source')
