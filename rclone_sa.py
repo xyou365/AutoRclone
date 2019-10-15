@@ -76,8 +76,11 @@ def main():
         open_cmd = "rclone copy --drive-server-side-across-configs --rc -vv --ignore-existing " \
                    "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list " \
                    "--log-file=%s %s %s" % (logfile, src_label+src_folder, dst_label+dst_folder)
+
         if not is_windows():
             open_cmd = "screen -d -m -S {} ".format(screen_name) + open_cmd
+        else:
+            open_cmd = "start /b " + open_cmd
 
         print(open_cmd)
 

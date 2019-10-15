@@ -7,6 +7,7 @@
 rclone.conf
 token.pickle
 client_secret_1011068108634-2htk4gcdlsf7255oq56sshj6rtn50q03.apps.googleusercontent.com.json
+rclone_sa_magic.py
 
 # exception to the rule
 !credentials/.gsuite_only.txt

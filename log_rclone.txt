@@ -1,0 +1,49 @@
+2019/10/15 12:22:59 DEBUG : rclone: Version "v1.49.2" starting with parameters ["rclone" "copy" "--dry-run" "--drive-server-side-across-configs" "--rc" "-vv" "--ignore-existing" "--tpslimit" "3" "--transfers" "3" "--drive-chunk-size" "32M" "--fast-list" "--config" "./rclone.conf" "--log-file=log_rclone.txt" "src001:" "dst001:"]
+2019/10/15 12:22:59 NOTICE: Serving remote control on http://127.0.0.1:5572/
+2019/10/15 12:22:59 DEBUG : Using config file from "C:\\Users\\YinChao\\Desktop\\AutoRclone\\rclone.conf"
+2019/10/15 12:22:59 INFO  : Starting HTTP transaction limiter: max 3 transactions/s with burst 1
+2019/10/15 12:23:08 INFO  : Google drive root '': Waiting for checks to finish
+2019/10/15 12:23:08 INFO  : Google drive root '': Waiting for transfers to finish
+2019/10/15 12:23:08 INFO  : 
+Transferred:   	         0 / 0 Bytes, -, 0 Bytes/s, ETA -
+Errors:                 0
+Checks:                 0 / 0, -
+Transferred:            0 / 0, -
+Elapsed time:          0s
+
+2019/10/15 12:23:08 DEBUG : 13 go routines active
+2019/10/15 12:23:08 DEBUG : rclone: Version "v1.49.2" finishing with parameters ["rclone" "copy" "--dry-run" "--drive-server-side-across-configs" "--rc" "-vv" "--ignore-existing" "--tpslimit" "3" "--transfers" "3" "--drive-chunk-size" "32M" "--fast-list" "--config" "./rclone.conf" "--log-file=log_rclone.txt" "src001:" "dst001:"]
+2019/10/15 12:29:33 DEBUG : rclone: Version "v1.49.2" starting with parameters ["rclone" "copy" "--dry-run" "--drive-server-side-across-configs" "--rc" "-vv" "--ignore-existing" "--tpslimit" "3" "--transfers" "3" "--drive-chunk-size" "32M" "--fast-list" "--config" "./rclone.conf" "--log-file=log_rclone.txt" "src001:04.RIP/CMCT" "dst001:together/04.RIP/CMCT"]
+2019/10/15 12:29:33 NOTICE: Serving remote control on http://127.0.0.1:5572/
+2019/10/15 12:29:33 DEBUG : Using config file from "C:\\Users\\YinChao\\Desktop\\AutoRclone\\rclone.conf"
+2019/10/15 12:29:33 INFO  : Starting HTTP transaction limiter: max 3 transactions/s with burst 1
+2019/10/15 12:30:00 DEBUG : rclone: Version "v1.49.2" starting with parameters ["rclone" "copy" "--drive-server-side-across-configs" "--rc" "-vv" "--ignore-existing" "--tpslimit" "3" "--transfers" "3" "--drive-chunk-size" "32M" "--fast-list" "--config" "./rclone.conf" "--log-file=log_rclone.txt" "src001:04.RIP/CMCT" "dst001:together/04.RIP/CMCT"]
+2019/10/15 12:30:00 NOTICE: Serving remote control on http://127.0.0.1:5572/
+2019/10/15 12:30:00 DEBUG : Using config file from "C:\\Users\\YinChao\\Desktop\\AutoRclone\\rclone.conf"
+2019/10/15 12:30:00 INFO  : Starting HTTP transaction limiter: max 3 transactions/s with burst 1
+2019/10/15 12:31:15 INFO  : 
+Transferred:   	         0 / 0 Bytes, -, 0 Bytes/s, ETA -
+Errors:                 0
+Checks:                 0 / 0, -
+Transferred:            0 / 0, -
+Elapsed time:          0s
+
+2019/10/15 12:31:40 DEBUG : rclone: Version "v1.49.2" starting with parameters ["D:\\迅雷下载\\rclone-v1.42-windows-amd64\\rclone.exe" "copy" "--drive-server-side-across-configs" "--rc" "-vv" "--ignore-existing" "--tpslimit" "3" "--transfers" "3" "--drive-chunk-size" "32M" "--fast-list" "--config" "./rclone.conf" "--log-file=log_rclone.txt" "src001:04.RIP/CMCT" "dst001:together/04.RIP/CMCT"]
+2019/10/15 12:31:40 NOTICE: Serving remote control on http://127.0.0.1:5572/
+2019/10/15 12:31:40 DEBUG : Using config file from "C:\\Users\\YinChao\\Desktop\\AutoRclone\\rclone.conf"
+2019/10/15 12:31:40 INFO  : Starting HTTP transaction limiter: max 3 transactions/s with burst 1
+2019/10/15 12:33:10 INFO  : 
+Transferred:   	         0 / 0 Bytes, -, 0 Bytes/s, ETA -
+Errors:                 0
+Checks:                 0 / 0, -
+Transferred:            0 / 0, -
+Elapsed time:          0s
+
+2019/10/15 12:35:04 DEBUG : rclone: Version "v1.49.2" starting with parameters ["rclone" "copy" "--dry-run" "--drive-server-side-across-configs" "--rc" "-vv" "--ignore-existing" "--tpslimit" "3" "--transfers" "3" "--drive-chunk-size" "32M" "--fast-list" "--config" "./rclone.conf" "--log-file=log_rclone.txt" "src001:04.RIP/CMCT" "dst001:together/04.RIP/CMCT"]
+2019/10/15 12:35:04 NOTICE: Serving remote control on http://127.0.0.1:5572/
+2019/10/15 12:35:04 DEBUG : Using config file from "C:\\Users\\YinChao\\Desktop\\AutoRclone\\rclone.conf"
+2019/10/15 12:35:04 INFO  : Starting HTTP transaction limiter: max 3 transactions/s with burst 1
+2019/10/15 12:35:14 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 12:35:14 DEBUG : rc: "core/stats": reply map[bytes:0 checks:0 deletes:0 elapsedTime:0 errors:0 fatalError:false retryError:false speed:0 transfers:0]: <nil>
+2019/10/15 12:35:17 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 12:35:17 DEBUG : rc: "core/stats": reply map[bytes:0 checks:0 deletes:0 elapsedTime:0 errors:0 fatalError:false retryError:false speed:0 transfers:0]: <nil>

@@ -9,6 +9,7 @@ parse.add_argument('--controller','-c',default='controller/*.json',help='Specify
 parse.add_argument('--yes','-y',default=False,action='store_true',help='Skips the sanity prompt.')
 parsereq = parse.add_argument_group('required arguments')
 parsereq.add_argument('--drive-id','-d',help='The ID of the Shared Drive.',required=True)
+parsereq.add_argument('--drive-id','-d',help='The ID of the Shared Drive.',required=True)
 
 args = parse.parse_args()
 acc_dir = args.path
