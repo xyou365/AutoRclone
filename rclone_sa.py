@@ -102,8 +102,8 @@ def main():
             except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
-                if cnt_error >= 3:
-                    print('No rclone task detected (possibly ended). Check your rclone cmd.')
+                if cnt_error >= 5:
+                    print('No rclone task detected (possibly done). Check your rclone cmd.')
                     return
 
                 continue

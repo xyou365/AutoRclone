@@ -5,10 +5,11 @@
 #
 # can copy from
 # - [x] publicly shared folder to Team Drive
-#      `python3 .\rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 10`
 # - [x] Team Drive to Team Drive
-# - [x] publicly shared folder to publicly shared folder
+# - [x] publicly shared folder to publicly shared folder (with write privilege)
 # - [x] Team Drive to publicly shared folder
+#   `python3 .\rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 10`
+#
 # - [ ] local to Team Drive
 # - [ ] local to private folder
 # - [ ] private folder to any (think service accounts cannot do anything about private folder)
@@ -183,8 +184,8 @@ def main():
             except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
-                if cnt_error >= 3:
-                    print('No rclone task detected. Check your rclone cmd.')
+                if cnt_error >= 5:
+                    print('No rclone task detected (possibly done). Check your rclone cmd.')
                     return
 
                 continue

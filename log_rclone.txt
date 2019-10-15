@@ -2533,3 +2533,407 @@ Transferring:
 2019/10/15 14:18:22 INFO  : 61 玩转Spring全家桶/43 Spring MVC 中的视图解析机制（下）[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
 2019/10/15 14:18:23 DEBUG : 71-Linux实战技能100讲/88丨sed和awk介绍.mp4: MD5 = e6ba3b6f21125f8517136ddb2d16981b OK
 2019/10/15 14:18:23 INFO  : 71-Linux实战技能100讲/88丨sed和awk介绍.mp4: Copied (server side copy)
+2019/10/15 14:18:25 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:25 DEBUG : rc: "core/stats": reply map[bytes:13826949335 checks:0 deletes:0 elapsedTime:328.1193216 errors:0 fatalError:false retryError:false speed:4.2140003421852745e+07 transferring:[map[name:71-Linux实战技能100讲/90丨sed指令加强版.avi size:187353120] map[name:71-Linux实战技能100讲/89丨sed替换命令讲解.mp4 size:201911048] map[name:71-Linux实战技能100讲/91丨sed其他指令.mp4 size:136882626]] transfers:226]: <nil>
+2019/10/15 14:18:25 DEBUG : 71-Linux实战技能100讲/89丨sed替换命令讲解.mp4: MD5 = 2ad8dd1da96cc649f9796de83e272260 OK
+2019/10/15 14:18:25 INFO  : 71-Linux实战技能100讲/89丨sed替换命令讲解.mp4: Copied (server side copy)
+2019/10/15 14:18:26 DEBUG : 71-Linux实战技能100讲/90丨sed指令加强版.avi: MD5 = ab700f42e115b280efbbfc8bcc5b756e OK
+2019/10/15 14:18:26 INFO  : 71-Linux实战技能100讲/90丨sed指令加强版.avi: Copied (server side copy)
+2019/10/15 14:18:27 DEBUG : 71-Linux实战技能100讲/91丨sed其他指令.mp4: MD5 = 3a3c969da03766cd2bbee3564a82310f OK
+2019/10/15 14:18:27 INFO  : 71-Linux实战技能100讲/91丨sed其他指令.mp4: Copied (server side copy)
+2019/10/15 14:18:29 DEBUG : 61 玩转Spring全家桶/44 - Spring MVC 中的常用视图（上）[加微信ixuexi66获取更多课程].mp4: MD5 = 2baf8a6d7c0d5d82b9df51a3dc810650 OK
+2019/10/15 14:18:29 INFO  : 61 玩转Spring全家桶/44 - Spring MVC 中的常用视图（上）[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:29 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:29 DEBUG : rc: "core/stats": reply map[bytes:14404644069 checks:0 deletes:0 elapsedTime:329.9334698 errors:0 fatalError:false retryError:false speed:4.365923856628382e+07 transferring:[map[name:61 玩转Spring全家桶/45 Spring MVC 中的常用视图（下）[加微信ixuexi66获取更多课程].mp4 size:49085341] map[name:61 玩转Spring全家桶/47 Spring MVC 中的异常处理机制[加微信 ixuexi66 获取更多课程].mp4 size:29267721] map[name:61 玩转Spring全家桶/46 静态资源与缓存[加微信ixuexi66获取更多课程].mp4 size:32803324]] transfers:230]: <nil>
+2019/10/15 14:18:29 DEBUG : 61 玩转Spring全家桶/45 Spring MVC 中的常用视图（下）[加微信ixuexi66获取更多课程].mp4: MD5 = a1b104f987d5eaad1a5094c33ec8fe93 OK
+2019/10/15 14:18:29 INFO  : 61 玩转Spring全家桶/45 Spring MVC 中的常用视图（下）[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:30 DEBUG : 61 玩转Spring全家桶/46 静态资源与缓存[加微信ixuexi66获取更多课程].mp4: MD5 = 4578cd42fe6e9c8eff723e19718caa1c OK
+2019/10/15 14:18:30 INFO  : 61 玩转Spring全家桶/46 静态资源与缓存[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:31 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:31 DEBUG : rc: "core/stats": reply map[bytes:14486532734 checks:0 deletes:0 elapsedTime:333.9896239 errors:0 fatalError:false retryError:false speed:4.3374199967174485e+07 transferring:[map[name:71-Linux实战技能100讲/93丨保持空间.mp4 size:222449379] map[name:71-Linux实战技能100讲/92丨sed多行模式空间.mp4 size:154180825] map[name:61 玩转Spring全家桶/47 Spring MVC 中的异常处理机制[加微信 ixuexi66 获取更多课程].mp4 size:29267721]] transfers:232]: <nil>
+2019/10/15 14:18:34 DEBUG : 61 玩转Spring全家桶/47 Spring MVC 中的异常处理机制[加微信 ixuexi66 获取更多课程].mp4: MD5 = 630fcba8dbf5ad8ae404ebfa670ec9dc OK
+2019/10/15 14:18:34 INFO  : 61 玩转Spring全家桶/47 Spring MVC 中的异常处理机制[加微信 ixuexi66 获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:34 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:34 DEBUG : rc: "core/stats": reply map[bytes:14515800455 checks:0 deletes:0 elapsedTime:335.5753851 errors:0 fatalError:false retryError:false speed:4.325645175278382e+07 transferring:[map[name:71-Linux实战技能100讲/92丨sed多行模式空间.mp4 size:154180825] map[name:71-Linux实战技能100讲/94丨认识awk.mp4 size:43839225] map[name:71-Linux实战技能100讲/93丨保持空间.mp4 size:222449379]] transfers:233]: <nil>
+2019/10/15 14:18:35 DEBUG : 71-Linux实战技能100讲/93丨保持空间.mp4: MD5 = 37014b549a6dba786a2d3ab025a2ed0a OK
+2019/10/15 14:18:35 INFO  : 71-Linux实战技能100讲/93丨保持空间.mp4: Copied (server side copy)
+2019/10/15 14:18:35 DEBUG : 71-Linux实战技能100讲/92丨sed多行模式空间.mp4: MD5 = a8647c1df6fed3d9f356f446156945e3 OK
+2019/10/15 14:18:35 INFO  : 71-Linux实战技能100讲/92丨sed多行模式空间.mp4: Copied (server side copy)
+2019/10/15 14:18:36 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:36 DEBUG : rc: "core/stats": reply map[bytes:14892430659 checks:0 deletes:0 elapsedTime:338.96931 errors:0 fatalError:false retryError:false speed:4.393445134900266e+07 transferring:[map[name:61 玩转Spring全家桶/48 了解 Spring MVC 的切入点[加微信 ixuexi66 获取更多课程].mp4 size:41930419] map[name:71-Linux实战技能100讲/94丨认识awk.mp4 size:43839225] map[name:71-Linux实战技能100讲/95丨awk的字段.mp4 size:157188177]] transfers:235]: <nil>
+2019/10/15 14:18:38 DEBUG : 71-Linux实战技能100讲/94丨认识awk.mp4: MD5 = 9ebf4d8edfee8603aa4d63836a6406ad OK
+2019/10/15 14:18:38 INFO  : 71-Linux实战技能100讲/94丨认识awk.mp4: Copied (server side copy)
+2019/10/15 14:18:39 DEBUG : 61 玩转Spring全家桶/48 了解 Spring MVC 的切入点[加微信 ixuexi66 获取更多课程].mp4: MD5 = 7ebcdb2701bd66f81638fbe241e199f4 OK
+2019/10/15 14:18:39 INFO  : 61 玩转Spring全家桶/48 了解 Spring MVC 的切入点[加微信 ixuexi66 获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:39 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:39 DEBUG : rc: "core/stats": reply map[bytes:14978200303 checks:0 deletes:0 elapsedTime:340.3695645 errors:0 fatalError:false retryError:false speed:4.4005698115232036e+07 transferring:[map[name:61 玩转Spring全家桶/49 SpringBucks 实战项目进度小结[加微信 ixuexi66 获取更多课程].mp4 size:14307697] map[name:71-Linux实战技能100讲/95丨awk的字段.mp4 size:157188177] map[name:61 玩转Spring全家桶/50 通过 RestTemplate 访问 Web 资源[加微信ixuexi66获取更多课程].mp4 size:30939205]] transfers:237]: <nil>
+2019/10/15 14:18:40 DEBUG : 71-Linux实战技能100讲/95丨awk的字段.mp4: MD5 = dff43cdb6203d2f4768abdf703cfa0b0 OK
+2019/10/15 14:18:40 INFO  : 71-Linux实战技能100讲/95丨awk的字段.mp4: Copied (server side copy)
+2019/10/15 14:18:40 DEBUG : 61 玩转Spring全家桶/49 SpringBucks 实战项目进度小结[加微信 ixuexi66 获取更多课程].mp4: MD5 = cedae9ac40f903ee8fbccedfd0c7a1f3 OK
+2019/10/15 14:18:40 INFO  : 61 玩转Spring全家桶/49 SpringBucks 实战项目进度小结[加微信 ixuexi66 获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:42 INFO  : 
+Transferred:   	   14.109G / 20.627 GBytes, 68%, 42.018 MBytes/s, ETA 2m38s
+Errors:                 0
+Checks:                 0 / 0, -
+Transferred:          239 / 342, 70%
+Elapsed time:     5m43.8s
+Transferring:
+ *                71-Linux实战技能100讲/96丨awk表达式.mp4: transferring
+ * 61 玩转Spring全家桶/50 通过 R…加微信ixuexi66获取更多课程].mp4: transferring
+ * 61 玩转Spring全家桶/51 Rest…加微信ixuexi66获取更多课程].mp4: transferring
+
+2019/10/15 14:18:42 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:42 DEBUG : rc: "core/stats": reply map[bytes:15149696177 checks:0 deletes:0 elapsedTime:343.8801788 errors:0 fatalError:false retryError:false speed:4.4055159648532785e+07 transferring:[map[name:71-Linux实战技能100讲/96丨awk表达式.mp4 size:193679449] map[name:61 玩转Spring全家桶/51 RestTemplate 的高阶用法[加微信ixuexi66获取更多课程].mp4 size:27753662] map[name:61 玩转Spring全家桶/50 通过 RestTemplate 访问 Web 资源[加微信ixuexi66获取更多课程].mp4 size:30939205]] transfers:239]: <nil>
+2019/10/15 14:18:43 DEBUG : 61 玩转Spring全家桶/51 RestTemplate 的高阶用法[加微信ixuexi66获取更多课程].mp4: MD5 = 6ad7dcadcb604e4216605a0dde085e43 OK
+2019/10/15 14:18:43 INFO  : 61 玩转Spring全家桶/51 RestTemplate 的高阶用法[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:43 DEBUG : 71-Linux实战技能100讲/96丨awk表达式.mp4: MD5 = 705a90e063208197b745f667d5745c8a OK
+2019/10/15 14:18:43 INFO  : 71-Linux实战技能100讲/96丨awk表达式.mp4: Copied (server side copy)
+2019/10/15 14:18:44 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:44 DEBUG : rc: "core/stats": reply map[bytes:15371129288 checks:0 deletes:0 elapsedTime:346.3804934 errors:0 fatalError:false retryError:false speed:4.4376428756481476e+07 transferring:[map[name:61 玩转Spring全家桶/52 简单定制 RestTemplate[加微信ixuexi66获取更多课程].mp4 size:28130892] map[name:61 玩转Spring全家桶/50 通过 RestTemplate 访问 Web 资源[加微信ixuexi66获取更多课程].mp4 size:30939205] map[name:71-Linux实战技能100讲/97丨awk判断和循环.mp4 size:194383844]] transfers:241]: <nil>
+2019/10/15 14:18:46 DEBUG : 71-Linux实战技能100讲/97丨awk判断和循环.mp4: MD5 = f240c46a24f749adc9c466cd51ffd89c OK
+2019/10/15 14:18:46 INFO  : 71-Linux实战技能100讲/97丨awk判断和循环.mp4: Copied (server side copy)
+2019/10/15 14:18:47 DEBUG : 61 玩转Spring全家桶/52 简单定制 RestTemplate[加微信ixuexi66获取更多课程].mp4: MD5 = 2eac8bdae35d01ea3eca044fa754ceff OK
+2019/10/15 14:18:47 INFO  : 61 玩转Spring全家桶/52 简单定制 RestTemplate[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:47 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:47 DEBUG : rc: "core/stats": reply map[bytes:15593644024 checks:0 deletes:0 elapsedTime:347.874498 errors:0 fatalError:false retryError:false speed:4.4825487679180205e+07 transferring:[map[name:71-Linux实战技能100讲/98丨awk数组.mp4 size:181470465] map[name:71-Linux实战技能100讲/99丨awk数组功能的使用.mp4 size:205087633] map[name:61 玩转Spring全家桶/50 通过 RestTemplate 访问 Web 资源[加微信ixuexi66获取更多课程].mp4 size:30939205]] transfers:243]: <nil>
+2019/10/15 14:18:47 DEBUG : 61 玩转Spring全家桶/50 通过 RestTemplate 访问 Web 资源[加微信ixuexi66获取更多课程].mp4: MD5 = ff732a2ce7db8d7fcb1be7f478c17d0e OK
+2019/10/15 14:18:47 INFO  : 61 玩转Spring全家桶/50 通过 RestTemplate 访问 Web 资源[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:49 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:49 DEBUG : rc: "core/stats": reply map[bytes:15624583229 checks:0 deletes:0 elapsedTime:352.2867002 errors:0 fatalError:false retryError:false speed:4.435189639611606e+07 transferring:[map[name:71-Linux实战技能100讲/99丨awk数组功能的使用.mp4 size:205087633] map[name:61 玩转Spring全家桶/53 通过 WebClient 访问 Web 资源[加微信ixuexi66获取更多课程].mp4 size:33255112] map[name:71-Linux实战技能100讲/98丨awk数组.mp4 size:181470465]] transfers:244]: <nil>
+2019/10/15 14:18:50 DEBUG : 71-Linux实战技能100讲/99丨awk数组功能的使用.mp4: MD5 = 1bc1a6846cd8aedda99e77da4b6adeab OK
+2019/10/15 14:18:50 INFO  : 71-Linux实战技能100讲/99丨awk数组功能的使用.mp4: Copied (server side copy)
+2019/10/15 14:18:50 DEBUG : 61 玩转Spring全家桶/53 通过 WebClient 访问 Web 资源[加微信ixuexi66获取更多课程].mp4: MD5 = 7a2d081b266418ddb848b2d3bf8ede32 OK
+2019/10/15 14:18:50 INFO  : 61 玩转Spring全家桶/53 通过 WebClient 访问 Web 资源[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:50 DEBUG : 71-Linux实战技能100讲/98丨awk数组.mp4: MD5 = de9bf1df953341f8e93cd899ddf0d0fe OK
+2019/10/15 14:18:50 INFO  : 71-Linux实战技能100讲/98丨awk数组.mp4: Copied (server side copy)
+2019/10/15 14:18:52 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:52 DEBUG : rc: "core/stats": reply map[bytes:16044396439 checks:0 deletes:0 elapsedTime:354.0579621 errors:0 fatalError:false retryError:false speed:4.531573402229668e+07 transferring:[map[name:61 玩转Spring全家桶/55 设计好的 RESTful Web Service（上）[加微信ixuexi66获取更多课程].mp4 size:20874092] map[name:61 玩转Spring全家桶/56 设计好的 RESTful Web Service（下）[加微信ixuexi66获取更多课程].mp4 size:18586318] map[name:61 玩转Spring全家桶/54 SpringBucks 实战项目进度小结[加微信ixuexi66获取更多课程].mp4 size:22732880]] transfers:247]: <nil>
+2019/10/15 14:18:54 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:54 DEBUG : rc: "core/stats": reply map[bytes:16044396439 checks:0 deletes:0 elapsedTime:358.9927675 errors:0 fatalError:false retryError:false speed:4.469281247845752e+07 transferring:[map[name:61 玩转Spring全家桶/55 设计好的 RESTful Web Service（上）[加微信ixuexi66获取更多课程].mp4 size:20874092] map[name:61 玩转Spring全家桶/56 设计好的 RESTful Web Service（下）[加微信ixuexi66获取更多课程].mp4 size:18586318] map[name:61 玩转Spring全家桶/54 SpringBucks 实战项目进度小结[加微信ixuexi66获取更多课程].mp4 size:22732880]] transfers:247]: <nil>
+2019/10/15 14:18:54 DEBUG : 61 玩转Spring全家桶/56 设计好的 RESTful Web Service（下）[加微信ixuexi66获取更多课程].mp4: MD5 = 53b4ca2a0566b232931406a397f3f6fe OK
+2019/10/15 14:18:54 INFO  : 61 玩转Spring全家桶/56 设计好的 RESTful Web Service（下）[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:55 DEBUG : 61 玩转Spring全家桶/54 SpringBucks 实战项目进度小结[加微信ixuexi66获取更多课程].mp4: MD5 = 644187634caf0aac534d5d8c71446da0 OK
+2019/10/15 14:18:55 INFO  : 61 玩转Spring全家桶/54 SpringBucks 实战项目进度小结[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:56 DEBUG : 61 玩转Spring全家桶/55 设计好的 RESTful Web Service（上）[加微信ixuexi66获取更多课程].mp4: MD5 = 8085c71aa5dc753cb17c38d654df8981 OK
+2019/10/15 14:18:56 INFO  : 61 玩转Spring全家桶/55 设计好的 RESTful Web Service（上）[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:56 DEBUG : 61 玩转Spring全家桶/57 什么是 HATEOAS[加微信ixuexi66获取更多课程].mp4: MD5 = 4a3b4af01e13562dcdd397179214548f OK
+2019/10/15 14:18:56 INFO  : 61 玩转Spring全家桶/57 什么是 HATEOAS[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:18:57 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:57 DEBUG : rc: "core/stats": reply map[bytes:16122245624 checks:0 deletes:0 elapsedTime:357.926619 errors:0 fatalError:false retryError:false speed:4.5043438426131696e+07 transferring:[map[name:61 玩转Spring全家桶/58 使用 Spring Data REST 实现简单的超媒体服务（上）[加微信ixuexi66获取更多课程].mp4 size:26250663] map[name:61 玩转Spring全家桶/59 使用 Spring Data REST 实现简单的超媒体服务(下)[加微信ixuexi66获取更多课程].mp4 size:39812959] map[name:61 玩转Spring全家桶/60 分布式环境中如何解决 Session 的问题[加微信ixuexi66获取更多课程].mp4 size:39659426]] transfers:251]: <nil>
+2019/10/15 14:18:59 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:18:59 DEBUG : rc: "core/stats": reply map[bytes:16122245624 checks:0 deletes:0 elapsedTime:363.0409418 errors:0 fatalError:false retryError:false speed:4.440889103048267e+07 transferring:[map[name:61 玩转Spring全家桶/58 使用 Spring Data REST 实现简单的超媒体服务（上）[加微信ixuexi66获取更多课程].mp4 size:26250663] map[name:61 玩转Spring全家桶/59 使用 Spring Data REST 实现简单的超媒体服务(下)[加微信ixuexi66获取更多课程].mp4 size:39812959] map[name:61 玩转Spring全家桶/60 分布式环境中如何解决 Session 的问题[加微信ixuexi66获取更多课程].mp4 size:39659426]] transfers:251]: <nil>
+2019/10/15 14:19:00 DEBUG : 61 玩转Spring全家桶/58 使用 Spring Data REST 实现简单的超媒体服务（上）[加微信ixuexi66获取更多课程].mp4: MD5 = cb828ca8b61762b385189858e2a92e81 OK
+2019/10/15 14:19:00 INFO  : 61 玩转Spring全家桶/58 使用 Spring Data REST 实现简单的超媒体服务（上）[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:01 DEBUG : 61 玩转Spring全家桶/60 分布式环境中如何解决 Session 的问题[加微信ixuexi66获取更多课程].mp4: MD5 = 1f69195083effb651dc835619bf0cea0 OK
+2019/10/15 14:19:01 INFO  : 61 玩转Spring全家桶/60 分布式环境中如何解决 Session 的问题[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:02 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:02 DEBUG : rc: "core/stats": reply map[bytes:16188155713 checks:0 deletes:0 elapsedTime:363.8298321 errors:0 fatalError:false retryError:false speed:4.449375582965013e+07 transferring:[map[name:61 玩转Spring全家桶/59 使用 Spring Data REST 实现简单的超媒体服务(下)[加微信ixuexi66获取更多课程].mp4 size:39812959] map[name:61 玩转Spring全家桶/62使用 WebFlux 代替 Spring MVC（下）[加微信ixuexi66获取更多课程].mp4 size:34231495] map[name:61 玩转Spring全家桶/61使用 WebFlux 代替 Spring MVC（上）[加微信ixuexi66获取更多课程].mp4 size:17579655]] transfers:253]: <nil>
+2019/10/15 14:19:02 DEBUG : 61 玩转Spring全家桶/59 使用 Spring Data REST 实现简单的超媒体服务(下)[加微信ixuexi66获取更多课程].mp4: MD5 = 97125db067b0ec9274d14e211613a91a OK
+2019/10/15 14:19:02 INFO  : 61 玩转Spring全家桶/59 使用 Spring Data REST 实现简单的超媒体服务(下)[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:04 DEBUG : 61 玩转Spring全家桶/61使用 WebFlux 代替 Spring MVC（上）[加微信ixuexi66获取更多课程].mp4: MD5 = 4751326591e73f18e86c36f30b3d1692 OK
+2019/10/15 14:19:04 INFO  : 61 玩转Spring全家桶/61使用 WebFlux 代替 Spring MVC（上）[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:04 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:04 DEBUG : rc: "core/stats": reply map[bytes:16245548327 checks:0 deletes:0 elapsedTime:365.780617 errors:0 fatalError:false retryError:false speed:4.441336574977673e+07 transferring:[map[name:61 玩转Spring全家桶/63 SpringBucks 实战项目进度小结[加微信ixuexi66获取更多课程].mp4 size:10747200] map[name:61 玩转Spring全家桶/62使用 WebFlux 代替 Spring MVC（下）[加微信ixuexi66获取更多课程].mp4 size:34231495] map[name:61 玩转Spring全家桶/64 认识 Spring Boot 的组成部分[加微信ixuexi66获取更多课程].mp4 size:40330339]] transfers:255]: <nil>
+2019/10/15 14:19:05 DEBUG : 61 玩转Spring全家桶/63 SpringBucks 实战项目进度小结[加微信ixuexi66获取更多课程].mp4: MD5 = 2bb526f9e0965b8bfde29a7f81d88e65 OK
+2019/10/15 14:19:05 INFO  : 61 玩转Spring全家桶/63 SpringBucks 实战项目进度小结[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:05 DEBUG : 61 玩转Spring全家桶/62使用 WebFlux 代替 Spring MVC（下）[加微信ixuexi66获取更多课程].mp4: MD5 = 238a66d88a43f86787cf74140eb5c99a OK
+2019/10/15 14:19:05 INFO  : 61 玩转Spring全家桶/62使用 WebFlux 代替 Spring MVC（下）[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:07 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:07 DEBUG : rc: "core/stats": reply map[bytes:16290527022 checks:0 deletes:0 elapsedTime:369.3460829 errors:0 fatalError:false retryError:false speed:4.410640257530669e+07 transferring:[map[name:61 玩转Spring全家桶/65 了解自动配置的实现原理[加微信ixuexi66获取更多课程].mp4 size:55518986] map[name:61 玩转Spring全家桶/66 动手实现自己的自动配置[加微信ixuexi66获取更多课程].mp4 size:34894523] map[name:61 玩转Spring全家桶/64 认识 Spring Boot 的组成部分[加微信ixuexi66获取更多课程].mp4 size:40330339]] transfers:257]: <nil>
+2019/10/15 14:19:08 DEBUG : 61 玩转Spring全家桶/65 了解自动配置的实现原理[加微信ixuexi66获取更多课程].mp4: MD5 = 55b5206b06d14e607298d3428eafd41d OK
+2019/10/15 14:19:08 INFO  : 61 玩转Spring全家桶/65 了解自动配置的实现原理[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:08 DEBUG : 61 玩转Spring全家桶/66 动手实现自己的自动配置[加微信ixuexi66获取更多课程].mp4: MD5 = 60b52d4e535098e214abea3722a8ab20 OK
+2019/10/15 14:19:08 INFO  : 61 玩转Spring全家桶/66 动手实现自己的自动配置[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:08 DEBUG : 61 玩转Spring全家桶/64 认识 Spring Boot 的组成部分[加微信ixuexi66获取更多课程].mp4: MD5 = 52936aad61a0ef7a1ae112b5a26a00e6 OK
+2019/10/15 14:19:08 INFO  : 61 玩转Spring全家桶/64 认识 Spring Boot 的组成部分[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:09 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:09 DEBUG : rc: "core/stats": reply map[bytes:16421270870 checks:0 deletes:0 elapsedTime:371.2270539 errors:0 fatalError:false retryError:false speed:4.423511351740952e+07 transferring:[map[name:61 玩转Spring全家桶/68了解起步依赖及其实现原理[加微信ixuexi66获取更多课程].mp4 size:46835633] map[name:61 玩转Spring全家桶/69 定制自己的起步依赖[加微信ixuexi66获取更多课程].mp4 size:13580667] map[name:61 玩转Spring全家桶/67 如何在低版本 Spring 中快速实现类似自动配置的功能[加微信ixuexi66获取更多课程].mp4 size:43428198]] transfers:260]: <nil>
+2019/10/15 14:19:11 DEBUG : 61 玩转Spring全家桶/67 如何在低版本 Spring 中快速实现类似自动配置的功能[加微信ixuexi66获取更多课程].mp4: MD5 = 952a40527692beb8554dfba76b2d4fee OK
+2019/10/15 14:19:11 INFO  : 61 玩转Spring全家桶/67 如何在低版本 Spring 中快速实现类似自动配置的功能[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:12 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:12 DEBUG : rc: "core/stats": reply map[bytes:16464699068 checks:0 deletes:0 elapsedTime:373.0840888 errors:0 fatalError:false retryError:false speed:4.4131335434211634e+07 transferring:[map[name:61 玩转Spring全家桶/68了解起步依赖及其实现原理[加微信ixuexi66获取更多课程].mp4 size:46835633] map[name:61 玩转Spring全家桶/69 定制自己的起步依赖[加微信ixuexi66获取更多课程].mp4 size:13580667] map[name:61 玩转Spring全家桶/70深挖 Spring Boot 的配置加载机制[加微信ixuexi66获取更多课程].mp4 size:22300285]] transfers:261]: <nil>
+2019/10/15 14:19:12 DEBUG : 61 玩转Spring全家桶/69 定制自己的起步依赖[加微信ixuexi66获取更多课程].mp4: MD5 = ae1dac8056327ca206c575d95b58daa4 OK
+2019/10/15 14:19:12 INFO  : 61 玩转Spring全家桶/69 定制自己的起步依赖[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:14 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:14 DEBUG : rc: "core/stats": reply map[bytes:16478279735 checks:0 deletes:0 elapsedTime:377.3038033 errors:0 fatalError:false retryError:false speed:4.3673770555389464e+07 transferring:[map[name:61 玩转Spring全家桶/70深挖 Spring Boot 的配置加载机制[加微信ixuexi66获取更多课程].mp4 size:22300285] map[name:61 玩转Spring全家桶/68了解起步依赖及其实现原理[加微信ixuexi66获取更多课程].mp4 size:46835633] map[name:61 玩转Spring全家桶/71理解配置背后的 PropertySource 抽象[加微信ixuexi66获取更多课程].mp4 size:26855411]] transfers:262]: <nil>
+2019/10/15 14:19:14 DEBUG : 61 玩转Spring全家桶/71理解配置背后的 PropertySource 抽象[加微信ixuexi66获取更多课程].mp4: MD5 = 2d6430b533ad1b12d42a245e022226bb OK
+2019/10/15 14:19:14 INFO  : 61 玩转Spring全家桶/71理解配置背后的 PropertySource 抽象[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:15 DEBUG : 61 玩转Spring全家桶/68了解起步依赖及其实现原理[加微信ixuexi66获取更多课程].mp4: MD5 = d5901f0a80d36e6d139d310c15b81d4b OK
+2019/10/15 14:19:15 INFO  : 61 玩转Spring全家桶/68了解起步依赖及其实现原理[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:16 DEBUG : 61 玩转Spring全家桶/70深挖 Spring Boot 的配置加载机制[加微信ixuexi66获取更多课程].mp4: MD5 = 72e4db9fdac4376912d4f7e5e08ff14b OK
+2019/10/15 14:19:16 INFO  : 61 玩转Spring全家桶/70深挖 Spring Boot 的配置加载机制[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:17 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:17 DEBUG : rc: "core/stats": reply map[bytes:16574271064 checks:0 deletes:0 elapsedTime:377.7545978 errors:0 fatalError:false retryError:false speed:4.387576262612468e+07 transferring:[map[name:61 玩转Spring全家桶/74 通过 Micrometer 获取运行数据[加微信ixuexi66获取更多课程].mp4 size:31044772] map[name:61 玩转Spring全家桶/73 动手定制自己的 Health Indicator[加微信ixuexi66获取更多课程].mp4 size:30015245] map[name:61 玩转Spring全家桶/72认识 Spring Boot 的各类 Actuator Endpoint[加微信ixuexi66获取更多课程].mp4 size:28649912]] transfers:265]: <nil>
+2019/10/15 14:19:17 DEBUG : 61 玩转Spring全家桶/73 动手定制自己的 Health Indicator[加微信ixuexi66获取更多课程].mp4: MD5 = ddf044773aa790edc384e8dcc69d1222 OK
+2019/10/15 14:19:17 INFO  : 61 玩转Spring全家桶/73 动手定制自己的 Health Indicator[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:19 DEBUG : 61 玩转Spring全家桶/74 通过 Micrometer 获取运行数据[加微信ixuexi66获取更多课程].mp4: MD5 = 722a9ca28bf2c2b46284f7384c942ca3 OK
+2019/10/15 14:19:19 INFO  : 61 玩转Spring全家桶/74 通过 Micrometer 获取运行数据[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:19 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:19 DEBUG : rc: "core/stats": reply map[bytes:16635331081 checks:0 deletes:0 elapsedTime:380.6688046 errors:0 fatalError:false retryError:false speed:4.37002740439425e+07 transferring:[map[name:61 玩转Spring全家桶/75通过 Spring Boot Admin 了解程序的运行状态[加微信 ixuexi66 获取更多课程].mp4 size:31781094] map[name:61 玩转Spring全家桶/75通过 Spring Boot Admin 了解程序的运行状态[加微信 ixuexi66 获取更多课程](1).mp4 size:31781094] map[name:61 玩转Spring全家桶/72认识 Spring Boot 的各类 Actuator Endpoint[加微信ixuexi66获取更多课程].mp4 size:28649912]] transfers:267]: <nil>
+2019/10/15 14:19:20 DEBUG : 61 玩转Spring全家桶/75通过 Spring Boot Admin 了解程序的运行状态[加微信 ixuexi66 获取更多课程](1).mp4: MD5 = 333f37d850d2776194b7ea0cff53cd7e OK
+2019/10/15 14:19:20 INFO  : 61 玩转Spring全家桶/75通过 Spring Boot Admin 了解程序的运行状态[加微信 ixuexi66 获取更多课程](1).mp4: Copied (server side copy)
+2019/10/15 14:19:21 DEBUG : 61 玩转Spring全家桶/75通过 Spring Boot Admin 了解程序的运行状态[加微信 ixuexi66 获取更多课程].mp4: MD5 = 333f37d850d2776194b7ea0cff53cd7e OK
+2019/10/15 14:19:21 INFO  : 61 玩转Spring全家桶/75通过 Spring Boot Admin 了解程序的运行状态[加微信 ixuexi66 获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:22 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:22 DEBUG : rc: "core/stats": reply map[bytes:16698893269 checks:0 deletes:0 elapsedTime:383.3606094 errors:0 fatalError:false retryError:false speed:4.355923081178199e+07 transferring:[map[name:61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程](1).mp4 size:26646423] map[name:61 玩转Spring全家桶/72认识 Spring Boot 的各类 Actuator Endpoint[加微信ixuexi66获取更多课程].mp4 size:28649912] map[name:61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程].mp4 size:26646423]] transfers:269]: <nil>
+2019/10/15 14:19:22 DEBUG : 61 玩转Spring全家桶/72认识 Spring Boot 的各类 Actuator Endpoint[加微信ixuexi66获取更多课程].mp4: MD5 = d9a9a74b941546eecb3aa7343f009a1f OK
+2019/10/15 14:19:22 INFO  : 61 玩转Spring全家桶/72认识 Spring Boot 的各类 Actuator Endpoint[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:23 DEBUG : 61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程].mp4: MD5 = 9ce6e380ba54bbfa8b97cd9d9447ddcd OK
+2019/10/15 14:19:23 INFO  : 61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:24 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:24 DEBUG : rc: "core/stats": reply map[bytes:16754189604 checks:0 deletes:0 elapsedTime:386.1092584 errors:0 fatalError:false retryError:false speed:4.3392353950350136e+07 transferring:[map[name:61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程](1).mp4 size:26646423] map[name:61 玩转Spring全家桶/77 通过 Micrometer 获取运行数据[加微信ixuexi66获取更多课程].mp4 size:18158193] map[name:61 玩转Spring全家桶/78 通过 Spring Boot Admin 了解程序的运行状态[加微信ixuexi66获取更多课程].mp4 size:16342549]] transfers:271]: <nil>
+2019/10/15 14:19:25 DEBUG : 61 玩转Spring全家桶/77 通过 Micrometer 获取运行数据[加微信ixuexi66获取更多课程].mp4: MD5 = a601a2265892f981289a9d38bb19f155 OK
+2019/10/15 14:19:25 INFO  : 61 玩转Spring全家桶/77 通过 Micrometer 获取运行数据[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:27 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:27 DEBUG : rc: "core/stats": reply map[bytes:16772347797 checks:0 deletes:0 elapsedTime:390.22625 errors:0 fatalError:false retryError:false speed:4.298108545234976e+07 transferring:[map[name:61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程](1).mp4 size:26646423] map[name:61 玩转Spring全家桶/79 如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程].mp4 size:14612918] map[name:61 玩转Spring全家桶/78 通过 Spring Boot Admin 了解程序的运行状态[加微信ixuexi66获取更多课程].mp4 size:16342549]] transfers:272]: <nil>
+2019/10/15 14:19:28 DEBUG : 61 玩转Spring全家桶/78 通过 Spring Boot Admin 了解程序的运行状态[加微信ixuexi66获取更多课程].mp4: MD5 = 890da37f77f4775b5db67268a0183f10 OK
+2019/10/15 14:19:28 INFO  : 61 玩转Spring全家桶/78 通过 Spring Boot Admin 了解程序的运行状态[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:29 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:29 DEBUG : rc: "core/stats": reply map[bytes:16788690346 checks:0 deletes:0 elapsedTime:392.1740414 errors:0 fatalError:false retryError:false speed:4.2809285097165026e+07 transferring:[map[name:61 玩转Spring全家桶/79 如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程].mp4 size:14612918] map[name:61 玩转Spring全家桶/80-如何配置容器支持HTTP2（上）.hd.mp4 size:16724988] map[name:61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程](1).mp4 size:26646423]] transfers:273]: <nil>
+2019/10/15 14:19:32 DEBUG : 61 玩转Spring全家桶/80-如何配置容器支持HTTP2（上）.hd.mp4: MD5 = 765384f56cf01ea4db97f14201bfc8e8 OK
+2019/10/15 14:19:32 INFO  : 61 玩转Spring全家桶/80-如何配置容器支持HTTP2（上）.hd.mp4: Copied (server side copy)
+2019/10/15 14:19:32 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:32 DEBUG : rc: "core/stats": reply map[bytes:16805415334 checks:0 deletes:0 elapsedTime:393.2481715 errors:0 fatalError:false retryError:false speed:4.273488486900695e+07 transferring:[map[name:61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程](1).mp4 size:26646423] map[name:61 玩转Spring全家桶/79 如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程].mp4 size:14612918] map[name:61 玩转Spring全家桶/81-如何配置容器支持HTTP2（下）.hd.mp4 size:13507814]] transfers:274]: <nil>
+2019/10/15 14:19:32 DEBUG : 61 玩转Spring全家桶/79 如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程].mp4: MD5 = 4a6428a0dbf7ecf24a68cbf528b74202 OK
+2019/10/15 14:19:32 INFO  : 61 玩转Spring全家桶/79 如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:19:33 DEBUG : 61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程](1).mp4: MD5 = 9ce6e380ba54bbfa8b97cd9d9447ddcd OK
+2019/10/15 14:19:33 INFO  : 61 玩转Spring全家桶/76如何定制 Web 容器的运行参数[加微信ixuexi66获取更多课程](1).mp4: Copied (server side copy)
+2019/10/15 14:19:36 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:36 DEBUG : rc: "core/stats": reply map[bytes:16846674675 checks:0 deletes:0 elapsedTime:400.7720511 errors:0 fatalError:false retryError:false speed:4.20355527007457e+07 transferring:[map[name:61 玩转Spring全家桶/81-如何配置容器支持HTTP2（下）.hd.mp4 size:13507814] map[name:61 玩转Spring全家桶/83-了解可执行Jar背后的秘密.hd.mp4 size:33558744] map[name:61 玩转Spring全家桶/82-如何编写命令行运行的程序.hd.mp4 size:12628003]] transfers:276]: <nil>
+2019/10/15 14:19:37 DEBUG : 61 玩转Spring全家桶/82-如何编写命令行运行的程序.hd.mp4: MD5 = 1d28a2bc830753720f7d316a34d58011 OK
+2019/10/15 14:19:37 INFO  : 61 玩转Spring全家桶/82-如何编写命令行运行的程序.hd.mp4: Copied (server side copy)
+2019/10/15 14:19:38 DEBUG : 61 玩转Spring全家桶/83-了解可执行Jar背后的秘密.hd.mp4: MD5 = a70f18f7ba7e459809b5b0f5d6974cf0 OK
+2019/10/15 14:19:38 INFO  : 61 玩转Spring全家桶/83-了解可执行Jar背后的秘密.hd.mp4: Copied (server side copy)
+2019/10/15 14:19:38 DEBUG : 61 玩转Spring全家桶/81-如何配置容器支持HTTP2（下）.hd.mp4: MD5 = 36a497936866500a14f88ad4a14cfa64 OK
+2019/10/15 14:19:38 INFO  : 61 玩转Spring全家桶/81-如何配置容器支持HTTP2（下）.hd.mp4: Copied (server side copy)
+2019/10/15 14:19:39 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:39 DEBUG : rc: "core/stats": reply map[bytes:16906369236 checks:0 deletes:0 elapsedTime:400.6623162 errors:0 fatalError:false retryError:false speed:4.219605526255878e+07 transferring:[map[name:61 玩转Spring全家桶/86-如何理解云原生(CloudNative).hd.mp4 size:13904409] map[name:61 玩转Spring全家桶/85-SpringBucks实战项目进度小结.hd.mp4 size:3805430] map[name:61 玩转Spring全家桶/84-如何将SpringBoot应用打包成Docker镜像文件.hd.mp4 size:13486950]] transfers:279]: <nil>
+2019/10/15 14:19:39 DEBUG : 61 玩转Spring全家桶/84-如何将SpringBoot应用打包成Docker镜像文件.hd.mp4: MD5 = d2329ab93950a48f275dfb2c43eb496b OK
+2019/10/15 14:19:39 INFO  : 61 玩转Spring全家桶/84-如何将SpringBoot应用打包成Docker镜像文件.hd.mp4: Copied (server side copy)
+2019/10/15 14:19:40 DEBUG : 61 玩转Spring全家桶/85-SpringBucks实战项目进度小结.hd.mp4: MD5 = 8ef40ae69a5ae3e1231ca055df78aef0 OK
+2019/10/15 14:19:40 INFO  : 61 玩转Spring全家桶/85-SpringBucks实战项目进度小结.hd.mp4: Copied (server side copy)
+2019/10/15 14:19:42 INFO  : 
+Transferred:   	   15.761G / 20.715 GBytes, 76%, 39.883 MBytes/s, ETA 2m7s
+Errors:                 0
+Checks:                 0 / 0, -
+Transferred:          281 / 342, 82%
+Elapsed time:     6m44.6s
+Transferring:
+ *              61 玩转Spring全家桶/87-简单理解微服务.hd.mp4: transferring
+ *          71-Linux实战技能100讲/100以上/100丨awk函数.mp4: transferring
+ * 61 玩转Spring全家桶/86-如何理解云原生(CloudNative).hd.mp4: transferring
+
+2019/10/15 14:19:42 DEBUG : 61 玩转Spring全家桶/86-如何理解云原生(CloudNative).hd.mp4: MD5 = 452d4eefe2aed18ce9799050ae47da0e OK
+2019/10/15 14:19:42 INFO  : 61 玩转Spring全家桶/86-如何理解云原生(CloudNative).hd.mp4: Copied (server side copy)
+2019/10/15 14:19:42 DEBUG : 61 玩转Spring全家桶/87-简单理解微服务.hd.mp4: MD5 = c8a2f8e0e69682355c105e5f0e772ae8 OK
+2019/10/15 14:19:42 INFO  : 61 玩转Spring全家桶/87-简单理解微服务.hd.mp4: Copied (server side copy)
+2019/10/15 14:19:43 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:43 DEBUG : rc: "core/stats": reply map[bytes:16946671191 checks:0 deletes:0 elapsedTime:405.3354856 errors:0 fatalError:false retryError:false speed:4.1808999688035205e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/101丨防火墙概述.mp4 size:203617807] map[name:71-Linux实战技能100讲/100以上/100丨awk函数.mp4 size:134526741] map[name:71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4 size:158768715]] transfers:283]: <nil>
+2019/10/15 14:19:46 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:46 DEBUG : rc: "core/stats": reply map[bytes:16946671191 checks:0 deletes:0 elapsedTime:410.4310364 errors:0 fatalError:false retryError:false speed:4.128993591625957e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/101丨防火墙概述.mp4 size:203617807] map[name:71-Linux实战技能100讲/100以上/100丨awk函数.mp4 size:134526741] map[name:71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4 size:158768715]] transfers:283]: <nil>
+2019/10/15 14:19:48 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:48 DEBUG : rc: "core/stats": reply map[bytes:16946671191 checks:0 deletes:0 elapsedTime:415.3698312 errors:0 fatalError:false retryError:false speed:4.079899385576754e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/101丨防火墙概述.mp4 size:203617807] map[name:71-Linux实战技能100讲/100以上/100丨awk函数.mp4 size:134526741] map[name:71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4 size:158768715]] transfers:283]: <nil>
+2019/10/15 14:19:51 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:51 DEBUG : rc: "core/stats": reply map[bytes:16946671191 checks:0 deletes:0 elapsedTime:420.294662 errors:0 fatalError:false retryError:false speed:4.032092891772202e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/101丨防火墙概述.mp4 size:203617807] map[name:71-Linux实战技能100讲/100以上/100丨awk函数.mp4 size:134526741] map[name:71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4 size:158768715]] transfers:283]: <nil>
+2019/10/15 14:19:53 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:53 DEBUG : rc: "core/stats": reply map[bytes:16946671191 checks:0 deletes:0 elapsedTime:425.2095192 errors:0 fatalError:false retryError:false speed:3.985487254115077e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/101丨防火墙概述.mp4 size:203617807] map[name:71-Linux实战技能100讲/100以上/100丨awk函数.mp4 size:134526741] map[name:71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4 size:158768715]] transfers:283]: <nil>
+2019/10/15 14:19:54 DEBUG : 71-Linux实战技能100讲/100以上/100丨awk函数.mp4: MD5 = e588458e1e3751666e96818e517fefa3 OK
+2019/10/15 14:19:54 INFO  : 71-Linux实战技能100讲/100以上/100丨awk函数.mp4: Copied (server side copy)
+2019/10/15 14:19:56 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:56 DEBUG : rc: "core/stats": reply map[bytes:17081197932 checks:0 deletes:0 elapsedTime:418.1031155 errors:0 fatalError:false retryError:false speed:4.085403169400683e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/103丨iptables过滤规则的使用.mp4 size:256268232] map[name:71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4 size:158768715] map[name:71-Linux实战技能100讲/100以上/101丨防火墙概述.mp4 size:203617807]] transfers:284]: <nil>
+2019/10/15 14:19:58 DEBUG : 71-Linux实战技能100讲/100以上/101丨防火墙概述.mp4: MD5 = 71b4c6d8c0a3fca2dc678baf101e8bfa OK
+2019/10/15 14:19:58 INFO  : 71-Linux实战技能100讲/100以上/101丨防火墙概述.mp4: Copied (server side copy)
+2019/10/15 14:19:58 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:19:58 DEBUG : rc: "core/stats": reply map[bytes:17284815739 checks:0 deletes:0 elapsedTime:419.3896763 errors:0 fatalError:false retryError:false speed:4.1214213691411264e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/104丨iptablesnat表的使用.mp4 size:186976390] map[name:71-Linux实战技能100讲/100以上/103丨iptables过滤规则的使用.mp4 size:256268232] map[name:71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4 size:158768715]] transfers:285]: <nil>
+2019/10/15 14:19:59 DEBUG : 71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4: MD5 = 3b078d47a76a82aa649cd30db890eb92 OK
+2019/10/15 14:19:59 INFO  : 71-Linux实战技能100讲/100以上/102丨iptables规则的基本使用演示.mp4: Copied (server side copy)
+2019/10/15 14:19:59 DEBUG : 71-Linux实战技能100讲/100以上/103丨iptables过滤规则的使用.mp4: MD5 = 54d6db23bace65930b1c4a978e998408 OK
+2019/10/15 14:19:59 INFO  : 71-Linux实战技能100讲/100以上/103丨iptables过滤规则的使用.mp4: Copied (server side copy)
+2019/10/15 14:20:01 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:01 DEBUG : rc: "core/stats": reply map[bytes:17699852686 checks:0 deletes:0 elapsedTime:423.3660431 errors:0 fatalError:false retryError:false speed:4.180744529343194e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/104丨iptablesnat表的使用.mp4 size:186976390] map[name:61 玩转Spring全家桶/88-12-FactorApp（上）.hd.mp4 size:12821324] map[name:71-Linux实战技能100讲/100以上/105丨firewalld.mp4 size:545318477]] transfers:287]: <nil>
+2019/10/15 14:20:01 DEBUG : 71-Linux实战技能100讲/100以上/105丨firewalld.mp4: MD5 = 157b66d9ee5cd630887cf213ce6a2992 OK
+2019/10/15 14:20:01 INFO  : 71-Linux实战技能100讲/100以上/105丨firewalld.mp4: Copied (server side copy)
+2019/10/15 14:20:01 DEBUG : 61 玩转Spring全家桶/88-12-FactorApp（上）.hd.mp4: MD5 = dd3166405c0208a6819fe16cbde3dadc OK
+2019/10/15 14:20:01 INFO  : 61 玩转Spring全家桶/88-12-FactorApp（上）.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:03 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:03 DEBUG : rc: "core/stats": reply map[bytes:18257992487 checks:0 deletes:0 elapsedTime:426.0917532 errors:0 fatalError:false retryError:false speed:4.284990814743607e+07 transferring:[map[name:61 玩转Spring全家桶/90-认识SpringCloud的组成部分.hd.mp4 size:10606211] map[name:61 玩转Spring全家桶/89-12-FactorApp（下）.hd.mp4 size:17150703] map[name:71-Linux实战技能100讲/100以上/104丨iptablesnat表的使用.mp4 size:186976390]] transfers:289]: <nil>
+2019/10/15 14:20:04 DEBUG : 61 玩转Spring全家桶/89-12-FactorApp（下）.hd.mp4: MD5 = 31b212333b6d65b34d77c89b55c8fa6b OK
+2019/10/15 14:20:04 INFO  : 61 玩转Spring全家桶/89-12-FactorApp（下）.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:05 DEBUG : 61 玩转Spring全家桶/90-认识SpringCloud的组成部分.hd.mp4: MD5 = 8fe842e73d1d6909b1c5cb5ec3123a5f OK
+2019/10/15 14:20:05 INFO  : 61 玩转Spring全家桶/90-认识SpringCloud的组成部分.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:05 DEBUG : 71-Linux实战技能100讲/100以上/104丨iptablesnat表的使用.mp4: MD5 = 25d0c9f71de7a05298f81954323ce774 OK
+2019/10/15 14:20:05 INFO  : 71-Linux实战技能100讲/100以上/104丨iptablesnat表的使用.mp4: Copied (server side copy)
+2019/10/15 14:20:06 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:06 DEBUG : rc: "core/stats": reply map[bytes:18472725791 checks:0 deletes:0 elapsedTime:427.0611614 errors:0 fatalError:false retryError:false speed:4.325545720533883e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/107丨SSH服务演示.mp4 size:358598144] map[name:71-Linux实战技能100讲/100以上/106丨SSH介绍之Telnet明文漏洞.mp4 size:231326462] map[name:61 玩转Spring全家桶/91-使用Eureka作为服务注册中心.hd.mp4 size:19572662]] transfers:292]: <nil>
+2019/10/15 14:20:08 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:08 DEBUG : rc: "core/stats": reply map[bytes:18472725791 checks:0 deletes:0 elapsedTime:432.065779 errors:0 fatalError:false retryError:false speed:4.275442927638108e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/107丨SSH服务演示.mp4 size:358598144] map[name:71-Linux实战技能100讲/100以上/106丨SSH介绍之Telnet明文漏洞.mp4 size:231326462] map[name:61 玩转Spring全家桶/91-使用Eureka作为服务注册中心.hd.mp4 size:19572662]] transfers:292]: <nil>
+2019/10/15 14:20:08 DEBUG : 61 玩转Spring全家桶/91-使用Eureka作为服务注册中心.hd.mp4: MD5 = eb79d23496e67e92397e5ef359c04936 OK
+2019/10/15 14:20:08 INFO  : 61 玩转Spring全家桶/91-使用Eureka作为服务注册中心.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:08 DEBUG : 71-Linux实战技能100讲/100以上/107丨SSH服务演示.mp4: MD5 = d07a928c212f07389a808d1a51ff7ebd OK
+2019/10/15 14:20:08 INFO  : 71-Linux实战技能100讲/100以上/107丨SSH服务演示.mp4: Copied (server side copy)
+2019/10/15 14:20:08 DEBUG : 71-Linux实战技能100讲/100以上/106丨SSH介绍之Telnet明文漏洞.mp4: MD5 = 00832060c4b7dc996d2474c253491319 OK
+2019/10/15 14:20:08 INFO  : 71-Linux实战技能100讲/100以上/106丨SSH介绍之Telnet明文漏洞.mp4: Copied (server side copy)
+2019/10/15 14:20:11 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:11 DEBUG : rc: "core/stats": reply map[bytes:19082223059 checks:0 deletes:0 elapsedTime:433.973677 errors:0 fatalError:false retryError:false speed:4.397092282396658e+07 transferring:[map[name:61 玩转Spring全家桶/92-深入理解服务发现背后的DiscoveryClient.hd.mp4 size:26380203] map[name:71-Linux实战技能100讲/100以上/108丨FTP服务搭建.mp4 size:128585368] map[name:71-Linux实战技能100讲/100以上/109丨vsftpd配置文件介绍.mp4 size:248824574]] transfers:295]: <nil>
+2019/10/15 14:20:12 DEBUG : 61 玩转Spring全家桶/92-深入理解服务发现背后的DiscoveryClient.hd.mp4: MD5 = b68d8e27e6d98997612387f336bab23b OK
+2019/10/15 14:20:12 INFO  : 61 玩转Spring全家桶/92-深入理解服务发现背后的DiscoveryClient.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:13 DEBUG : 71-Linux实战技能100讲/100以上/109丨vsftpd配置文件介绍.mp4: MD5 = df018e774839faac98a0bc796a040983 OK
+2019/10/15 14:20:13 INFO  : 71-Linux实战技能100讲/100以上/109丨vsftpd配置文件介绍.mp4: Copied (server side copy)
+2019/10/15 14:20:13 DEBUG : 71-Linux实战技能100讲/100以上/108丨FTP服务搭建.mp4: MD5 = b60ed85ae2ebfa884431b989c25b6ee7 OK
+2019/10/15 14:20:13 INFO  : 71-Linux实战技能100讲/100以上/108丨FTP服务搭建.mp4: Copied (server side copy)
+2019/10/15 14:20:13 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:13 DEBUG : rc: "core/stats": reply map[bytes:19486013204 checks:0 deletes:0 elapsedTime:434.4144991 errors:0 fatalError:false retryError:false speed:4.4855807631582804e+07 transferring:[map[name:61 玩转Spring全家桶/94-使用Feign访问服务.hd.mp4 size:15684207] map[name:61 玩转Spring全家桶/93-使用SpringCloudLoadbalancer访问服务.hd.mp4 size:19848875] map[name:61 玩转Spring全家桶/95-使用Zookeeper作为服务注册中心.hd.mp4 size:25258114]] transfers:298]: <nil>
+2019/10/15 14:20:15 DEBUG : 61 玩转Spring全家桶/93-使用SpringCloudLoadbalancer访问服务.hd.mp4: MD5 = 2296704cd75e3eee208467109b3f2160 OK
+2019/10/15 14:20:15 INFO  : 61 玩转Spring全家桶/93-使用SpringCloudLoadbalancer访问服务.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:16 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:16 DEBUG : rc: "core/stats": reply map[bytes:19505862079 checks:0 deletes:0 elapsedTime:437.9081565 errors:0 fatalError:false retryError:false speed:4.4543271892675966e+07 transferring:[map[name:61 玩转Spring全家桶/95-使用Zookeeper作为服务注册中心.hd.mp4 size:25258114] map[name:61 玩转Spring全家桶/94-使用Feign访问服务.hd.mp4 size:15684207] map[name:71-Linux实战技能100讲/100以上/110丨vsftp虚拟用户.avi size:197233002]] transfers:299]: <nil>
+2019/10/15 14:20:17 DEBUG : 61 玩转Spring全家桶/94-使用Feign访问服务.hd.mp4: MD5 = c35a721adccf750b73ff78e340f55248 OK
+2019/10/15 14:20:17 INFO  : 61 玩转Spring全家桶/94-使用Feign访问服务.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:18 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:18 DEBUG : rc: "core/stats": reply map[bytes:19521546286 checks:0 deletes:0 elapsedTime:440.8911809 errors:0 fatalError:false retryError:false speed:4.427747056802151e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/110丨vsftp虚拟用户.avi size:197233002] map[name:61 玩转Spring全家桶/95-使用Zookeeper作为服务注册中心.hd.mp4 size:25258114] map[name:61 玩转Spring全家桶/96-使用Consul作为服务注册中心.hd.mp4 size:8257057]] transfers:300]: <nil>
+2019/10/15 14:20:19 DEBUG : 61 玩转Spring全家桶/95-使用Zookeeper作为服务注册中心.hd.mp4: MD5 = 4aeb86d8a7c629891a8b6e0994d67bfc OK
+2019/10/15 14:20:19 INFO  : 61 玩转Spring全家桶/95-使用Zookeeper作为服务注册中心.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:20 DEBUG : 71-Linux实战技能100讲/100以上/110丨vsftp虚拟用户.avi: MD5 = 1f65987fdfd2ab7f533fdeb98e3e84be OK
+2019/10/15 14:20:20 INFO  : 71-Linux实战技能100讲/100以上/110丨vsftp虚拟用户.avi: Copied (server side copy)
+2019/10/15 14:20:21 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:21 DEBUG : rc: "core/stats": reply map[bytes:19744037402 checks:0 deletes:0 elapsedTime:442.6325257 errors:0 fatalError:false retryError:false speed:4.460593439394416e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/112丨NFS服务.mp4 size:137225106] map[name:71-Linux实战技能100讲/100以上/111丨samba服务演示.mp4 size:230158507] map[name:61 玩转Spring全家桶/96-使用Consul作为服务注册中心.hd.mp4 size:8257057]] transfers:302]: <nil>
+2019/10/15 14:20:21 DEBUG : 71-Linux实战技能100讲/100以上/111丨samba服务演示.mp4: MD5 = 23753ee2b829700fe745ea6817a2bd82 OK
+2019/10/15 14:20:21 INFO  : 71-Linux实战技能100讲/100以上/111丨samba服务演示.mp4: Copied (server side copy)
+2019/10/15 14:20:22 DEBUG : 61 玩转Spring全家桶/96-使用Consul作为服务注册中心.hd.mp4: MD5 = 5ef07a2dfd55836b220026d586286498 OK
+2019/10/15 14:20:22 INFO  : 61 玩转Spring全家桶/96-使用Consul作为服务注册中心.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:23 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:23 DEBUG : rc: "core/stats": reply map[bytes:19982452966 checks:0 deletes:0 elapsedTime:445.7671421 errors:0 fatalError:false retryError:false speed:4.482711056688267e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/112丨NFS服务.mp4 size:137225106] map[name:71-Linux实战技能100讲/100以上/113丨Nginx基本配置文件.mp4 size:307319132] map[name:71-Linux实战技能100讲/100以上/114丨Nginx域名虚拟主机.mp4 size:169223231]] transfers:304]: <nil>
+2019/10/15 14:20:25 DEBUG : 71-Linux实战技能100讲/100以上/114丨Nginx域名虚拟主机.mp4: MD5 = d10643c9295cf0cd74d7147ca4c35413 OK
+2019/10/15 14:20:25 INFO  : 71-Linux实战技能100讲/100以上/114丨Nginx域名虚拟主机.mp4: Copied (server side copy)
+2019/10/15 14:20:26 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:26 DEBUG : rc: "core/stats": reply map[bytes:20151676197 checks:0 deletes:0 elapsedTime:447.6191894 errors:0 fatalError:false retryError:false speed:4.501968788248737e+07 transferring:[map[name:71-Linux实战技能100讲/100以上/115丨LNMP.mp4 size:257073782] map[name:71-Linux实战技能100讲/100以上/112丨NFS服务.mp4 size:137225106] map[name:71-Linux实战技能100讲/100以上/113丨Nginx基本配置文件.mp4 size:307319132]] transfers:305]: <nil>
+2019/10/15 14:20:27 DEBUG : 71-Linux实战技能100讲/100以上/112丨NFS服务.mp4: MD5 = 590a4953dbc4e8c5b8d8e37372e35c2a OK
+2019/10/15 14:20:27 INFO  : 71-Linux实战技能100讲/100以上/112丨NFS服务.mp4: Copied (server side copy)
+2019/10/15 14:20:27 DEBUG : 71-Linux实战技能100讲/100以上/113丨Nginx基本配置文件.mp4: MD5 = 7b1a0116b35af7a71a72b8b53bb39737 OK
+2019/10/15 14:20:27 INFO  : 71-Linux实战技能100讲/100以上/113丨Nginx基本配置文件.mp4: Copied (server side copy)
+2019/10/15 14:20:28 DEBUG : 71-Linux实战技能100讲/100以上/115丨LNMP.mp4: MD5 = d96d93b83ca5bec0fa4a0ad8c92be679 OK
+2019/10/15 14:20:28 INFO  : 71-Linux实战技能100讲/100以上/115丨LNMP.mp4: Copied (server side copy)
+2019/10/15 14:20:28 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:28 DEBUG : rc: "core/stats": reply map[bytes:20853294217 checks:0 deletes:0 elapsedTime:449.4153869 errors:0 fatalError:false retryError:false speed:4.6400935136740424e+07 transferring:[map[name:61 玩转Spring全家桶/98-如何定制自己的DiscoveryClient.hd.mp4 size:24222199] map[name:61 玩转Spring全家桶/97-使用Nacos作为服务注册中心.hd.mp4 size:27306237] map[name:71-Linux实战技能100讲/100以上/116丨DNS.mp4 size:414089335]] transfers:308]: <nil>
+2019/10/15 14:20:30 DEBUG : 71-Linux实战技能100讲/100以上/116丨DNS.mp4: MD5 = 8173d6c957f15b5537ab175fe9e9e871 OK
+2019/10/15 14:20:30 INFO  : 71-Linux实战技能100讲/100以上/116丨DNS.mp4: Copied (server side copy)
+2019/10/15 14:20:30 DEBUG : 61 玩转Spring全家桶/98-如何定制自己的DiscoveryClient.hd.mp4: MD5 = e6bf397ec5ba86a9faa1d866895e367c OK
+2019/10/15 14:20:30 INFO  : 61 玩转Spring全家桶/98-如何定制自己的DiscoveryClient.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:31 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:31 DEBUG : rc: "core/stats": reply map[bytes:21291605751 checks:0 deletes:0 elapsedTime:452.6856413 errors:0 fatalError:false retryError:false speed:4.7033976359081835e+07 transferring:[map[name:61 玩转Spring全家桶/99-SpringBucks实战项目进度小结.hd.mp4 size:5916037] map[name:61 玩转Spring全家桶/97-使用Nacos作为服务注册中心.hd.mp4 size:27306237] map[name:71-Linux实战技能100讲/100以上/117丨NAS演示.mp4 size:327908902]] transfers:310]: <nil>
+2019/10/15 14:20:31 DEBUG : 61 玩转Spring全家桶/97-使用Nacos作为服务注册中心.hd.mp4: MD5 = dd275e31f7a7defe1eeda0705afda666 OK
+2019/10/15 14:20:31 INFO  : 61 玩转Spring全家桶/97-使用Nacos作为服务注册中心.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:33 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:33 DEBUG : rc: "core/stats": reply map[bytes:21318911988 checks:0 deletes:0 elapsedTime:456.8923949 errors:0 fatalError:false retryError:false speed:4.666068471694756e+07 transferring:[map[name:61 玩转Spring全家桶/99-SpringBucks实战项目进度小结.hd.mp4 size:5916037] map[name:61 玩转Spring全家桶/PDF 课件和源代码下载地址.txt size:59] map[name:71-Linux实战技能100讲/100以上/117丨NAS演示.mp4 size:327908902]] transfers:311]: <nil>
+2019/10/15 14:20:34 DEBUG : 71-Linux实战技能100讲/100以上/117丨NAS演示.mp4: MD5 = 35edca452b9fb5398c7875bfc8eb9851 OK
+2019/10/15 14:20:34 INFO  : 71-Linux实战技能100讲/100以上/117丨NAS演示.mp4: Copied (server side copy)
+2019/10/15 14:20:34 DEBUG : 61 玩转Spring全家桶/99-SpringBucks实战项目进度小结.hd.mp4: MD5 = 91dedaa7aa2f46d149f05d412374dd23 OK
+2019/10/15 14:20:34 INFO  : 61 玩转Spring全家桶/99-SpringBucks实战项目进度小结.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:36 DEBUG : 61 玩转Spring全家桶/PDF 课件和源代码下载地址.txt: MD5 = 4682aa8b3919443d156dbc5a0d281424 OK
+2019/10/15 14:20:36 INFO  : 61 玩转Spring全家桶/PDF 课件和源代码下载地址.txt: Copied (server side copy)
+2019/10/15 14:20:36 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:36 DEBUG : rc: "core/stats": reply map[bytes:21652736986 checks:0 deletes:0 elapsedTime:457.1038294 errors:0 fatalError:false retryError:false speed:4.736940623407519e+07 transferring:[map[name:61 玩转Spring全家桶/课程答疑（上)[加微信 ixuexi66 获取更多课程].mp4 size:83528062] map[name:61 玩转Spring全家桶/课程答疑（下)[加微信 ixuexi66 获取更多课程].mp4 size:48266388] map[name:61 玩转Spring全家桶/课程答疑[加微信 ixuexi66 获取更多课程].mp4 size:42754515]] transfers:314]: <nil>
+2019/10/15 14:20:37 DEBUG : 61 玩转Spring全家桶/课程答疑（上)[加微信 ixuexi66 获取更多课程].mp4: MD5 = 9916039cb3b47bd5f400054e3becff4d OK
+2019/10/15 14:20:37 INFO  : 61 玩转Spring全家桶/课程答疑（上)[加微信 ixuexi66 获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:20:38 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:38 DEBUG : rc: "core/stats": reply map[bytes:21736265048 checks:0 deletes:0 elapsedTime:460.6772731 errors:0 fatalError:false retryError:false speed:4.71832806114611e+07 transferring:[map[name:61 玩转Spring全家桶/课程答疑（下)[加微信 ixuexi66 获取更多课程].mp4 size:48266388] map[name:61 玩转Spring全家桶/课程答疑[加微信 ixuexi66 获取更多课程].mp4 size:42754515] map[name:71-Linux实战技能100讲/100以上/118丨结束语.avi size:30120870]] transfers:315]: <nil>
+2019/10/15 14:20:39 DEBUG : 61 玩转Spring全家桶/课程答疑（下)[加微信 ixuexi66 获取更多课程].mp4: MD5 = 3b5c27436c504f29f4ce5f624188bf8d OK
+2019/10/15 14:20:39 INFO  : 61 玩转Spring全家桶/课程答疑（下)[加微信 ixuexi66 获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:20:40 DEBUG : 71-Linux实战技能100讲/100以上/118丨结束语.avi: MD5 = 2018c3ee42101ee200a3b9c81813a92f OK
+2019/10/15 14:20:40 INFO  : 71-Linux实战技能100讲/100以上/118丨结束语.avi: Copied (server side copy)
+2019/10/15 14:20:40 DEBUG : 61 玩转Spring全家桶/课程答疑[加微信 ixuexi66 获取更多课程].mp4: MD5 = 22fce58d9b0ea389cd820813a29a933c OK
+2019/10/15 14:20:40 INFO  : 61 玩转Spring全家桶/课程答疑[加微信 ixuexi66 获取更多课程].mp4: Copied (server side copy)
+2019/10/15 14:20:41 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:41 DEBUG : rc: "core/stats": reply map[bytes:21857406821 checks:0 deletes:0 elapsedTime:462.5253314 errors:0 fatalError:false retryError:false speed:4.725666971545247e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/100-使用Hystrix实现服务熔断（上）.hd.mp4 size:27668838] map[name:61 玩转Spring全家桶/100-123/102-如何观察服务熔断.hd.mp4 size:28337980] map[name:61 玩转Spring全家桶/100-123/101-使用Hystrix实现服务熔断（下）.hd.mp4 size:21196726]] transfers:318]: <nil>
+2019/10/15 14:20:42 INFO  : 
+Transferred:   	   20.356G / 20.790 GBytes, 98%, 44.929 MBytes/s, ETA 9s
+Errors:                 0
+Checks:                 0 / 0, -
+Transferred:          318 / 342, 93%
+Elapsed time:     7m43.9s
+Transferring:
+ *    61 玩转Spring全家桶/100-123/102-如何观察服务熔断.hd.mp4: transferring
+ * 61 玩转Spring全家桶/100-123…ystrix实现服务熔断（上）.hd.mp4: transferring
+ * 61 玩转Spring全家桶/100-123…ystrix实现服务熔断（下）.hd.mp4: transferring
+
+2019/10/15 14:20:43 DEBUG : 61 玩转Spring全家桶/100-123/100-使用Hystrix实现服务熔断（上）.hd.mp4: MD5 = a1f2bff7371dd7c84d3409477060180c OK
+2019/10/15 14:20:43 INFO  : 61 玩转Spring全家桶/100-123/100-使用Hystrix实现服务熔断（上）.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:43 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:43 DEBUG : rc: "core/stats": reply map[bytes:21885075659 checks:0 deletes:0 elapsedTime:464.7892783 errors:0 fatalError:false retryError:false speed:4.7086016568726e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/103-使用Resilience4j实现服务熔断.hd.mp4 size:38653300] map[name:61 玩转Spring全家桶/100-123/102-如何观察服务熔断.hd.mp4 size:28337980] map[name:61 玩转Spring全家桶/100-123/101-使用Hystrix实现服务熔断（下）.hd.mp4 size:21196726]] transfers:319]: <nil>
+2019/10/15 14:20:44 DEBUG : 61 玩转Spring全家桶/100-123/101-使用Hystrix实现服务熔断（下）.hd.mp4: MD5 = f4ffbb202a61aa82fdf06afc98cf638e OK
+2019/10/15 14:20:44 INFO  : 61 玩转Spring全家桶/100-123/101-使用Hystrix实现服务熔断（下）.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:46 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:46 DEBUG : rc: "core/stats": reply map[bytes:21906272385 checks:0 deletes:0 elapsedTime:468.7486896 errors:0 fatalError:false retryError:false speed:4.673351173246672e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/103-使用Resilience4j实现服务熔断.hd.mp4 size:38653300] map[name:61 玩转Spring全家桶/100-123/102-如何观察服务熔断.hd.mp4 size:28337980] map[name:61 玩转Spring全家桶/100-123/104-使用Resilience4j实现服务限流（上）.hd.mp4 size:26781937]] transfers:320]: <nil>
+2019/10/15 14:20:46 DEBUG : 61 玩转Spring全家桶/100-123/102-如何观察服务熔断.hd.mp4: MD5 = 8032a8eabaaaca7e4f3caf3a0259d1cd OK
+2019/10/15 14:20:46 INFO  : 61 玩转Spring全家桶/100-123/102-如何观察服务熔断.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:47 DEBUG : 61 玩转Spring全家桶/100-123/104-使用Resilience4j实现服务限流（上）.hd.mp4: MD5 = bdd4b937d7f43f7f06de750bfc5c7ee8 OK
+2019/10/15 14:20:47 INFO  : 61 玩转Spring全家桶/100-123/104-使用Resilience4j实现服务限流（上）.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:48 DEBUG : 61 玩转Spring全家桶/100-123/103-使用Resilience4j实现服务熔断.hd.mp4: MD5 = c808bff2dcfdd045fb7a58e588d635ba OK
+2019/10/15 14:20:48 INFO  : 61 玩转Spring全家桶/100-123/103-使用Resilience4j实现服务熔断.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:48 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:48 DEBUG : rc: "core/stats": reply map[bytes:22000045602 checks:0 deletes:0 elapsedTime:470.0412344 errors:0 fatalError:false retryError:false speed:4.680450137546486e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/106-SpringBucks实战项目进度小结.hd.mp4 size:7014031] map[name:61 玩转Spring全家桶/100-123/107-基于Git的配置中心（上）.hd.mp4 size:15669126] map[name:61 玩转Spring全家桶/100-123/105-使用Resilience4j实现服务限流（下）.hd.mp4 size:25508211]] transfers:323]: <nil>
+2019/10/15 14:20:48 DEBUG : 61 玩转Spring全家桶/100-123/105-使用Resilience4j实现服务限流（下）.hd.mp4: MD5 = 48e89dd1bd68d641b416d294f4a56c20 OK
+2019/10/15 14:20:48 INFO  : 61 玩转Spring全家桶/100-123/105-使用Resilience4j实现服务限流（下）.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:51 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:51 DEBUG : rc: "core/stats": reply map[bytes:22025553813 checks:0 deletes:0 elapsedTime:474.4065604 errors:0 fatalError:false retryError:false speed:4.642759112443336e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/108-基于Git的配置中心（下）.hd.mp4 size:21019772] map[name:61 玩转Spring全家桶/100-123/106-SpringBucks实战项目进度小结.hd.mp4 size:7014031] map[name:61 玩转Spring全家桶/100-123/107-基于Git的配置中心（上）.hd.mp4 size:15669126]] transfers:324]: <nil>
+2019/10/15 14:20:52 DEBUG : 61 玩转Spring全家桶/100-123/107-基于Git的配置中心（上）.hd.mp4: MD5 = 0f9da312eaac5ff0caf160fd3f3eac65 OK
+2019/10/15 14:20:52 INFO  : 61 玩转Spring全家桶/100-123/107-基于Git的配置中心（上）.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:53 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:53 DEBUG : rc: "core/stats": reply map[bytes:22041222939 checks:0 deletes:0 elapsedTime:475.4946517 errors:0 fatalError:false retryError:false speed:4.635430253568086e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/106-SpringBucks实战项目进度小结.hd.mp4 size:7014031] map[name:61 玩转Spring全家桶/100-123/109-基于Zookeeper的配置中心.hd.mp4 size:18416848] map[name:61 玩转Spring全家桶/100-123/108-基于Git的配置中心（下）.hd.mp4 size:21019772]] transfers:325]: <nil>
+2019/10/15 14:20:55 DEBUG : 61 玩转Spring全家桶/100-123/108-基于Git的配置中心（下）.hd.mp4: MD5 = ee7a60eb66dc659a0baea1f206a5788e OK
+2019/10/15 14:20:55 INFO  : 61 玩转Spring全家桶/100-123/108-基于Git的配置中心（下）.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:56 DEBUG : 61 玩转Spring全家桶/100-123/109-基于Zookeeper的配置中心.hd.mp4: MD5 = f140eb1ab6e99d41f336f0b556cf8a31 OK
+2019/10/15 14:20:56 INFO  : 61 玩转Spring全家桶/100-123/109-基于Zookeeper的配置中心.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:56 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:56 DEBUG : rc: "core/stats": reply map[bytes:22080659559 checks:0 deletes:0 elapsedTime:477.0923804 errors:0 fatalError:false retryError:false speed:4.628172753563431e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/111-基于Consul的配置中心.hd.mp4 size:18742556] map[name:61 玩转Spring全家桶/100-123/110-深入理解SpringCloud的配置抽象.hd.mp4 size:26341293] map[name:61 玩转Spring全家桶/100-123/106-SpringBucks实战项目进度小结.hd.mp4 size:7014031]] transfers:327]: <nil>
+2019/10/15 14:20:57 DEBUG : 61 玩转Spring全家桶/100-123/106-SpringBucks实战项目进度小结.hd.mp4: MD5 = 790c76c96b77790b804b66e72960d453 OK
+2019/10/15 14:20:57 INFO  : 61 玩转Spring全家桶/100-123/106-SpringBucks实战项目进度小结.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:57 DEBUG : 61 玩转Spring全家桶/100-123/110-深入理解SpringCloud的配置抽象.hd.mp4: MD5 = c7c2c3cdc82d481a871167ede0b3555d OK
+2019/10/15 14:20:57 INFO  : 61 玩转Spring全家桶/100-123/110-深入理解SpringCloud的配置抽象.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:58 DEBUG : 61 玩转Spring全家桶/100-123/111-基于Consul的配置中心.hd.mp4: MD5 = 58d01b9d24334c08c5fc64f1a12ca9d8 OK
+2019/10/15 14:20:58 INFO  : 61 玩转Spring全家桶/100-123/111-基于Consul的配置中心.hd.mp4: Copied (server side copy)
+2019/10/15 14:20:58 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:20:58 DEBUG : rc: "core/stats": reply map[bytes:22132757439 checks:0 deletes:0 elapsedTime:479.6196237 errors:0 fatalError:false retryError:false speed:4.614648013827713e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/112-基于Nacos的配置中心.hd.mp4 size:22867281] map[name:61 玩转Spring全家桶/100-123/114-认识SpringCloudStream.hd.mp4 size:10587764] map[name:61 玩转Spring全家桶/100-123/113-SpringBucks实战项目进度小结.hd.mp4 size:7040702]] transfers:330]: <nil>
+2019/10/15 14:21:00 DEBUG : 61 玩转Spring全家桶/100-123/114-认识SpringCloudStream.hd.mp4: MD5 = 7e5fbcd26bf90978b53e71d67c23e7e6 OK
+2019/10/15 14:21:00 INFO  : 61 玩转Spring全家桶/100-123/114-认识SpringCloudStream.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:01 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:21:01 DEBUG : rc: "core/stats": reply map[bytes:22143345203 checks:0 deletes:0 elapsedTime:482.3463311 errors:0 fatalError:false retryError:false speed:4.590756428581447e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/112-基于Nacos的配置中心.hd.mp4 size:22867281] map[name:61 玩转Spring全家桶/100-123/115-通过SpringCloudStream访问RabbitMQ.hd~1.mp4 size:36233650] map[name:61 玩转Spring全家桶/100-123/113-SpringBucks实战项目进度小结.hd.mp4 size:7040702]] transfers:331]: <nil>
+2019/10/15 14:21:01 DEBUG : 61 玩转Spring全家桶/100-123/113-SpringBucks实战项目进度小结.hd.mp4: MD5 = 7c888c693837a59ea8ac7bb096db1d33 OK
+2019/10/15 14:21:01 INFO  : 61 玩转Spring全家桶/100-123/113-SpringBucks实战项目进度小结.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:03 DEBUG : 61 玩转Spring全家桶/100-123/115-通过SpringCloudStream访问RabbitMQ.hd~1.mp4: MD5 = 2e59f84c02eb3ed41d911ac670811488 OK
+2019/10/15 14:21:03 INFO  : 61 玩转Spring全家桶/100-123/115-通过SpringCloudStream访问RabbitMQ.hd~1.mp4: Copied (server side copy)
+2019/10/15 14:21:03 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:21:03 DEBUG : rc: "core/stats": reply map[bytes:22186619555 checks:0 deletes:0 elapsedTime:484.8386684 errors:0 fatalError:false retryError:false speed:4.5760829325386375e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/116-通过SpringCloudStream访问Kafka.hd.mp4 size:33910323] map[name:61 玩转Spring全家桶/100-123/112-基于Nacos的配置中心.hd.mp4 size:22867281] map[name:61 玩转Spring全家桶/100-123/117-SpringBucks实战项目进度小结.hd.mp4 size:35429324]] transfers:333]: <nil>
+2019/10/15 14:21:05 DEBUG : 61 玩转Spring全家桶/100-123/116-通过SpringCloudStream访问Kafka.hd.mp4: MD5 = da65d2a975ef585e57d00a2923f74e09 OK
+2019/10/15 14:21:05 INFO  : 61 玩转Spring全家桶/100-123/116-通过SpringCloudStream访问Kafka.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:05 DEBUG : 61 玩转Spring全家桶/100-123/112-基于Nacos的配置中心.hd.mp4: MD5 = 9d504a1b63ae35500fdf636b5933a2dc OK
+2019/10/15 14:21:05 INFO  : 61 玩转Spring全家桶/100-123/112-基于Nacos的配置中心.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:06 DEBUG : 61 玩转Spring全家桶/100-123/117-SpringBucks实战项目进度小结.hd.mp4: MD5 = 6fa0cbe2fb1807a8fd301131dbd675a8 OK
+2019/10/15 14:21:06 INFO  : 61 玩转Spring全家桶/100-123/117-SpringBucks实战项目进度小结.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:09 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:21:09 DEBUG : rc: "core/stats": reply map[bytes:22278826483 checks:0 deletes:0 elapsedTime:492.5809622 errors:0 fatalError:false retryError:false speed:4.5228760737111576e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/119-使用SpringCloudSleuth实现链路追踪.hd.mp4 size:33027117] map[name:61 玩转Spring全家桶/100-123/120-如何追踪消息链路.hd.mp4 size:22736041] map[name:61 玩转Spring全家桶/100-123/118-通过Dapper理解链路治理.hd.mp4 size:10792986]] transfers:336]: <nil>
+2019/10/15 14:21:10 DEBUG : 61 玩转Spring全家桶/100-123/119-使用SpringCloudSleuth实现链路追踪.hd.mp4: MD5 = 56c5a6dacaf45d2a41da54220bbc3d1c OK
+2019/10/15 14:21:10 INFO  : 61 玩转Spring全家桶/100-123/119-使用SpringCloudSleuth实现链路追踪.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:10 DEBUG : 61 玩转Spring全家桶/100-123/118-通过Dapper理解链路治理.hd.mp4: MD5 = 86a1ce99a3c9f09e3fcd2d7a67aded93 OK
+2019/10/15 14:21:10 INFO  : 61 玩转Spring全家桶/100-123/118-通过Dapper理解链路治理.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:11 DEBUG : 61 玩转Spring全家桶/100-123/120-如何追踪消息链路.hd.mp4: MD5 = 483fa889abdb73e0c565e520991cc5c0 OK
+2019/10/15 14:21:11 INFO  : 61 玩转Spring全家桶/100-123/120-如何追踪消息链路.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:12 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:21:12 DEBUG : rc: "core/stats": reply map[bytes:22345382627 checks:0 deletes:0 elapsedTime:493.8954499 errors:0 fatalError:false retryError:false speed:4.5243143324208215e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/121-除了链路还要治理什么.hd.mp4 size:11242840] map[name:61 玩转Spring全家桶/100-123/123-结束语.hd.mp4 size:15109311] map[name:61 玩转Spring全家桶/100-123/122-SpringBucks实战项目进度小结.hd.mp4 size:28254327]] transfers:339]: <nil>
+2019/10/15 14:21:13 DEBUG : 61 玩转Spring全家桶/100-123/122-SpringBucks实战项目进度小结.hd.mp4: MD5 = 42aeb3b6254983d01ff86e0d2d9433ac OK
+2019/10/15 14:21:13 INFO  : 61 玩转Spring全家桶/100-123/122-SpringBucks实战项目进度小结.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:14 DEBUG : 61 玩转Spring全家桶/100-123/121-除了链路还要治理什么.hd.mp4: MD5 = e5d44633cf8d6aa4ce5c104da644e513 OK
+2019/10/15 14:21:14 INFO  : 61 玩转Spring全家桶/100-123/121-除了链路还要治理什么.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:14 DEBUG : rc: "core/stats": with parameters map[]
+2019/10/15 14:21:14 DEBUG : rc: "core/stats": reply map[bytes:22384879794 checks:0 deletes:0 elapsedTime:498.4911608 errors:0 fatalError:false retryError:false speed:4.490526924905907e+07 transferring:[map[name:61 玩转Spring全家桶/100-123/123-结束语.hd.mp4 size:15109311]] transfers:341]: <nil>
+2019/10/15 14:21:16 DEBUG : 61 玩转Spring全家桶/100-123/123-结束语.hd.mp4: MD5 = c421343e69282f20dfce9b7410063092 OK
+2019/10/15 14:21:16 INFO  : 61 玩转Spring全家桶/100-123/123-结束语.hd.mp4: Copied (server side copy)
+2019/10/15 14:21:16 INFO  : 
+Transferred:   	   20.862G / 20.862 GBytes, 100%, 42.655 MBytes/s, ETA 0s
+Errors:                 0
+Checks:                 0 / 0, -
+Transferred:          342 / 342, 100%
+Elapsed time:     8m20.8s
+
+2019/10/15 14:21:16 DEBUG : 10 go routines active
+2019/10/15 14:21:16 DEBUG : rclone: Version "v1.49.2" finishing with parameters ["rclone" "--config" "./rclone.conf" "copy" "--drive-server-side-across-configs" "--rc" "-vv" "--ignore-existing" "--tpslimit" "3" "--transfers" "3" "--drive-chunk-size" "32M" "--fast-list" "--log-file=log_rclone.txt" "src007:" "dst007:极客时间"]
