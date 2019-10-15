@@ -8,7 +8,7 @@
 # - [x] Team Drive to Team Drive
 # - [x] publicly shared folder to publicly shared folder
 # - [x] Team Drive to publicly shared folder
-# - [ ] private folder to any (think service accounts cannot do thing about private folder)
+# - [ ] private folder to any (think service accounts cannot do anything about private folder)
 #
 import argparse
 import glob
@@ -21,15 +21,13 @@ import time
 from signal import signal, SIGINT
 
 # =================modify here=================
-# if have many tasks, can run this script but with different screen name, e.g., wrc1, wrc2 ... wrcN
-screen_name = "wrc"
-
 logfile = "log_rclone.txt"  # log file: tail -f log_rclone.txt
-
+screen_name = "wrc"
 # change it when u know what are u doing
 SIZE_GB_MAX = 735
 CNT_403_RETRY = 600
 # =================modify here=================
+
 
 def is_windows():
     return platform.system() == 'Windows'
@@ -86,12 +84,19 @@ def gen_rclone_cfg(args):
             filename = os.path.join(dir_path, filename)
             filename = filename.replace(os.sep, '/')
 
+            if len(args.source_id) == 33:
+                folder_or_team_drive = 'root_folder_id'
+            elif len(args.source_id) == 19:
+                folder_or_team_drive = 'team_drive'
+            else:
+                return print('Wrong length of team_drive_id or publicly shared root_folder_id')
+
             try:
                 fp.write('[{}{:03d}]\n'
                          'type = drive\n'
                          'scope = drive\n'
                          'service_account_file = {}\n'
-                         'team_drive = {}\n\n'.format('src', i, filename, args.source_id))
+                         '{} = {}\n\n'.format('src', i, filename, folder_or_team_drive, args.source_id))
             except:
                 return print("failed to write {} to {}".format(args.source_id, output_of_config_file))
 
@@ -100,7 +105,7 @@ def gen_rclone_cfg(args):
                          'type = drive\n'
                          'scope = drive\n'
                          'service_account_file = {}\n'
-                         'team_drive = {}\n\n'.format('dst', i, filename, args.destination_id))
+                         '{} = {}\n\n'.format('dst', i, filename, folder_or_team_drive, args.destination_id))
             except:
                 return print("failed to write {} to {}".format(args.destination_id, output_of_config_file))
 
@@ -140,13 +145,13 @@ def main():
         src_label = "src" + "{0:03d}".format(id) + ":"
         dst_label = "dst" + "{0:03d}".format(id) + ":"
 
-        open_cmd = "rclone copy "
+        open_cmd = "rclone --config {} copy ".format(config_file)
         if args.test_only:
             open_cmd += "--dry-run "
 
         open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing " \
-                    "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list --config {} " \
-                    "--log-file={} {} {}".format(config_file, logfile,
+                    "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list " \
+                    "--log-file={} {} {}".format(logfile,
                                                 src_label + args.source_folder,
                                                 dst_label + args.destination_folder)
 
@@ -159,7 +164,7 @@ def main():
 
         try:
             subprocess.check_call(open_cmd, shell=True)
-            print(">> Let us go %s" % src_label)
+            print(">> Let us go %s" % dst_label)
             time.sleep(10)
         except subprocess.SubprocessError as error:
             return print("error: " + str(error))
@@ -184,10 +189,12 @@ def main():
             response_processed = response.decode('utf-8').replace('\0', '')
             response_processed_json = json.loads(response_processed)
 
+            print(response_processed_json)
+
             size_GB_done = int(int(response_processed_json['bytes']) * 9.31322e-10)
             speed_now = float(int(response_processed_json['speed']) * 9.31322e-10 * 1024)
 
-            print("%s: %dGB Done @ %fMB/s" % (dst_label, size_GB_done, speed_now), end="\r")
+            print("%s %dGB Done @ %fMB/s" % (dst_label, size_GB_done, speed_now), end="\r")
 
             # continually no ...
             if size_GB_done - size_GB_done_before == 0:
