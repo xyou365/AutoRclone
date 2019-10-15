@@ -89,9 +89,16 @@ def gen_rclone_cfg(args):
             filename = filename.replace(os.sep, '/')
 
             if len(args.source_id) == 33:
-                folder_or_team_drive = 'root_folder_id'
+                folder_or_team_drive_src = 'root_folder_id'
             elif len(args.source_id) == 19:
-                folder_or_team_drive = 'team_drive'
+                folder_or_team_drive_src = 'team_drive'
+            else:
+                return print('Wrong length of team_drive_id or publicly shared root_folder_id')
+
+            if len(args.destination_id) == 33:
+                folder_or_team_drive_dst = 'root_folder_id'
+            elif len(args.destination_id) == 19:
+                folder_or_team_drive_dst = 'team_drive'
             else:
                 return print('Wrong length of team_drive_id or publicly shared root_folder_id')
 
@@ -100,7 +107,7 @@ def gen_rclone_cfg(args):
                          'type = drive\n'
                          'scope = drive\n'
                          'service_account_file = {}\n'
-                         '{} = {}\n\n'.format('src', i+1, filename, folder_or_team_drive, args.source_id))
+                         '{} = {}\n\n'.format('src', i+1, filename, folder_or_team_drive_src, args.source_id))
             except:
                 return print("failed to write {} to {}".format(args.source_id, output_of_config_file))
 
@@ -109,7 +116,7 @@ def gen_rclone_cfg(args):
                          'type = drive\n'
                          'scope = drive\n'
                          'service_account_file = {}\n'
-                         '{} = {}\n\n'.format('dst', i, filename, folder_or_team_drive, args.destination_id))
+                         '{} = {}\n\n'.format('dst', i, filename, folder_or_team_drive_dst, args.destination_id))
             except:
                 return print("failed to write {} to {}".format(args.destination_id, output_of_config_file))
 
