@@ -86,39 +86,15 @@ just run
 python3 .\rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 10
 ```
 _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
-```
-usage: rclone_sa_magic.py [-h] -s SOURCE_ID -d DESTINATION_ID
-                          [-sp SOURCE_PATH] [-dp DESTINATION_PATH]
-                          [-b BEGIN_SA_ID] [-e END_SA_ID]
-                          [-c RCLONE_CONFIG_FILE] [-t]
 
-Copy from source (publicly shared drive/Team Drive) to destination (publicly
-shared drive/Team Drive).
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -s SOURCE_ID, --source_id SOURCE_ID
-                        the id of source
-  -d DESTINATION_ID, --destination_id DESTINATION_ID
-                        the id of destination
-  -sp SOURCE_PATH, --source_path SOURCE_PATH
-                        the folder path of source
-  -dp DESTINATION_PATH, --destination_path DESTINATION_PATH
-                        the folder path of destination
-  -b BEGIN_SA_ID, --begin_sa_id BEGIN_SA_ID
-                        the begin id of sa for source
-  -e END_SA_ID, --end_sa_id END_SA_ID
-                        the end id of sa for destination
-  -c RCLONE_CONFIG_FILE, --rclone_config_file RCLONE_CONFIG_FILE
-                        rclone file path of rclone
-  -t, --test_only       for test: make rclone dry-run
-```
-
-
-There are some more case need to test
+For local to Google Drive (need test)
 - [ ] local to Team Drive
 - [ ] local to private folder
 - [ ] private folder to any (think service accounts cannot do anything about private folder)
+just run
+```
+python3 .\rclone_sa_magic.py -d DestinationID -sp YourLocalPath -dp DestinationPathName -b 10
+```
 
 Run this command `tail -f log_rclone.txt` to see what happens in details (linux only).
 
