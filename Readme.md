@@ -57,8 +57,10 @@ Here we use Google Groups to manager our service accounts considering the
 
 _For meaning of above flags, please run `python3 massadd.py -h`_
 
-Step 4. Add service accounts or Google Groups (created in Step 3) into Team Drive tdsrc and tddst
+Step 4. Add service accounts or Google Groups into Team Drive
 ---------------------------------
+_If you do not use Team Drive, just skip._
+
 Add the group address `sa@yourdomain.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
 If you are not Gsuite admin or do not care about the member limitation of Team Drive, 
@@ -74,7 +76,7 @@ Step 5. Start your task
 ---------------------------------
 Let us `rclone copy` hundreds of TB resource using service accounts.
 
-* For
+* For remote operation
 - [x] publicly shared folder to Team Drive
 - [x] Team Drive to Team Drive
 - [x] publicly shared folder to publicly shared folder (with write privilege)
