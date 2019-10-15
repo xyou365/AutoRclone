@@ -69,7 +69,7 @@ def parse_args():
                         help='the end id of sa for destination')
 
     parser.add_argument('-c', '--rclone_config_file', type=str,
-                        help='rclone file path of rclone')
+                        help='config file path of rclone')
     parser.add_argument('-t', '--test_only', action="store_true",
                         help='for test: make rclone dry-run')
 
