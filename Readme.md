@@ -75,23 +75,21 @@ Step 5. Start your task
 _Please check in this way `rclone lsd tdsrc001:` and `rclone lsd tddst001:`). Make sure it is okay._
 
 Let us `rclone copy` hundreds of TB resource using service accounts.
-For
+
+* For
 - [x] publicly shared folder to Team Drive
 - [x] Team Drive to Team Drive
 - [x] publicly shared folder to publicly shared folder (with write privilege)
 - [x] Team Drive to publicly shared folder
-
-just run 
 ```
 python3 .\rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 10
 ```
 _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
 
-For local to Google Drive (need test)
+* For local to Google Drive (need test)
 - [ ] local to Team Drive
 - [ ] local to private folder
 - [ ] private folder to any (think service accounts cannot do anything about private folder)
-just run
 ```
 python3 .\rclone_sa_magic.py -d DestinationID -sp YourLocalPath -dp DestinationPathName -b 10
 ```
