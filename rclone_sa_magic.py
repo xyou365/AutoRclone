@@ -240,7 +240,9 @@ def main():
         id = id + 1
 
         time_stop = time.time()
-        print(str((time_stop - time_start) / 60 / 60) + " Hours")
+        hours, rem = divmod((time_stop - time_start), 3600)
+        minutes, sec = divmod(rem, 60)
+        print("Elapsed Time:\n{:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
 
 
 if __name__ == "__main__":
