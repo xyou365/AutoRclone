@@ -51,7 +51,7 @@ def handler(signal_received, frame):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Copy from source (publicly shared drive/Team Drive) "
+    parser = argparse.ArgumentParser(description="Copy from source (publicly local/shared drive/Team Drive/) "
                                                  "to destination (publicly shared drive/Team Drive).")
     parser.add_argument('-s', '--source_id', type=str, required=True,
                         help='the id of source')
@@ -149,6 +149,14 @@ def main():
         src_label = "src" + "{0:03d}".format(id) + ":"
         dst_label = "dst" + "{0:03d}".format(id) + ":"
 
+        src_full_path = src_label + args.source_path
+        if args.source_id is None:
+            src_full_path = args.source_path
+
+        dst_full_path = dst_label + args.destination_path
+        if args.destination_id is None:
+            src_full_path = args.destination_path
+
         open_cmd = "rclone --config {} copy ".format(config_file)
         if args.test_only:
             open_cmd += "--dry-run "
@@ -156,8 +164,8 @@ def main():
         open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing " \
                     "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list " \
                     "--log-file={} {} {}".format(logfile,
-                                                src_label + args.source_path,
-                                                dst_label + args.destination_path)
+                                                src_full_path,
+                                                dst_full_path)
 
         if not is_windows():
             open_cmd = "screen -d -m -S {} ".format(screen_name) + open_cmd

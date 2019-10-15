@@ -42,24 +42,7 @@ Just copy all json files into our folder `accounts`.
 [How to use service account in rclone](https://rclone.org/drive/#service-account-support).
 
 
-Step 3. Add service accounts into rclone config file
----------------------------------
-For convenient, we use script to write (directly) the service accounts generated in **Step 2** into rclone config file.
-
-- To set source Team Drive, run command `python3 gen_rclone_cfg.py -p tdsrc -t SharedTeamDriveSrcID`
-
-- To set destination Team Drive, run again with different parameters: `python3 gen_rclone_cfg.py -p tddst -t SharedTeamDriveDstID`
-```
-Done. Generated rclone config file is successfully saved to ./rclone.conf
-
-Your default rclone Configuration file is stored at:
-C:\Vim\Neovim\share\rclone\rclone.conf
-
-You can
-* copy content in generated config file (./rclone.conf) to default config file
-```
-
-Step 4. Add service accounts to Google Groups (Optional)
+Step 3. Add service accounts to Google Groups (Optional)
 ---------------------------------
 _Support that you are GSuite admin (domain admin or normal admin)_
 
@@ -74,7 +57,7 @@ Here we use Google Groups to manager our service accounts considering the
 
 _For meaning of above flags, please run `python3 massadd.py -h`_
 
-Step 5. Add service accounts or Google Groups (created in Step 4) into Team Drive tdsrc and tddst
+Step 4. Add service accounts or Google Groups (created in Step 3) into Team Drive tdsrc and tddst
 ---------------------------------
 Add the group address `sa@yourdomain.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
@@ -87,16 +70,57 @@ just use script of `folderclone` to add `sa` accounts into Team Drive.
 - Add service accounts into your destination Team Drive:
 `python3 masshare.py -d SharedTeamDriveDstID`
 
-Step 6. Start your task (copy from Team Drive tdsrc to tddst)
+Step 5. Start your task
 ---------------------------------
 _Please check in this way `rclone lsd tdsrc001:` and `rclone lsd tddst001:`). Make sure it is okay._
 
-Edit the `rclone_sa.py` using your editor `vim rclone_sa.py`.
+Let us `rclone copy` hundreds of TB resource using service accounts.
+For
+- [x] publicly shared folder to Team Drive
+- [x] Team Drive to Team Drive
+- [x] publicly shared folder to publicly shared folder (with write privilege)
+- [x] Team Drive to publicly shared folder
 
-Let us `rclone copy` hundreds of TB resource using service accounts from source Team Drive `tdsrc` into you destination Team Drive `tddst` using sa accounts 1 to 1000
-`python3 rclone_sa.py 1 1000`
+just run 
+```
+python3 .\rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 10
+```
+_For meaning of above flags, please run python3 rclone_sa_magic.py -h_
+```
+usage: rclone_sa_magic.py [-h] -s SOURCE_ID -d DESTINATION_ID
+                          [-sp SOURCE_PATH] [-dp DESTINATION_PATH]
+                          [-b BEGIN_SA_ID] [-e END_SA_ID]
+                          [-c RCLONE_CONFIG_FILE] [-t]
 
-Run this command `tail -f log_rclone.txt` to see what happens in details.
+Copy from source (publicly shared drive/Team Drive) to destination (publicly
+shared drive/Team Drive).
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SOURCE_ID, --source_id SOURCE_ID
+                        the id of source
+  -d DESTINATION_ID, --destination_id DESTINATION_ID
+                        the id of destination
+  -sp SOURCE_PATH, --source_path SOURCE_PATH
+                        the folder path of source
+  -dp DESTINATION_PATH, --destination_path DESTINATION_PATH
+                        the folder path of destination
+  -b BEGIN_SA_ID, --begin_sa_id BEGIN_SA_ID
+                        the begin id of sa for source
+  -e END_SA_ID, --end_sa_id END_SA_ID
+                        the end id of sa for destination
+  -c RCLONE_CONFIG_FILE, --rclone_config_file RCLONE_CONFIG_FILE
+                        rclone file path of rclone
+  -t, --test_only       for test: make rclone dry-run
+```
+
+
+There are some more case need to test
+- [ ] local to Team Drive
+- [ ] local to private folder
+- [ ] private folder to any (think service accounts cannot do anything about private folder)
+
+Run this command `tail -f log_rclone.txt` to see what happens in details (linux only).
 
 ![](AutoRclone.jpg)
 
