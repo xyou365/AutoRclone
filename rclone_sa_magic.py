@@ -240,7 +240,7 @@ def main():
         id = id + 1
 
         time_stop = time.time()
-        print(str((time_stop - time_start) / 60 / 60) + "小时")
+        print(str((time_stop - time_start) / 60 / 60) + " Hours")
 
 
 if __name__ == "__main__":
