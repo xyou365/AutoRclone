@@ -72,8 +72,6 @@ just use script of `folderclone` to add `sa` accounts into Team Drive.
 
 Step 5. Start your task
 ---------------------------------
-_Please check in this way `rclone lsd tdsrc001:` and `rclone lsd tddst001:`). Make sure it is okay._
-
 Let us `rclone copy` hundreds of TB resource using service accounts.
 
 * For
