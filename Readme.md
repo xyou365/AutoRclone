@@ -11,7 +11,7 @@ Step 1. Copy code to your VPS or local machine
 ---------------------------------
 _Before everything, install python3. Because we use python as our programing language._
 
-**For Linux system**: Installed 
+**For Linux system**: Install
 [screen](https://www.interserver.net/tips/kb/using-screen-to-attach-and-detach-console-sessions/),
 `git` 
 and [latest rclone](https://rclone.org/downloads/#script-download-and-install). 
