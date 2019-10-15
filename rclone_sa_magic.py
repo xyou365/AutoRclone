@@ -54,9 +54,9 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Copy from source (publicly local/shared drive/Team Drive/) "
                                                  "to destination (publicly shared drive/Team Drive).")
     parser.add_argument('-s', '--source_id', type=str, required=True,
-                        help='the id of source (either Team Drive id or publicly shared folder id)')
+                        help='the id of source. Team Drive id or publicly shared folder id')
     parser.add_argument('-d', '--destination_id', type=str, required=True,
-                        help='the id of destination (either Team Drive id or publicly shared folder id)')
+                        help='the id of destination. Team Drive id or publicly shared folder id')
 
     parser.add_argument('-sp', '--source_path', type=str, default="",
                         help='the folder path of source')
