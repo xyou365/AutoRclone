@@ -29,9 +29,9 @@ Then run this command (type in cmd command windows or PowerShell windows) in our
 pip3 install -r requirements.txt
 ```
 
-Step 2. Generate service accounts (sa) required
+Step 2. Generate service accounts (sa)
 ---------------------------------
-Let us create as many service accounts as possible following [official steps of folderclone](https://github.com/Spazzlo/folderclone/blob/master/README_multifolderclone.md#steps-to-setup-multifactorypy). 
+Let us create as many service accounts as possible following first step of [official steps of folderclone](https://github.com/Spazzlo/folderclone/blob/master/README_multifolderclone.md#steps-to-setup-multifactorypy). 
 
 After you finished, there will be many json files in one folder named `accounts`. 
 
