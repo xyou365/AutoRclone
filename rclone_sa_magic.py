@@ -242,7 +242,7 @@ def main():
         time_stop = time.time()
         hours, rem = divmod((time_stop - time_start), 3600)
         minutes, sec = divmod(rem, 60)
-        print("Elapsed Time:\n{:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
+        print("Elapsed Time: {:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
 
 
 if __name__ == "__main__":
