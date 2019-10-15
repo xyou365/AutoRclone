@@ -5,9 +5,12 @@
 #
 # can copy from
 # - [x] publicly shared folder to Team Drive
+#      `python3 .\rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 10`
 # - [x] Team Drive to Team Drive
 # - [x] publicly shared folder to publicly shared folder
 # - [x] Team Drive to publicly shared folder
+# - [ ] local to Team Drive
+# - [ ] local to private folder
 # - [ ] private folder to any (think service accounts cannot do anything about private folder)
 #
 import argparse
@@ -54,20 +57,20 @@ def parse_args():
     parser.add_argument('-d', '--destination_id', type=str, required=True,
                         help='the id of destination')
 
-    parser.add_argument('-sf', '--source_folder', type=str, default="",
+    parser.add_argument('-sp', '--source_path', type=str, default="",
                         help='the folder path of source')
-    parser.add_argument('-df', '--destination_folder', type=str, default="",
+    parser.add_argument('-dp', '--destination_path', type=str, default="",
                         help='the folder path of destination')
 
-    parser.add_argument('-start', '--start_sa_id', type=int, default=1,
-                        help='the folder path of source')
-    parser.add_argument('-end', '--end_sa_id', type=int, default=200,
-                        help='the folder path of destination')
+    parser.add_argument('-b', '--begin_sa_id', type=int, default=1,
+                        help='the begin id of sa for source')
+    parser.add_argument('-e', '--end_sa_id', type=int, default=400,
+                        help='the end id of sa for destination')
 
     parser.add_argument('-c', '--rclone_config_file', type=str,
                         help='rclone file path of rclone')
     parser.add_argument('-t', '--test_only', action="store_true",
-                        help='rclone file path of rclone')
+                        help='for test: make rclone dry-run')
 
     args = parser.parse_args()
     return args
@@ -96,7 +99,7 @@ def gen_rclone_cfg(args):
                          'type = drive\n'
                          'scope = drive\n'
                          'service_account_file = {}\n'
-                         '{} = {}\n\n'.format('src', i, filename, folder_or_team_drive, args.source_id))
+                         '{} = {}\n\n'.format('src', i+1, filename, folder_or_team_drive, args.source_id))
             except:
                 return print("failed to write {} to {}".format(args.source_id, output_of_config_file))
 
@@ -117,7 +120,7 @@ def main():
 
     args = parse_args()
 
-    id = args.start_sa_id
+    id = args.begin_sa_id
     end_id = args.end_sa_id
 
     config_file = args.rclone_config_file
@@ -152,8 +155,8 @@ def main():
         open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing " \
                     "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list " \
                     "--log-file={} {} {}".format(logfile,
-                                                src_label + args.source_folder,
-                                                dst_label + args.destination_folder)
+                                                src_label + args.source_path,
+                                                dst_label + args.destination_path)
 
         if not is_windows():
             open_cmd = "screen -d -m -S {} ".format(screen_name) + open_cmd
@@ -189,7 +192,7 @@ def main():
             response_processed = response.decode('utf-8').replace('\0', '')
             response_processed_json = json.loads(response_processed)
 
-            print(response_processed_json)
+            # print(response_processed_json)
 
             size_GB_done = int(int(response_processed_json['bytes']) * 9.31322e-10)
             speed_now = float(int(response_processed_json['speed']) * 9.31322e-10 * 1024)

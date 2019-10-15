@@ -103,7 +103,7 @@ def main():
                 # continually ...
                 cnt_error = cnt_error + 1
                 if cnt_error >= 3:
-                    print('No rclone task detected. Check your rclone cmd.')
+                    print('No rclone task detected (possibly ended). Check your rclone cmd.')
                     return
 
                 continue

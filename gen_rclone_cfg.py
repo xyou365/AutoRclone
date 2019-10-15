@@ -43,7 +43,7 @@ def main():
                          'type = drive\n'
                          'scope = drive\n'
                          'service_account_file = {}\n'
-                         'team_drive = {}\n\n'.format(args.prefix, i, filename, args.team_drive_id))
+                         'team_drive = {}\n\n'.format(args.prefix, i+1, filename, args.team_drive_id))
             except:
                 return print("failed to write to {}".format(output_of_config_file))
 
