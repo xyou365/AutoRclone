@@ -33,7 +33,7 @@ Step 2. Generate service accounts
 ---------------------------------
 Let us create as many service accounts as possible following [official steps of folderclone](https://github.com/Spazzlo/folderclone). (**Note**: With new version of folderclone, you can skip our **Step 4** directly)
 
-After you finished, there will be many json files in one folder named `accounts`. 
+After it is finished, there will be many json files in one folder named `accounts`. 
 
 Just copy all json files into our folder `accounts`.
 
