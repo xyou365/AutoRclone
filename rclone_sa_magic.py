@@ -10,7 +10,7 @@
 # - [x] Team Drive to publicly shared folder
 #   `python3 .\rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 10`
 #
-# - [ ] local to Team Drive
+# - [x] local to Team Drive
 # - [ ] local to private folder
 # - [ ] private folder to any (think service accounts cannot do anything about private folder)
 #
@@ -103,12 +103,25 @@ def gen_rclone_cfg(args):
             filename = os.path.join(dir_path, filename)
             filename = filename.replace(os.sep, '/')
 
-            if len(args.source_id) == 33:
-                folder_or_team_drive_src = 'root_folder_id'
-            elif len(args.source_id) == 19:
-                folder_or_team_drive_src = 'team_drive'
+            if args.source_id:
+                if len(args.source_id) == 33:
+                    folder_or_team_drive_src = 'root_folder_id'
+                elif len(args.source_id) == 19:
+                    folder_or_team_drive_src = 'team_drive'
+                else:
+                    return print('Wrong length of team_drive_id or publicly shared root_folder_id')
+
+                try:
+                    fp.write('[{}{:03d}]\n'
+                             'type = drive\n'
+                             'scope = drive\n'
+                             'service_account_file = {}\n'
+                             '{} = {}\n\n'.format('src', i + 1, filename, folder_or_team_drive_src, args.source_id))
+                except:
+                    return print("failed to write {} to {}".format(args.source_id, output_of_config_file))
             else:
-                return print('Wrong length of team_drive_id or publicly shared root_folder_id')
+                pass
+
 
             if len(args.destination_id) == 33:
                 folder_or_team_drive_dst = 'root_folder_id'
@@ -117,14 +130,7 @@ def gen_rclone_cfg(args):
             else:
                 return print('Wrong length of team_drive_id or publicly shared root_folder_id')
 
-            try:
-                fp.write('[{}{:03d}]\n'
-                         'type = drive\n'
-                         'scope = drive\n'
-                         'service_account_file = {}\n'
-                         '{} = {}\n\n'.format('src', i+1, filename, folder_or_team_drive_src, args.source_id))
-            except:
-                return print("failed to write {} to {}".format(args.source_id, output_of_config_file))
+
 
             try:
                 fp.write('[{}{:03d}]\n'
