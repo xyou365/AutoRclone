@@ -84,7 +84,7 @@ Let us `rclone copy` hundreds of TB resource using service accounts.
 ```
 python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 1 -e 400
 ```
-_Add `--disable_list_r` if `rclone` cannot read all files/folders of source._
+_Add `--disable_list_r` if `rclone` [cannot read all contents of public shared folder](https://forum.rclone.org/t/rclone-cannot-see-all-files-folder-in-public-shared-folder/12351)._
  
 _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
 
