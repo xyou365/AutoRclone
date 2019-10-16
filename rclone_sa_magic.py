@@ -82,7 +82,7 @@ def parse_args():
 
 
 def gen_rclone_cfg(args):
-    sa_files = glob.glob(os.path.join(args.accounts, '*.json'))
+    sa_files = glob.glob(os.path.join(args.service_account, '*.json'))
     output_of_config_file = './rclone.conf'
 
     with open(output_of_config_file, 'w') as fp:
