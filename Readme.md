@@ -88,7 +88,7 @@ python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName 
 _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
 
 * For local to Google Drive (need test)
-- [ ] local to Team Drive
+- [x] local to Team Drive
 - [ ] local to private folder
 - [ ] private folder to any (think service accounts cannot do anything about private folder)
 ```
