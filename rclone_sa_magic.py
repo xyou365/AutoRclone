@@ -31,7 +31,7 @@ NAME_SCREEN = "wrc"         # default value. Will be replaced by parameters inpu
 # parameters for this script
 SIZE_GB_MAX = 735          # if one account has already copied 735GB, switch to next account
 CNT_403_RETRY = 100        # if there is no files be copied for 100 times, switch to next account
-CNT_ACC_EXIT = 3           # if continually switch account for 3 times stop script
+CNT_SA_EXIT = 3           # if continually switch account for 3 times stop script
 
 # change it when u know what are u doing
 # paramters for rclone.
@@ -282,7 +282,7 @@ def main():
                     cnt_exit = 0
 
                 # Regard continually exit as *all done*.
-                if cnt_exit > CNT_ACC_EXIT:
+                if cnt_exit > CNT_SA_EXIT:
                     print_during(time_start)
                     # exit directly rather than switch to next account.
                     return print('All Done.')
