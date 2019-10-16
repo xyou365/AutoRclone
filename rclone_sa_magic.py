@@ -91,6 +91,9 @@ def parse_args():
     parser.add_argument('-t', '--test_only', action="store_true",
                         help='for test: make rclone dry-run')
 
+    parser.add_argument('-debug', action="store_true",
+                        help='for debug. do not use this.')
+
     args = parser.parse_args()
     return args
 
@@ -202,12 +205,14 @@ def main():
         if args.test_only:
             open_cmd += "--dry-run "
 
-        open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing " \
-                    "--tpslimit {} --transfers {} --drive-chunk-size 32M --fast-list  " \
-                    "--drive-acknowledge-abuse --log-file={} {} {}".format(TPSLIMIT, TRANSFERS,
-                                                                           logfile,
-                                                                           src_full_path,
-                                                                           dst_full_path)
+        # --fast-list is default adopted in latest rclone
+        open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing "
+        open_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
+
+        if args.debug:
+            open_cmd += "--disable ListR "
+
+        open_cmd += "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile, src_full_path, dst_full_path)
 
         if not is_windows():
             open_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + open_cmd
