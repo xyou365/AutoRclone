@@ -31,7 +31,13 @@ pip3 install -r requirements.txt
 
 Step 2. Generate service accounts
 ---------------------------------
-Let us create as many service accounts as possible following [official steps of folderclone](https://github.com/Spazzlo/folderclone). (**Note**: With new version of folderclone, you can skip our **Step 4** directly)
+Let us create as many service accounts as possible.
+
+Run `python3 multifactory.py --quick-setup 10` to 
+* create 10 projects
+* enable the required services
+* create 1000 (10 projects, each with 100) Service Accounts
+* and download their credentials into a new folder accounts
 
 After it is finished, there will be many json files in one folder named `accounts`. 
 
