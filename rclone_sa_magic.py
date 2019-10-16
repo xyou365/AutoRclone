@@ -44,6 +44,7 @@ def handler(signal_received, frame):
         kill_cmd = "screen -r -S %s -X quit" % screen_name
 
     try:
+        print('\n{}\n'.format(time.strftime("%H:%M:%S")))
         subprocess.check_call(kill_cmd, shell=True)
     except:
         pass
@@ -230,7 +231,7 @@ def main():
                     kill_cmd = 'taskkill /IM "rclone.exe" /F'
                 else:
                     kill_cmd = "screen -r -S %s -X quit" % screen_name
-                print('\n')
+                print('\n{}\n'.format(time.strftime("%H:%M:%S")))
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
