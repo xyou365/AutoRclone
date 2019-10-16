@@ -91,7 +91,7 @@ def parse_args():
     parser.add_argument('-t', '--test_only', action="store_true",
                         help='for test: make rclone dry-run')
 
-    parser.add_argument('-debug', action="store_true",
+    parser.add_argument('--disable_list_r', action="store_true",
                         help='for debug. do not use this.')
 
     args = parser.parse_args()
@@ -210,7 +210,7 @@ def main():
         # --fast-list is default adopted in latest rclone
         open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing "
         open_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
-        if args.debug:
+        if args.disable_list_r:
             open_cmd += "--disable ListR "
         open_cmd += "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile, src_full_path, dst_full_path)
 
