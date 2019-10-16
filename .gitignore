@@ -13,7 +13,8 @@ log_rclone.txt
 log*.txt
 current_sa.txt
 accounts.zip
-accounts*.zip
+accounts1k.zip
+accounts400.zip
 
 # exception to the rule
 !credentials/.gsuite_only.txt
