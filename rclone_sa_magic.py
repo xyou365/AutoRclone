@@ -285,8 +285,6 @@ def main():
 
                 break
 
-
-
             time.sleep(2)
         id = id + 1
 
