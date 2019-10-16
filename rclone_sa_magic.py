@@ -26,7 +26,8 @@ from signal import signal, SIGINT
 
 # =================modify here=================
 logfile = "log_rclone.txt"  # log file: tail -f log_rclone.txt
-NAME_SCREEN = "wrc"
+NAME_SCREEN = "wrc"         # default value. Will be replaced by parameters input (-n)
+
 # change it when u know what are u doing
 # paramters for rclone
 TPSLIMIT = 3
@@ -61,7 +62,7 @@ def handler(signal_received, frame):
 def parse_args():
     parser = argparse.ArgumentParser(description="Copy from source (publicly local/shared drive/Team Drive/) "
                                                  "to destination (publicly shared drive/Team Drive).")
-    parser.add_argument('-s', '--source_id', type=str, required=True,
+    parser.add_argument('-s', '--source_id', type=str,
                         help='the id of source. Team Drive id or publicly shared folder id')
     parser.add_argument('-d', '--destination_id', type=str, required=True,
                         help='the id of destination. Team Drive id or publicly shared folder id')
