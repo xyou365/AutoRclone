@@ -51,7 +51,7 @@ def handler(signal_received, frame):
         kill_cmd = "screen -r -S %s -X quit" % NAME_SCREEN
 
     try:
-        print('\n{}\n'.format(time.strftime("%H:%M:%S")))
+        print("\n" + " "*20 + " {}".format(time.strftime("%H:%M:%S")))
         subprocess.check_call(kill_cmd, shell=True)
     except:
         pass
