@@ -35,7 +35,8 @@ TRANSFERS = 3
 
 # parameters for this script
 SIZE_GB_MAX = 735
-CNT_403_RETRY = 600
+CNT_403_RETRY = 100
+CNT_ACC_EXIT = 3
 # =================modify here=================
 
 
@@ -144,6 +145,13 @@ def gen_rclone_cfg(args):
     return output_of_config_file, i
 
 
+def print_during(time_start):
+    time_stop = time.time()
+    hours, rem = divmod((time_stop - time_start), 3600)
+    minutes, sec = divmod(rem, 60)
+    print("Elapsed Time: {:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
+
+
 def main():
     signal(SIGINT, handler)
 
@@ -216,11 +224,13 @@ def main():
         cnt_error = 0
         cnt_403_retry = 0
         size_GB_done_before = 0
+        cnt_exit = 0
         while True:
             cmd = 'rclone rc core/stats'
             try:
                 response = subprocess.check_output(cmd, shell=True)
                 cnt_error = 0
+                cnt_exit = 0
             except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
@@ -259,15 +269,26 @@ def main():
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
+                if cnt_403_retry >= CNT_403_RETRY:
+                    cnt_exit += 1
+                else:
+                    # clear cnt if there is one time
+                    cnt_exit = 0
+
+                # Regard continually exit as *all done*.
+                if cnt_exit > CNT_ACC_EXIT:
+                    print_during(time_start)
+                    # exit directly rather than switch to next account.
+                    return print('All Done.')
+
                 break
+
+
 
             time.sleep(2)
         id = id + 1
 
-    time_stop = time.time()
-    hours, rem = divmod((time_stop - time_start), 3600)
-    minutes, sec = divmod(rem, 60)
-    print("Elapsed Time: {:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
+    print_during(time_start)
 
 
 if __name__ == "__main__":
