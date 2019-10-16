@@ -201,23 +201,22 @@ def main():
         if args.destination_id is None:
             src_full_path = args.destination_path
 
+        # =================cmd to run=================
         open_cmd = "rclone --config {} copy ".format(config_file)
         if args.test_only:
             open_cmd += "--dry-run "
-
         # --fast-list is default adopted in latest rclone
         open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing "
         open_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
-
         if args.debug:
             open_cmd += "--disable ListR "
-
         open_cmd += "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile, src_full_path, dst_full_path)
 
         if not is_windows():
             open_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + open_cmd
         else:
             open_cmd = "start /b " + open_cmd
+        # =================cmd to run=================
 
         print(open_cmd)
 
