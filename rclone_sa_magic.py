@@ -26,8 +26,13 @@ from signal import signal, SIGINT
 
 # =================modify here=================
 logfile = "log_rclone.txt"  # log file: tail -f log_rclone.txt
-screen_name = "wrc"
+NAME_SCREEN = "wrc"
 # change it when u know what are u doing
+# paramters for rclone
+TPSLIMIT = 3
+TRANSFERS = 3
+
+# parameters for this script
 SIZE_GB_MAX = 735
 CNT_403_RETRY = 600
 # =================modify here=================
@@ -38,10 +43,12 @@ def is_windows():
 
 
 def handler(signal_received, frame):
+    global NAME_SCREEN
+
     if is_windows():
         kill_cmd = 'taskkill /IM "rclone.exe" /F'
     else:
-        kill_cmd = "screen -r -S %s -X quit" % screen_name
+        kill_cmd = "screen -r -S %s -X quit" % NAME_SCREEN
 
     try:
         print('\n{}\n'.format(time.strftime("%H:%M:%S")))
@@ -66,6 +73,9 @@ def parse_args():
 
     parser.add_argument('-sa', '--service_account', type=str, default="accounts",
                         help='the folder path of json files for service accounts.')
+
+    parser.add_argument('-n', '--name_screen', type=str, default="wrc",
+                        help='the name of screen. Set it to different if you want to run more than one instance.')
 
     parser.add_argument('-b', '--begin_sa_id', type=int, default=1,
                         help='the begin id of sa for source')
@@ -132,6 +142,9 @@ def main():
 
     args = parse_args()
 
+    global NAME_SCREEN
+    NAME_SCREEN = args.name_screen
+
     id = args.begin_sa_id
     end_id = args.end_sa_id
 
@@ -173,13 +186,14 @@ def main():
             open_cmd += "--dry-run "
 
         open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing " \
-                    "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list  " \
-                    "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile,
-                                                src_full_path,
-                                                dst_full_path)
+                    "--tpslimit {} --transfers {} --drive-chunk-size 32M --fast-list  " \
+                    "--drive-acknowledge-abuse --log-file={} {} {}".format(TPSLIMIT, TRANSFERS,
+                                                                           logfile,
+                                                                           src_full_path,
+                                                                           dst_full_path)
 
         if not is_windows():
-            open_cmd = "screen -d -m -S {} ".format(screen_name) + open_cmd
+            open_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + open_cmd
         else:
             open_cmd = "start /b " + open_cmd
 
@@ -233,8 +247,8 @@ def main():
                 if is_windows():
                     kill_cmd = 'taskkill /IM "rclone.exe" /F'
                 else:
-                    kill_cmd = "screen -r -S %s -X quit" % screen_name
-                print('\n{}\n'.format(time.strftime("%H:%M:%S")))
+                    kill_cmd = "screen -r -S %s -X quit" % NAME_SCREEN
+                print("\n" + " "*20 + " {}".format(time.strftime("%H:%M:%S")))
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
