@@ -102,6 +102,9 @@ def gen_rclone_cfg(args):
     sa_files = glob.glob(os.path.join(args.service_account, '*.json'))
     output_of_config_file = './rclone.conf'
 
+    if len(sa_files)==0:
+        sys.exit('No json files found in {}'.format(args.service_account))
+
     with open(output_of_config_file, 'w') as fp:
         for i, filename in enumerate(sa_files):
 
@@ -109,6 +112,7 @@ def gen_rclone_cfg(args):
             filename = os.path.join(dir_path, filename)
             filename = filename.replace(os.sep, '/')
 
+            # For source
             if args.source_id:
                 if len(args.source_id) == 33:
                     folder_or_team_drive_src = 'root_folder_id'
@@ -128,15 +132,13 @@ def gen_rclone_cfg(args):
             else:
                 pass
 
-
+            # For destination
             if len(args.destination_id) == 33:
                 folder_or_team_drive_dst = 'root_folder_id'
             elif len(args.destination_id) == 19:
                 folder_or_team_drive_dst = 'team_drive'
             else:
                 return print('Wrong length of team_drive_id or publicly shared root_folder_id')
-
-
 
             try:
                 fp.write('[{}{:03d}]\n'
