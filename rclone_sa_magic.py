@@ -64,6 +64,9 @@ def parse_args():
     parser.add_argument('-dp', '--destination_path', type=str, default="",
                         help='the folder path of destination. In Google Drive.')
 
+    parser.add_argument('-sa', '--service_account', type=str, default="accounts",
+                        help='the folder path of json files for service accounts.')
+
     parser.add_argument('-b', '--begin_sa_id', type=int, default=1,
                         help='the begin id of sa for source')
     parser.add_argument('-e', '--end_sa_id', type=int, default=400,
@@ -79,7 +82,7 @@ def parse_args():
 
 
 def gen_rclone_cfg(args):
-    sa_files = glob.glob(os.path.join('accounts', '*.json'))
+    sa_files = glob.glob(os.path.join(args.accounts, '*.json'))
     output_of_config_file = './rclone.conf'
 
     with open(output_of_config_file, 'w') as fp:
