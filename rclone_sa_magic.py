@@ -169,7 +169,7 @@ def main():
             open_cmd += "--dry-run "
 
         open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing " \
-                    "--tpslimit 3 --transfers 3 --drive-chunk-size 32M " \
+                    "--tpslimit 3 --transfers 3 --drive-chunk-size 32M --fast-list  " \
                     "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile,
                                                 src_full_path,
                                                 dst_full_path)
@@ -230,7 +230,7 @@ def main():
                     kill_cmd = 'taskkill /IM "rclone.exe" /F'
                 else:
                     kill_cmd = "screen -r -S %s -X quit" % screen_name
-
+                print('\n')
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
