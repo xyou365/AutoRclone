@@ -7,7 +7,7 @@
 rclone.conf
 rclone*.conf
 token.pickle
-client_secret_1011068108634-2htk4gcdlsf7255oq56sshj6rtn50q03.apps.googleusercontent.com.json
+client*.apps.googleusercontent.com.json
 rclone_sa.py
 log_rclone.txt
 log*.txt
