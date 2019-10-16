@@ -33,6 +33,8 @@ Step 2. Generate service accounts
 ---------------------------------
 Let us create as many service accounts as possible.
 
+Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python).
+
 Run `python3 multifactory.py --quick-setup 10` to 
 * create 10 projects
 * enable the required services
