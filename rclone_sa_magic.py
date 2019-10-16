@@ -28,15 +28,17 @@ from signal import signal, SIGINT
 logfile = "log_rclone.txt"  # log file: tail -f log_rclone.txt
 NAME_SCREEN = "wrc"         # default value. Will be replaced by parameters input (-n)
 
+# parameters for this script
+SIZE_GB_MAX = 735          # if one account has already copied 735GB, switch to next account
+CNT_403_RETRY = 100        # if there is no files be copied for 100 times, switch to next account
+CNT_ACC_EXIT = 3           # if continually switch account for 3 times stop script
+
 # change it when u know what are u doing
-# paramters for rclone
+# paramters for rclone.
+# If TPSLIMITxTRANSFERS is too big, will cause 404 user rate limit error,
+# especially for tasks with a lot of small files
 TPSLIMIT = 3
 TRANSFERS = 3
-
-# parameters for this script
-SIZE_GB_MAX = 735
-CNT_403_RETRY = 100
-CNT_ACC_EXIT = 3
 # =================modify here=================
 
 
