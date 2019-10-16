@@ -84,6 +84,8 @@ Let us `rclone copy` hundreds of TB resource using service accounts.
 ```
 python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 1 -e 400
 ```
+_Add `--disable_list_r` if `rclone` cannot read all files/folders of source._
+ 
 _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
 
 * For local to Google Drive (need test)
