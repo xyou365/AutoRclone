@@ -104,7 +104,7 @@ _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
 python3 rclone_sa_magic.py -sp YourLocalPath -d DestinationID -dp DestinationPathName -b 1 -e 400
 ```
 
-* Run this command `tail -f log_rclone.txt` to see what happens in details (linux only).
+* Run command `tail -f log_rclone.txt` to see what happens in details (linux only).
 
 ![](AutoRclone.jpg)
 
