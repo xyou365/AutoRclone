@@ -183,6 +183,7 @@ def main():
     time_start = time.time()
     print("Start: " + str(time_start))
 
+    cnt_acc_error = 0
     while id <= end_id + 1:
 
         if id == end_id + 1:
@@ -242,11 +243,13 @@ def main():
             except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
-                if cnt_error >= 5:
-                    print('No rclone task detected (possibly done for this account).')
+                cnt_acc_error = cnt_acc_error + 1
+                if cnt_error >= 3:
+                    print('No rclone task detected (possibly done for this '
+                          'account). ({}/3)'.format(int(cnt_acc_error/cnt_error)))
                     # Regard continually exit as *all done*.
-                    if cnt_error >= 15:
-                        return print('All done.')
+                    if cnt_acc_error >= 9:
+                        return print('All done (3/3).')
                     break
 
                 continue
