@@ -244,6 +244,9 @@ def main():
                 cnt_error = cnt_error + 1
                 if cnt_error >= 5:
                     print('No rclone task detected (possibly done for this account).')
+                    # Regard continually exit as *all done*.
+                    if cnt_error >= 15:
+                        return print('All done.')
                     break
 
                 continue
@@ -277,6 +280,7 @@ def main():
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
+                # =================Finish it=================
                 if cnt_403_retry >= CNT_403_RETRY:
                     cnt_exit += 1
                 else:
@@ -288,6 +292,7 @@ def main():
                     print_during(time_start)
                     # exit directly rather than switch to next account.
                     return print('All Done.')
+                # =================Finish it=================
 
                 break
 
