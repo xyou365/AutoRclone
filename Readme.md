@@ -87,8 +87,8 @@ Let us `rclone copy` hundreds of TB resource using service accounts.
 * For remote operation
 - [x] publicly shared folder to Team Drive
 - [x] Team Drive to Team Drive
-- [x] publicly shared folder to publicly shared folder (with write privilege)
-- [x] Team Drive to publicly shared folder
+- [ ] publicly shared folder to publicly shared folder (with write privilege)
+- [ ] Team Drive to publicly shared folder
 ```
 python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 1 -e 400
 ```
