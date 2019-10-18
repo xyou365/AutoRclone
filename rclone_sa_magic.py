@@ -23,6 +23,7 @@ import platform
 import subprocess
 import sys
 import time
+import distutils.spawn
 from signal import signal, SIGINT
 
 # =================modify here=================
@@ -160,8 +161,22 @@ def print_during(time_start):
     print("Elapsed Time: {:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
 
 
+def check_rclone_program():
+    # promote if user has not install rclone
+    rclone_prog = 'rclone'
+    if is_windows():
+        rclone_prog += ".exe"
+    ret = distutils.spawn.find_executable(rclone_prog)
+    if ret is None:
+        sys.exit("Please install rclone firstly.")
+    return ret
+
 def main():
     signal(SIGINT, handler)
+
+    # if rclone is not installed, quit directly
+    ret = check_rclone_program()
+    print("rclone is detected: {}",format(ret))
 
     args = parse_args()
 
