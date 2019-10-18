@@ -168,7 +168,7 @@ def check_rclone_program():
         rclone_prog += ".exe"
     ret = distutils.spawn.find_executable(rclone_prog)
     if ret is None:
-        sys.exit("Please install rclone firstly.")
+        sys.exit("Please install rclone firstly: https://rclone.org/downloads/")
     return ret
 
 def main():
