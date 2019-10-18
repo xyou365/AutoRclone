@@ -14,6 +14,7 @@
 # - [ ] local to private folder
 # - [ ] private folder to any (think service accounts cannot do anything about private folder)
 #
+from __future__ import print_function
 import argparse
 import glob
 import json
