@@ -77,6 +77,11 @@ def parse_args():
     parser.add_argument('-dp', '--destination_path', type=str, default="",
                         help='the folder path of destination. In Google Drive.')
 
+    # if there are some special symbols in source path, please use this
+    # path id (publicly shared folder or folder inside team drive)
+    parser.add_argument('-spi', '--source_path_id', type=str, default="",
+                        help='the folder path id (rather than name) of source. In Google Drive.')
+
     parser.add_argument('-sa', '--service_account', type=str, default="accounts",
                         help='the folder path of json files for service accounts.')
 
@@ -123,12 +128,27 @@ def gen_rclone_cfg(args):
                 else:
                     sys.exit('Wrong length of team_drive_id or publicly shared root_folder_id')
 
+                text_to_write = "[{}{:03d}]\n" \
+                                "type = drive\n" \
+                                "scope = drive\n" \
+                                "service_account_file = {}\n" \
+                                "{} = {}\n".format('src', i + 1, filename, folder_or_team_drive_src, args.source_id)
+
+                # use path id instead path name
+                if args.source_path_id:
+                    # for team drive only
+                    if len(args.source_id) == 19:
+                        if len(args.source_path_id) == 33:
+                            text_to_write += 'root_folder_id = {}\n'.format(args.source_path_id)
+                        else:
+                            sys.exit('Wrong length of source_path_id')
+                    else:
+                        sys.exit('For publicly shared folder please do not set -spi flag')
+
+                text_to_write += "\n"
+
                 try:
-                    fp.write('[{}{:03d}]\n'
-                             'type = drive\n'
-                             'scope = drive\n'
-                             'service_account_file = {}\n'
-                             '{} = {}\n\n'.format('src', i + 1, filename, folder_or_team_drive_src, args.source_id))
+                    fp.write(text_to_write)
                 except:
                     sys.exit("failed to write {} to {}".format(args.source_id, output_of_config_file))
             else:
