@@ -229,7 +229,7 @@ def main():
         open_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
         if args.disable_list_r:
             open_cmd += "--disable ListR "
-        open_cmd += "--drive-acknowledge-abuse --log-file={} '{}' '{}'".format(logfile, src_full_path, dst_full_path)
+        open_cmd += "--drive-acknowledge-abuse --log-file='{}' '{}' '{}'".format(logfile, src_full_path, dst_full_path)
 
         if not is_windows():
             open_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + open_cmd
