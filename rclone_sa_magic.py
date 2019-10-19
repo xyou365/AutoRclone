@@ -147,7 +147,7 @@ def gen_rclone_cfg(args):
                          'type = drive\n'
                          'scope = drive\n'
                          'service_account_file = {}\n'
-                         '{} = {}\n\n'.format('dst', i, filename, folder_or_team_drive_dst, args.destination_id))
+                         '{} = {}\n\n'.format('dst', i + 1, filename, folder_or_team_drive_dst, args.destination_id))
             except:
                 sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
 
