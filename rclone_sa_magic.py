@@ -177,7 +177,6 @@ def main():
     # if rclone is not installed, quit directly
     ret = check_rclone_program()
     print("rclone is detected: {}".format(ret))
-
     args = parse_args()
 
     global NAME_SCREEN
