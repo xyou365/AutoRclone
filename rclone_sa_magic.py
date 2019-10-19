@@ -197,7 +197,7 @@ def main():
         # need parse labels from config files
 
     time_start = time.time()
-    print("Start: " + str(time_start))
+    print("Start: {}".format(time.strftime("%H:%M:%S")))
 
     cnt_acc_error = 0
     while id <= end_id + 1:
