@@ -225,7 +225,7 @@ def main():
             break
             # id = 1
 
-        with open('current_sa.txt', 'w') as fp:
+        with open('current_sa.txt', 'w', encoding='utf-8') as fp:
             fp.write(str(id) + '\n')
 
         src_label = "src" + "{0:03d}".format(id) + ":"
@@ -240,26 +240,26 @@ def main():
             src_full_path = args.destination_path
 
         # =================cmd to run=================
-        open_cmd = "rclone --config {} copy ".format(config_file)
+        rclone_cmd = "rclone --config {} copy ".format(config_file)
         if args.test_only:
-            open_cmd += "--dry-run "
+            rclone_cmd += "--dry-run "
         # --fast-list is default adopted in latest rclone
-        open_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing "
-        open_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
+        rclone_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing "
+        rclone_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
         if args.disable_list_r:
-            open_cmd += "--disable ListR "
-        open_cmd += "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile, src_full_path, dst_full_path)
+            rclone_cmd += "--disable ListR "
+        rclone_cmd += "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile, src_full_path, dst_full_path)
 
         if not is_windows():
-            open_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + open_cmd
+            rclone_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + rclone_cmd
         else:
-            open_cmd = "start /b " + open_cmd
+            rclone_cmd = "start /b " + rclone_cmd
         # =================cmd to run=================
 
-        print(open_cmd)
+        print(rclone_cmd)
 
         try:
-            subprocess.check_call(open_cmd, shell=True)
+            subprocess.check_call(rclone_cmd, shell=True)
             print(">> Let us go {} {}".format(dst_label, time.strftime("%H:%M:%S")))
             time.sleep(10)
         except subprocess.SubprocessError as error:
@@ -270,11 +270,10 @@ def main():
         size_GB_done_before = 0
         cnt_exit = 0
         while True:
-            cmd = 'rclone rc core/stats'
+            rc_cmd = 'rclone rc core/stats'
             try:
-                response = subprocess.check_output(cmd, shell=True)
-                cnt_error = 0
-                cnt_exit = 0
+                response = subprocess.check_output(rc_cmd, shell=True)
+                cnt_error, cnt_exit = 0, 0
             except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
@@ -286,16 +285,17 @@ def main():
                     if cnt_acc_error >= 9:
                         return print('All done (3/3).')
                     break
-
                 continue
 
             response_processed = response.decode('utf-8').replace('\0', '')
             response_processed_json = json.loads(response_processed)
-
-            # print(response_processed_json)
-
             size_GB_done = int(int(response_processed_json['bytes']) * 9.31322e-10)
             speed_now = float(int(response_processed_json['speed']) * 9.31322e-10 * 1024)
+
+            # try:
+            #     print(json.loads(response.decode('utf-8')))
+            # except:
+            #     print("have some encoding problem to print info")
 
             print("%s %dGB Done @ %fMB/s" % (dst_label, size_GB_done, speed_now), end="\r")
 
@@ -329,7 +329,9 @@ def main():
                 if cnt_exit > CNT_SA_EXIT:
                     print_during(time_start)
                     # exit directly rather than switch to next account.
-                    return print('All Done.')
+                    print('All Done.')
+                    print_during(time_start)
+                    return
                 # =================Finish it=================
 
                 break
