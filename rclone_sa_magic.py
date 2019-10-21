@@ -273,7 +273,7 @@ def main():
             rc_cmd = 'rclone rc core/stats'
             try:
                 response = subprocess.check_output(rc_cmd, shell=True)
-                cnt_error, cnt_exit = 0, 0
+                cnt_error, cnt_exit, cnt_acc_error = 0, 0, 0
             except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
@@ -330,7 +330,6 @@ def main():
                     print_during(time_start)
                     # exit directly rather than switch to next account.
                     print('All Done.')
-                    print_during(time_start)
                     return
                 # =================Finish it=================
 
