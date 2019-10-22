@@ -288,7 +288,7 @@ def main():
                 cnt_acc_error = cnt_acc_error + 1
                 if cnt_error >= 3:
                     cnt_acc_sucess = 0
-                    if args.test_only: print("total 3 times success. the cnt_acc_sucess is reset to {}\n".format(cnt_acc_sucess))
+                    if args.test_only: print("total 3 times failure. the cnt_acc_sucess is reset to {}\n".format(cnt_acc_sucess))
 
                     print('No rclone task detected (possibly done for this '
                           'account). ({}/3)'.format(int(cnt_acc_error/cnt_error)))
@@ -342,7 +342,7 @@ def main():
                     if args.test_only: print("1 time sucess. the cnt_exit is reset to {}\n".format(cnt_exit))
 
                 # Regard continually exit as *all done*.
-                if cnt_exit > CNT_SA_EXIT:
+                if cnt_exit >= CNT_SA_EXIT:
                     print_during(time_start)
                     # exit directly rather than switch to next account.
                     print('All Done.')
