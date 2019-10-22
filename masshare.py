@@ -5,7 +5,7 @@ stt = time.time()
 
 parse = argparse.ArgumentParser(description='A tool to add service accounts to a shared drive from a folder containing credential files.')
 parse.add_argument('--path','-p',default='accounts',help='Specify an alternative path to the service accounts folder.')
-parse.add_argument('--controller','-c',default='controller/*.json',help='Specify the relative path for the controller file.')
+parse.add_argument('--credentials','-c',default='./credentials.json',help='Specify the relative path for the credentials file.')
 parse.add_argument('--yes','-y',default=False,action='store_true',help='Skips the sanity prompt.')
 parsereq = parse.add_argument_group('required arguments')
 parsereq.add_argument('--drive-id','-d',help='The ID of the Shared Drive.',required=True)
@@ -13,22 +13,37 @@ parsereq.add_argument('--drive-id','-d',help='The ID of the Shared Drive.',requi
 args = parse.parse_args()
 acc_dir = args.path
 did = args.drive_id
-contrs = glob.glob(args.controller)
+credentials = glob.glob(args.credentials)
 
 try:
-	open(contrs[0],'r')
-	print('Found controllers.')
+	open(credentials[0],'r')
+	print('Found credentials.')
 except IndexError:
-	print('No controller found.')
+	print('No credentials found.')
 	sys.exit(0)
+	
 if not args.yes:
-	input('Make sure the following email is added to the shared drive as Manager:\n' + json.loads((open(contrs[0],'r').read()))['client_email'])
+	input('Make sure the following email is added to the shared drive as Manager:\n' + json.loads((open(credentials[0],'r').read()))['installed']['client_id'])
 
-credentials = Credentials.from_service_account_file(contrs[0], scopes=[
-	"https://www.googleapis.com/auth/drive"
-])
+creds = None
+if os.path.exists('token.pickle'):
+	with open('token.pickle', 'rb') as token:
+		creds = pickle.load(token)
+# If there are no (valid) credentials available, let the user log in.
+if not creds or not creds.valid:
+	if creds and creds.expired and creds.refresh_token:
+		creds.refresh(Request())
+	else:
+		flow = InstalledAppFlow.from_client_secrets_file(credentials[0], scopes=[
+			'https://www.googleapis.com/auth/admin.directory.group',
+			'https://www.googleapis.com/auth/admin.directory.group.member'
+		])
+		creds = flow.run_local_server(port=0)
+	# Save the credentials for the next run
+	with open('token.pickle', 'wb') as token:
+		pickle.dump(creds, token)
 
-drive = googleapiclient.discovery.build("drive", "v3", credentials=credentials)
+drive = googleapiclient.discovery.build("drive", "v3", credentials=creds)
 batch = drive.new_batch_http_request()
 
 aa = glob.glob('%s/*.json' % acc_dir)

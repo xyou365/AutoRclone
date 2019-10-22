@@ -33,7 +33,8 @@ Step 2. Generate service accounts
 ---------------------------------
 Let us create as many service accounts as possible.
 
-Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python).
+Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python)
+and save it into project root path as `credentials.json`.
 
 Run `python3 multifactory.py --quick-setup 10` to 
 * create 10 projects
@@ -73,6 +74,9 @@ Add the group address `sa@yourdomain.com` to your source Team Drive (tdsrc) and 
  
 If you are not Gsuite admin or do not care about the member limitation of Team Drive, 
 just use script of `folderclone` to add `sa` accounts into Team Drive.
+
+Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python) 
+and save the `credentials.json` into project root path if you have not done it in **Step 2**.
 
 - Add service accounts into your source Team Drive:
 `python3 masshare.py -d SharedTeamDriveSrcID`
