@@ -276,7 +276,7 @@ def main():
             try:
                 response = subprocess.check_output(rc_cmd, shell=True)
                 cnt_acc_sucess += 1
-                cnt_error, cnt_exit = 0, 0
+                cnt_error = 0
                 if cnt_acc_sucess >= 9:
                     cnt_acc_error = 0
                     cnt_acc_sucess = 0
