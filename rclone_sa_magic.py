@@ -280,6 +280,7 @@ def main():
                 cnt_error, cnt_exit = 0, 0
                 if cnt_acc_sucess >= 18:
                     cnt_acc_error = 0
+                    cnt_acc_sucess = 0
                     if args.test_only: print("the cnt_acc_error is reset to {}".format(cnt_acc_error))
 
             except subprocess.SubprocessError as error:
@@ -288,6 +289,8 @@ def main():
                 cnt_acc_error = cnt_acc_error + 1
                 if cnt_error >= 3:
                     cnt_acc_sucess = 0
+                    if args.test_only: print("the cnt_acc_sucess is reset to {}".format(cnt_acc_sucess))
+
                     print('No rclone task detected (possibly done for this '
                           'account). ({}/3)'.format(int(cnt_acc_error/cnt_error)))
                     # Regard continually exit as *all done*.
