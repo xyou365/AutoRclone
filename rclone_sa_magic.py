@@ -270,7 +270,6 @@ def main():
         cnt_error = 0
         cnt_403_retry = 0
         size_GB_done_before = 0
-        cnt_exit = 0
         cnt_acc_sucess = 0
         while True:
             rc_cmd = 'rclone rc core/stats'
