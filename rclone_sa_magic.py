@@ -331,7 +331,10 @@ def main():
 
                 # =================Finish it=================
                 if cnt_403_retry >= CNT_403_RETRY:
-                    cnt_exit += 1
+                    try:
+                        cnt_exit += 1
+                    except:
+                        cnt_exit = 1
                     if args.test_only: print("1 more time for long time waiting. the cnt_exit is added to {}\n".format(cnt_exit))
                 else:
                     # clear cnt if there is one time
