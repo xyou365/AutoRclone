@@ -36,10 +36,10 @@ Let us create as many service accounts as possible.
 Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python)
 and save it into project root path as `credentials.json`.
 
-Run `python3 multifactory.py --quick-setup 9` to 
-* create 10 projects (project 0 to project 9)
+Run `python3 multifactory.py --quick-setup 5` to 
+* create 6 projects (project 0 to project 5)
 * enable the required services
-* create 1000 (10 projects, each with 100) Service Accounts
+* create 600 (6 projects, each with 100) Service Accounts
 * and download their credentials into a new folder accounts
 
 After it is finished, there will be many json files in one folder named `accounts`. 
