@@ -95,8 +95,10 @@ def parse_args():
 
     parser.add_argument('-c', '--rclone_config_file', type=str,
                         help='config file path of rclone')
-    parser.add_argument('-t', '--test_only', action="store_true",
-                        help='for test: make rclone dry-run')
+    parser.add_argument('-test', '--test_only', action="store_true",
+                        help='for test: make rclone print some more information.')
+    parser.add_argument('-t', '--dry_run', action="store_true",
+                        help='for test: make rclone dry-run.')
 
     parser.add_argument('--disable_list_r', action="store_true",
                         help='for debug. do not use this.')
@@ -241,7 +243,7 @@ def main():
 
         # =================cmd to run=================
         rclone_cmd = "rclone --config {} copy ".format(config_file)
-        if args.test_only:
+        if args.dry_run:
             rclone_cmd += "--dry-run "
         # --fast-list is default adopted in latest rclone
         rclone_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing "
@@ -276,13 +278,16 @@ def main():
                 response = subprocess.check_output(rc_cmd, shell=True)
                 cnt_acc_sucess += 1
                 cnt_error, cnt_exit = 0, 0
-                if cnt_acc_sucess >= 3:
+                if cnt_acc_sucess >= 18:
                     cnt_acc_error = 0
+                    if args.test_only: print("the cnt_acc_error is reset to {}".format(cnt_acc_error))
+
             except subprocess.SubprocessError as error:
                 # continually ...
                 cnt_error = cnt_error + 1
                 cnt_acc_error = cnt_acc_error + 1
                 if cnt_error >= 3:
+                    cnt_acc_sucess = 0
                     print('No rclone task detected (possibly done for this '
                           'account). ({}/3)'.format(int(cnt_acc_error/cnt_error)))
                     # Regard continually exit as *all done*.
@@ -325,9 +330,11 @@ def main():
                 # =================Finish it=================
                 if cnt_403_retry >= CNT_403_RETRY:
                     cnt_exit += 1
+                    if args.test_only: print("the cnt_exit is added to {}".format(cnt_exit))
                 else:
                     # clear cnt if there is one time
                     cnt_exit = 0
+                    if args.test_only: print("the cnt_exit is reset to {}".format(cnt_exit))
 
                 # Regard continually exit as *all done*.
                 if cnt_exit > CNT_SA_EXIT:
