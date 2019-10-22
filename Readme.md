@@ -62,9 +62,9 @@ Here we use Google Groups to manager our service accounts considering the
 
 2. Create groups for your organization [in the Admin console](https://support.google.com/a/answer/33343?hl=en). After create a group, you will have an address for example`sa@yourdomain.com`.
 
-3. Run `python3 massadd.py -p ./accounts -c credentials/*.json -g sa@yourdomain.com`
+3. Run `python3 add_to_google_group.py -p ./accounts -c credentials/*.json -g sa@yourdomain.com`
 
-_For meaning of above flags, please run `python3 massadd.py -h`_
+_For meaning of above flags, please run `python3 add_to_google_group.py -h`_
 
 Step 4. Add service accounts or Google Groups into Team Drive
 ---------------------------------
@@ -79,10 +79,10 @@ Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/
 and save the `credentials.json` into project root path if you have not done it in **Step 2**.
 
 - Add service accounts into your source Team Drive:
-`python3 masshare.py -d SharedTeamDriveSrcID`
+`python3 add_to_team_drive.py -d SharedTeamDriveSrcID`
 
 - Add service accounts into your destination Team Drive:
-`python3 masshare.py -d SharedTeamDriveDstID`
+`python3 add_to_team_drive.py -d SharedTeamDriveDstID`
 
 Step 5. Start your task
 ---------------------------------
