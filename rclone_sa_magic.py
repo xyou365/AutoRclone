@@ -278,10 +278,10 @@ def main():
                 response = subprocess.check_output(rc_cmd, shell=True)
                 cnt_acc_sucess += 1
                 cnt_error, cnt_exit = 0, 0
-                if cnt_acc_sucess >= 18:
+                if cnt_acc_sucess >= 9:
                     cnt_acc_error = 0
                     cnt_acc_sucess = 0
-                    if args.test_only: print("the cnt_acc_error is reset to {}".format(cnt_acc_error))
+                    if args.test_only: print("total 9 times success. the cnt_acc_error is reset to {}\n".format(cnt_acc_error))
 
             except subprocess.SubprocessError as error:
                 # continually ...
@@ -289,7 +289,7 @@ def main():
                 cnt_acc_error = cnt_acc_error + 1
                 if cnt_error >= 3:
                     cnt_acc_sucess = 0
-                    if args.test_only: print("the cnt_acc_sucess is reset to {}".format(cnt_acc_sucess))
+                    if args.test_only: print("total 3 times success. the cnt_acc_sucess is reset to {}\n".format(cnt_acc_sucess))
 
                     print('No rclone task detected (possibly done for this '
                           'account). ({}/3)'.format(int(cnt_acc_error/cnt_error)))
@@ -333,11 +333,11 @@ def main():
                 # =================Finish it=================
                 if cnt_403_retry >= CNT_403_RETRY:
                     cnt_exit += 1
-                    if args.test_only: print("the cnt_exit is added to {}".format(cnt_exit))
+                    if args.test_only: print("1 more time for long time waiting. the cnt_exit is added to {}\n".format(cnt_exit))
                 else:
                     # clear cnt if there is one time
                     cnt_exit = 0
-                    if args.test_only: print("the cnt_exit is reset to {}".format(cnt_exit))
+                    if args.test_only: print("1 time sucess. the cnt_exit is reset to {}\n".format(cnt_exit))
 
                 # Regard continually exit as *all done*.
                 if cnt_exit > CNT_SA_EXIT:
