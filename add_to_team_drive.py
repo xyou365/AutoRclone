@@ -41,7 +41,8 @@ if not creds or not creds.valid:
 			'https://www.googleapis.com/auth/admin.directory.group',
 			'https://www.googleapis.com/auth/admin.directory.group.member'
 		])
-		creds = flow.run_local_server(port=0)
+		# creds = flow.run_local_server(port=0)
+		creds = flow.run_console()
 	# Save the credentials for the next run
 	with open('token.pickle', 'wb') as token:
 		pickle.dump(creds, token)
