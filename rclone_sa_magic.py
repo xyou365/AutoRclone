@@ -33,7 +33,7 @@ NAME_SCREEN = "wrc"         # default value. Will be replaced by parameters inpu
 # parameters for this script
 SIZE_GB_MAX = 735          # if one account has already copied 735GB, switch to next account
 CNT_403_RETRY = 100        # if there is no files be copied for 100 times, switch to next account
-CNT_SA_EXIT = 3           # if continually switch account for 3 times stop script
+CNT_SA_EXIT = 3            # if continually switch account for 3 times stop script
 
 # change it when u know what are u doing
 # paramters for rclone.
@@ -241,16 +241,20 @@ def main():
         if args.destination_id is None:
             src_full_path = args.destination_path
 
+        if args.test_only:
+            print('\nsrc full path\n', src_full_path)
+            print('\ndst full path\n', dst_full_path)
+
         # =================cmd to run=================
         rclone_cmd = "rclone --config {} copy ".format(config_file)
         if args.dry_run:
             rclone_cmd += "--dry-run "
-        # --fast-list is default adopted in latest rclone
+        # --fast-list is default adopted in the latest rclone
         rclone_cmd += "--drive-server-side-across-configs --rc -vv --ignore-existing "
         rclone_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
         if args.disable_list_r:
             rclone_cmd += "--disable ListR "
-        rclone_cmd += "--drive-acknowledge-abuse --log-file={} {} {}".format(logfile, src_full_path, dst_full_path)
+        rclone_cmd += "--drive-acknowledge-abuse --log-file={} \"{}\" \"{}\"".format(logfile, src_full_path, dst_full_path)
 
         if not is_windows():
             rclone_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + rclone_cmd
