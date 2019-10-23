@@ -26,7 +26,7 @@ except IndexError:
 	sys.exit(0)
 	
 if not args.yes:
-	input('Make sure the following email is added to the shared drive as Manager:\n' + json.loads((open(credentials[0],'r').read()))['installed']['client_id'])
+	input('Make sure the following client id is added to the shared drive as Manager:\n' + json.loads((open(credentials[0],'r').read()))['installed']['client_id'])
 
 creds = None
 if os.path.exists('token.pickle'):

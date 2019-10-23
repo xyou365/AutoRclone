@@ -84,6 +84,8 @@ def parse_args():
 
     parser.add_argument('-sa', '--service_account', type=str, default="accounts",
                         help='the folder path of json files for service accounts.')
+    parser.add_argument('-cp', '--check_path', type=str, action="store_true",
+                        help='if check src/dst path or not.')
 
     parser.add_argument('-n', '--name_screen', type=str, default="wrc",
                         help='the name of screen. Set it to different if you want to run more than one instance.')
@@ -193,6 +195,15 @@ def check_rclone_program():
         sys.exit("Please install rclone firstly: https://rclone.org/downloads/")
     return ret
 
+
+def check_path(path):
+    try:
+        ret = subprocess.check_output('rclone --config {} --disable ListR size \"{}\"'.format('rclone.conf', path), shell=True)
+        print('It is okay:\n{}'.format(ret.decode('utf-8').replace('\0', '')))
+    except subprocess.SubprocessError as error:
+        sys.exit(str(error))
+
+
 def main():
     signal(SIGINT, handler)
 
@@ -239,11 +250,18 @@ def main():
 
         dst_full_path = dst_label + args.destination_path
         if args.destination_id is None:
-            src_full_path = args.destination_path
+            dst_full_path = args.destination_path
 
         if args.test_only:
             print('\nsrc full path\n', src_full_path)
-            print('\ndst full path\n', dst_full_path)
+            print('\ndst full path\n', dst_full_path, '\n')
+
+        if args.check_path and id == args.begin_sa_id:
+            print("Please wait. Checking source path...")
+            check_path(src_full_path)
+
+            print("Please wait. Checking destination path...")
+            check_path(dst_full_path)
 
         # =================cmd to run=================
         rclone_cmd = "rclone --config {} copy ".format(config_file)
