@@ -84,7 +84,7 @@ def parse_args():
 
     parser.add_argument('-sa', '--service_account', type=str, default="accounts",
                         help='the folder path of json files for service accounts.')
-    parser.add_argument('-cp', '--check_path', type=str, action="store_true",
+    parser.add_argument('-cp', '--check_path', action="store_true",
                         help='if check src/dst path or not.')
 
     parser.add_argument('-n', '--name_screen', type=str, default="wrc",
