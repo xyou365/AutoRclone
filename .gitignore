@@ -8,6 +8,7 @@ rclone.conf
 rclone*.conf
 token.pickle
 client*.apps.googleusercontent.com.json
+credentials.json
 rclone_sa.py
 log_rclone.txt
 log*.txt
