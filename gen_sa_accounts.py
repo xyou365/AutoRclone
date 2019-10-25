@@ -202,8 +202,8 @@ def serviceaccountfactory(
                 nprjs = _create_projects(cloud, create_projects)
                 selected_projects = nprjs
             else:
-                sys.exit('No, you cannot create %d new project.\n'
-                      'Reduce value of --quick-setup or delete existing project (%d already).\n'
+                sys.exit('No, you cannot create %d new project (s).\n'
+                      'Please reduce value of --quick-setup or delete existing project (%d already).\n'
                       'Remember that you can totally create %d projects.\n' % (create_projects, current_count, max_projects))
         else:
             print('Please specify a number larger than 0.')
