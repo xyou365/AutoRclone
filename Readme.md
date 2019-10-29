@@ -36,7 +36,7 @@ Let us create as many service accounts as possible.
 Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python)
 and save it into project root path as `credentials.json`.
 
-Run `python3 gen_sa_accounts.py --quick-setup 5` to 
+Run `python3 gen_sa_accounts.py --quick-setup 5 --new-only` to 
 * create 6 projects (project 0 to project 5)
 * enable the required services
 * create 600 (6 projects, each with 100) Service Accounts
