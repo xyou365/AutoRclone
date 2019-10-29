@@ -31,9 +31,9 @@ logfile = "log_rclone.txt"  # log file: tail -f log_rclone.txt
 NAME_SCREEN = "wrc"         # default value. Will be replaced by parameters input (-n)
 
 # parameters for this script
-SIZE_GB_MAX = 735           # if one account has already copied 735GB, switch to next account
+SIZE_GB_MAX = 700          # if one account has already copied 735GB, switch to next account
 CNT_DEAD_RETRY = 100        # if there is no files be copied for 100 times, switch to next account
-CNT_SA_EXIT = 3             # if continually switch account for 3 times stop script
+CNT_SA_EXIT = 3            # if continually switch account for 3 times stop script
 
 # change it when u know what are u doing
 # paramters for rclone.
@@ -290,7 +290,7 @@ def main():
             return print("error: " + str(error))
 
         cnt_error = 0
-        CNT_DEAD_RETRY = 0
+        cnt_dead_retry = 0
         size_GB_done_before = 0
         cnt_acc_sucess = 0
         while True:
@@ -334,14 +334,14 @@ def main():
 
             # continually no ...
             if size_GB_done - size_GB_done_before == 0:
-                CNT_DEAD_RETRY += 1
+                cnt_dead_retry += 1
             else:
-                CNT_DEAD_RETRY = 0
+                cnt_dead_retry = 0
 
             size_GB_done_before = size_GB_done
 
             # Stop by error (403) info
-            if size_GB_done >= SIZE_GB_MAX or CNT_DEAD_RETRY >= CNT_DEAD_RETRY:
+            if size_GB_done >= SIZE_GB_MAX or cnt_dead_retry >= CNT_DEAD_RETRY:
 
                 if is_windows():
                     kill_cmd = 'taskkill /IM "rclone.exe" /F'
@@ -352,7 +352,7 @@ def main():
                 print('\n')
 
                 # =================Finish it=================
-                if CNT_DEAD_RETRY >= CNT_DEAD_RETRY:
+                if cnt_dead_retry >= CNT_DEAD_RETRY:
                     try:
                         cnt_exit += 1
                     except:
