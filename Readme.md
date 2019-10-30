@@ -98,7 +98,7 @@ python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName 
 ```
 _Add `--disable_list_r` if `rclone` [cannot read all contents of public shared folder](https://forum.rclone.org/t/rclone-cannot-see-all-files-folder-in-public-shared-folder/12351)._
 
-Please make sure the Rclone can read your source and destination directory using `rclone size`:
+Please make sure the Rclone can read your source and destination directory. Check it using `rclone size`:
 
 1. ```rclone --config rclone.conf size --disable ListR src001:```
 
