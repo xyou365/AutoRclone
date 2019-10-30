@@ -5,7 +5,7 @@ Many thanks for [rclone](https://rclone.org/) and [folderclone](https://github.c
 - [x] add massive service accounts into rclone config file
 - [x] add massive service accounts into groups for your organization
 - [x] automatically switch accounts when rclone copy/move/sync 
-- [x] Windows system supported
+- [x] Windows system is supported
 
 Step 1. Copy code to your VPS or local machine
 ---------------------------------
@@ -19,7 +19,7 @@ If in Debian/Ubuntu, directly use this command
 ```
 sudo apt-get install screen git && curl https://rclone.org/install.sh | sudo bash
 ```
-After all requirements above are successfully installed, run this command
+After all dependency above are successfully installed, run this command
 ```
 sudo git clone https://github.com/xyou365/AutoRclone && cd AutoRclone && sudo pip3 install -r requirements.txt
 ```

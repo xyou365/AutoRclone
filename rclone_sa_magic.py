@@ -291,7 +291,7 @@ def main():
 
         cnt_error = 0
         cnt_dead_retry = 0
-        size_GB_done_before = 0
+        size_bytes_done_before = 0
         cnt_acc_sucess = 0
         already_start = False
         while True:
@@ -323,7 +323,8 @@ def main():
 
             response_processed = response.decode('utf-8').replace('\0', '')
             response_processed_json = json.loads(response_processed)
-            size_GB_done = int(int(response_processed_json['bytes']) * 9.31322e-10)
+            size_bytes_done = int(response_processed_json['bytes'])
+            size_GB_done = int(size_bytes_done * 9.31322e-10)
             speed_now = float(int(response_processed_json['speed']) * 9.31322e-10 * 1024)
 
             # try:
@@ -334,13 +335,13 @@ def main():
             print("%s %dGB Done @ %fMB/s" % (dst_label, size_GB_done, speed_now), end="\r")
 
             # continually no ...
-            if already_start and size_GB_done - size_GB_done_before == 0:
+            if already_start and size_bytes_done - size_bytes_done_before == 0:
                 cnt_dead_retry += 1
             else:
                 cnt_dead_retry = 0
                 already_start = True
 
-            size_GB_done_before = size_GB_done
+            size_bytes_done_before = size_bytes_done
 
             # Stop by error (403) info
             if size_GB_done >= SIZE_GB_MAX or cnt_dead_retry >= CNT_DEAD_RETRY:
