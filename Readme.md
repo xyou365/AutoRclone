@@ -73,7 +73,7 @@ _If you do not use Team Drive, just skip._
 Add the group address `sa@yourdomain.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
 If you are not Gsuite admin or do not care about the member limitation of Team Drive, 
-just use script of `folderclone` to add `sa` accounts into Team Drive.
+just use script of `folderclone` to add service accounts directly into Team Drive.
 
 Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python) 
 and save the `credentials.json` into project root path if you have not done it in **Step 2**.
