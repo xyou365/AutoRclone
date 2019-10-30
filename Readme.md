@@ -88,9 +88,9 @@ Step 5. Start your task
 ---------------------------------
 First, please make sure the Rclone can read your source and destination directory using `rclone size`:
 
-1. ```rclone ncdu --config rclone.conf --disable ListR src001:```
+1. ```rclone size --config rclone.conf --disable ListR src001:```
 
-2. ```rclone ncdu --config rclone.conf --disable ListR dst001:```
+2. ```rclone size --config rclone.conf --disable ListR dst001:```
 
 Then, let us copy hundreds of TB resource using service accounts.
 
