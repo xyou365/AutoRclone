@@ -86,9 +86,15 @@ and save the `credentials.json` into project root path if you have not done it i
 
 Step 5. Start your task
 ---------------------------------
-Let us `rclone copy` hundreds of TB resource using service accounts.
+First, please make sure the Rclone can read your source and destination directory:
 
-* For remote operation
+1. ```rclone ncdu --config rclone.conf src001:```
+
+2. ```rclone ncdu --config rclone.conf dst001:```
+
+Then, let us copy hundreds of TB resource using service accounts.
+
+* For server side copy
 - [x] publicly shared folder to Team Drive
 - [x] Team Drive to Team Drive
 - [ ] publicly shared folder to publicly shared folder (with write privilege)

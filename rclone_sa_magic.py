@@ -31,7 +31,7 @@ logfile = "log_rclone.txt"  # log file: tail -f log_rclone.txt
 NAME_SCREEN = "wrc"         # default value. Will be replaced by parameters input (-n)
 
 # parameters for this script
-SIZE_GB_MAX = 700          # if one account has already copied 735GB, switch to next account
+SIZE_GB_MAX = 735          # if one account has already copied 735GB, switch to next account
 CNT_DEAD_RETRY = 100        # if there is no files be copied for 100 times, switch to next account
 CNT_SA_EXIT = 3            # if continually switch account for 3 times stop script
 
