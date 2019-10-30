@@ -88,7 +88,7 @@ Step 5. Start your task
 ---------------------------------
 Let us copy hundreds of TB resource using service accounts.
 
-* For server side copy
+#### For server side copy
 - [x] publicly shared folder to Team Drive
 - [x] Team Drive to Team Drive
 - [ ] publicly shared folder to publicly shared folder (with write privilege)
@@ -105,7 +105,7 @@ Please make sure the Rclone can read your source and destination directory. Chec
 2. ```rclone --config rclone.conf size --disable ListR dst001:```
 _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
 
-* For local to Google Drive (need test)
+#### For local to Google Drive (need test)
 - [x] local to Team Drive
 - [ ] local to private folder
 - [ ] private folder to any (think service accounts cannot do anything about private folder)
