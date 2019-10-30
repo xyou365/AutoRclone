@@ -86,7 +86,7 @@ and save the `credentials.json` into project root path if you have not done it i
 
 Step 5. Start your task
 ---------------------------------
-First, please make sure the Rclone can read your source and destination directory:
+First, please make sure the Rclone can read your source and destination directory using rclone [ncdu](https://rclone.org/commands/rclone_ncdu/):
 
 1. ```rclone ncdu --config rclone.conf src001:```
 
