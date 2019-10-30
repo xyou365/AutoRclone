@@ -300,7 +300,9 @@ def main():
                 response = subprocess.check_output(rc_cmd, shell=True)
                 cnt_acc_sucess += 1
                 cnt_error = 0
-                if cnt_acc_sucess >= 9:
+                # if there is a long time waiting, this is will be easily satisfied, so check if it is started using
+                # already_started flag
+                if already_start and cnt_acc_sucess >= 9:
                     cnt_acc_error = 0
                     cnt_acc_sucess = 0
                     if args.test_only: print("total 9 times success. the cnt_acc_error is reset to {}\n".format(cnt_acc_error))
