@@ -62,7 +62,7 @@ Here we use Google Groups to manager our service accounts considering the
 
 2. Create groups for your organization [in the Admin console](https://support.google.com/a/answer/33343?hl=en). After create a group, you will have an address for example`sa@yourdomain.com`.
 
-3. Run `python3 add_to_google_group.py -p ./accounts -c credentials/*.json -g sa@yourdomain.com`
+3. Run `python3 add_to_google_group.py -g sa@yourdomain.com`
 
 _For meaning of above flags, please run `python3 add_to_google_group.py -h`_
 
