@@ -17,7 +17,7 @@ stt = time.time()
 
 parse = argparse.ArgumentParser(description='A tool to add service accounts to groups for your organization from a folder containing credential files.')
 parse.add_argument('--path','-p',default='accounts',help='Specify an alternative path to the service accounts folder.')
-parse.add_argument('--credentials','-c',default='credentials/*.json',help='Specify the relative path for the controller file.')
+parse.add_argument('--credentials','-c',default='credentials/credentials.json',help='Specify the relative path for the controller file.')
 parsereq = parse.add_argument_group('required arguments')
 # service-account@googlegroups.com
 parsereq.add_argument('--groupaddr','-g',help='The address of groups for your organization.', required=True)
@@ -28,8 +28,8 @@ gaddr = args.groupaddr
 credentials = glob.glob(args.credentials)
 
 creds = None
-if os.path.exists('token.pickle'):
-	with open('token.pickle', 'rb') as token:
+if os.path.exists('credentials/token.pickle'):
+	with open('credentials/token.pickle', 'rb') as token:
 		creds = pickle.load(token)
 # If there are no (valid) credentials available, let the user log in.
 if not creds or not creds.valid:
@@ -43,7 +43,7 @@ if not creds or not creds.valid:
 		# creds = flow.run_local_server(port=0)
 		creds = flow.run_console()
 	# Save the credentials for the next run
-	with open('token.pickle', 'wb') as token:
+	with open('credentials/token.pickle', 'wb') as token:
 		pickle.dump(creds, token)
 
 group = googleapiclient.discovery.build("admin", "directory_v1", credentials=creds)
