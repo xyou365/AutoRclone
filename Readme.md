@@ -86,11 +86,11 @@ and save the `credentials.json` into project root path if you have not done it i
 
 Step 5. Start your task
 ---------------------------------
-First, please make sure the Rclone can read your source and destination directory using rclone [ncdu](https://rclone.org/commands/rclone_ncdu/):
+First, please make sure the Rclone can read your source and destination directory using `rclone size`:
 
-1. ```rclone ncdu --config rclone.conf src001:```
+1. ```rclone ncdu --config rclone.conf --disable ListR src001:```
 
-2. ```rclone ncdu --config rclone.conf dst001:```
+2. ```rclone ncdu --config rclone.conf --disable ListR dst001:```
 
 Then, let us copy hundreds of TB resource using service accounts.
 
