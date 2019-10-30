@@ -86,13 +86,7 @@ and save the `credentials.json` into project root path if you have not done it i
 
 Step 5. Start your task
 ---------------------------------
-First, please make sure the Rclone can read your source and destination directory using `rclone size`:
-
-1. ```rclone --config rclone.conf size --disable ListR src001:```
-
-2. ```rclone --config rclone.conf size --disable ListR dst001:```
-
-Then, let us copy hundreds of TB resource using service accounts.
+Let us copy hundreds of TB resource using service accounts.
 
 * For server side copy
 - [x] publicly shared folder to Team Drive
@@ -103,7 +97,12 @@ Then, let us copy hundreds of TB resource using service accounts.
 python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 1 -e 400
 ```
 _Add `--disable_list_r` if `rclone` [cannot read all contents of public shared folder](https://forum.rclone.org/t/rclone-cannot-see-all-files-folder-in-public-shared-folder/12351)._
- 
+
+Please make sure the Rclone can read your source and destination directory using `rclone size`:
+
+1. ```rclone --config rclone.conf size --disable ListR src001:```
+
+2. ```rclone --config rclone.conf size --disable ListR dst001:```
 _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
 
 * For local to Google Drive (need test)
