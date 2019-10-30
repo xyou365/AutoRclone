@@ -335,15 +335,21 @@ def main():
             print("%s %dGB Done @ %fMB/s" % (dst_label, size_GB_done, speed_now), end="\r")
 
             # continually no ...
-            if already_start and size_bytes_done - size_bytes_done_before == 0:
-                cnt_dead_retry += 1
+            if size_bytes_done - size_bytes_done_before == 0:
+                if already_start:
+                    cnt_dead_retry += 1
+                    if args.test_only:
+                        print('\nsize_bytes_done', size_bytes_done)
+                        print('size_bytes_done_before', size_bytes_done_before)
+                        print("No. No size increase after job started.")
             else:
                 cnt_dead_retry = 0
+                if args.test_only: print("\nOk. I think the job has started")
                 already_start = True
 
             size_bytes_done_before = size_bytes_done
 
-            # Stop by error (403) info
+            # Stop by error (403, etc) info
             if size_GB_done >= SIZE_GB_MAX or cnt_dead_retry >= CNT_DEAD_RETRY:
 
                 if is_windows():
