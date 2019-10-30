@@ -92,7 +92,7 @@ def parse_args():
 
     parser.add_argument('-b', '--begin_sa_id', type=int, default=1,
                         help='the begin id of sa for source')
-    parser.add_argument('-e', '--end_sa_id', type=int, default=400,
+    parser.add_argument('-e', '--end_sa_id', type=int, default=600,
                         help='the end id of sa for destination')
 
     parser.add_argument('-c', '--rclone_config_file', type=str,

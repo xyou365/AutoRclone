@@ -94,7 +94,7 @@ Let us copy hundreds of TB resource using service accounts.
 - [ ] publicly shared folder to publicly shared folder (with write privilege)
 - [ ] Team Drive to publicly shared folder
 ```
-python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 1 -e 400
+python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName -b 1 -e 600
 ```
 - _For meaning of above flags, please run python3 rclone_sa_magic.py -h_
 
@@ -111,7 +111,7 @@ python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName 
 - [ ] local to private folder
 - [ ] private folder to any (think service accounts cannot do anything about private folder)
 ```
-python3 rclone_sa_magic.py -sp YourLocalPath -d DestinationID -dp DestinationPathName -b 1 -e 400
+python3 rclone_sa_magic.py -sp YourLocalPath -d DestinationID -dp DestinationPathName -b 1 -e 600
 ```
 
 * Run command `tail -f log_rclone.txt` to see what happens in details (linux only).
