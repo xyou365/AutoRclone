@@ -53,18 +53,21 @@ Just copy all json files into our folder `accounts`.
 
 Step 3. Add service accounts to Google Groups (Optional)
 ---------------------------------
-_Support that you are GSuite admin (domain admin or normal admin)_
-
 Here we use Google Groups to manager our service accounts considering the  
 [Official limits to the members of Team Drive](https://support.google.com/a/answer/7338880?hl=en) (Limit for individuals and groups directly added as members: 600).
 
+#### For GSuite Admin
 1. Turn on the Directory API following [official steps](https://developers.google.com/admin-sdk/directory/v1/quickstart/python) (save the generated json file to folder `credentials`).
 
-2. Create groups for your organization [in the Admin console](https://support.google.com/a/answer/33343?hl=en). After create a group, you will have an address for example`sa@yourdomain.com`.
+2. Create group for your organization [in the Admin console](https://support.google.com/a/answer/33343?hl=en). After create a group, you will have an address for example`sa@yourdomain.com`.
 
 3. Run `python3 add_to_google_group.py -g sa@yourdomain.com`
 
 _For meaning of above flags, please run `python3 add_to_google_group.py -h`_
+
+#### For normal user
+
+Create [Google Group](https://groups.google.com/) then add the service accounts as members by hand.
 
 Step 4. Add service accounts or Google Groups into Team Drive
 ---------------------------------
