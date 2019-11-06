@@ -94,6 +94,9 @@ def parse_args():
     parser.add_argument('-n', '--name_screen', type=str, default="wrc",
                         help='the name of screen. Set it to different if you want to run more than one instance.')
 
+    parser.add_argument('-p', '--port', type=int, default=5572,
+                        help='the port to run rclone rc. ')
+
     parser.add_argument('-b', '--begin_sa_id', type=int, default=1,
                         help='the begin id of sa for source')
     parser.add_argument('-e', '--end_sa_id', type=int, default=600,
@@ -289,7 +292,7 @@ def main():
         if args.dry_run:
             rclone_cmd += "--dry-run "
         # --fast-list is default adopted in the latest rclone
-        rclone_cmd += "--drive-server-side-across-configs --rc --rc-addr=\"localhost:5572\" -vv --ignore-existing "
+        rclone_cmd += "--drive-server-side-across-configs --rc --rc-addr=\"localhost:{}\" -vv --ignore-existing ".format(args.port)
         rclone_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
         if args.disable_list_r:
             rclone_cmd += "--disable ListR "
@@ -318,7 +321,7 @@ def main():
         cnt_acc_sucess = 0
         already_start = False
 
-        response = subprocess.check_output('rclone rc --rc-addr="localhost:5572" core/pid', shell=True)
+        response = subprocess.check_output('rclone rc --rc-addr="localhost:{}" core/pid'.format(args.port), shell=True)
         pid = json.loads(response.decode('utf-8').replace('\0', ''))['pid']
         print('\npid is: {}\n'.format(pid))
         global PID
