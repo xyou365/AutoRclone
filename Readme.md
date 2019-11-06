@@ -53,7 +53,7 @@ Just copy all json files into our folder `accounts`.
 
 Step 3. Add service accounts to Google Groups (Optional)
 ---------------------------------
-Here we use Google Groups to manager our service accounts considering the  
+We use Google Groups to manager our service accounts considering the  
 [Official limits to the members of Team Drive](https://support.google.com/a/answer/7338880?hl=en) (Limit for individuals and groups directly added as members: 600).
 
 #### For GSuite Admin
@@ -73,7 +73,7 @@ Step 4. Add service accounts or Google Groups into Team Drive
 ---------------------------------
 _If you do not use Team Drive, just skip._
 
-Add the group address `sa@yourdomain.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
+Add the group address `sa@yourdomain.com` or `sa@googlegroups.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
 If you are not Gsuite admin or do not care about the member limitation of Team Drive, 
 just use script of `folderclone` to add service accounts directly into Team Drive.
