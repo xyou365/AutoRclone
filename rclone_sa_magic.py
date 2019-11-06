@@ -28,12 +28,12 @@ from signal import signal, SIGINT
 
 # =================modify here=================
 logfile = "log_rclone.txt"  # log file: tail -f log_rclone.txt
-NAME_SCREEN = "wrc"         # default value. Will be replaced by parameters input (-n)
+NAME_SCREEN = "wrc"  # default value. Will be replaced by parameters input (-n)
 
 # parameters for this script
-SIZE_GB_MAX = 735          # if one account has already copied 735GB, switch to next account
-CNT_DEAD_RETRY = 100        # if there is no files be copied for 100 times, switch to next account
-CNT_SA_EXIT = 3            # if continually switch account for 3 times stop script
+SIZE_GB_MAX = 735  # if one account has already copied 735GB, switch to next account
+CNT_DEAD_RETRY = 100  # if there is no files be copied for 100 times, switch to next account
+CNT_SA_EXIT = 3  # if continually switch account for 3 times stop script
 
 # change it when u know what are u doing
 # paramters for rclone.
@@ -41,6 +41,8 @@ CNT_SA_EXIT = 3            # if continually switch account for 3 times stop scri
 # especially for tasks with a lot of small files
 TPSLIMIT = 3
 TRANSFERS = 3
+
+
 # =================modify here=================
 
 
@@ -57,7 +59,7 @@ def handler(signal_received, frame):
         kill_cmd = "screen -r -S %s -X quit" % NAME_SCREEN
 
     try:
-        print("\n" + " "*20 + " {}".format(time.strftime("%H:%M:%S")))
+        print("\n" + " " * 20 + " {}".format(time.strftime("%H:%M:%S")))
         subprocess.check_call(kill_cmd, shell=True)
     except:
         pass
@@ -105,6 +107,9 @@ def parse_args():
     parser.add_argument('--disable_list_r', action="store_true",
                         help='for debug. do not use this.')
 
+    parser.add_argument('--crypt', action="store_true",
+                        help='crypt remote destination.')
+
     args = parser.parse_args()
     return args
 
@@ -113,7 +118,7 @@ def gen_rclone_cfg(args):
     sa_files = glob.glob(os.path.join(args.service_account, '*.json'))
     output_of_config_file = './rclone.conf'
 
-    if len(sa_files)==0:
+    if len(sa_files) == 0:
         sys.exit('No json files found in {}'.format(args.service_account))
 
     with open(output_of_config_file, 'w') as fp:
@@ -175,6 +180,17 @@ def gen_rclone_cfg(args):
             except:
                 sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
 
+            if args.crypt:
+                remote_name = '{}{:03d}'.format('dst', i + 1)
+                try:
+                    fp.write('[{}_crypt]\n'
+                             'type = crypt\n'
+                             'remote = {}:\n'
+                             'filename_encryption = standard\n'
+                             'directory_name_encryption = true\n'.format(remote_name, remote_name))
+                except:
+                    sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
+
     return output_of_config_file, i
 
 
@@ -198,7 +214,8 @@ def check_rclone_program():
 
 def check_path(path):
     try:
-        ret = subprocess.check_output('rclone --config {} --disable ListR size \"{}\"'.format('rclone.conf', path), shell=True)
+        ret = subprocess.check_output('rclone --config {} --disable ListR size \"{}\"'.format('rclone.conf', path),
+                                      shell=True)
         print('It is okay:\n{}'.format(ret.decode('utf-8').replace('\0', '')))
     except subprocess.SubprocessError as error:
         sys.exit(str(error))
@@ -243,6 +260,8 @@ def main():
 
         src_label = "src" + "{0:03d}".format(id) + ":"
         dst_label = "dst" + "{0:03d}".format(id) + ":"
+        if args.crypt:
+            dst_label = "dst" + "{0:03d}_crypt".format(id) + ":"
 
         src_full_path = src_label + args.source_path
         if args.source_id is None:
@@ -272,7 +291,8 @@ def main():
         rclone_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
         if args.disable_list_r:
             rclone_cmd += "--disable ListR "
-        rclone_cmd += "--drive-acknowledge-abuse --log-file={} \"{}\" \"{}\"".format(logfile, src_full_path, dst_full_path)
+        rclone_cmd += "--drive-acknowledge-abuse --log-file={} \"{}\" \"{}\"".format(logfile, src_full_path,
+                                                                                     dst_full_path)
 
         if not is_windows():
             rclone_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + rclone_cmd
@@ -305,7 +325,8 @@ def main():
                 if already_start and cnt_acc_sucess >= 9:
                     cnt_acc_error = 0
                     cnt_acc_sucess = 0
-                    if args.test_only: print("total 9 times success. the cnt_acc_error is reset to {}\n".format(cnt_acc_error))
+                    if args.test_only: print(
+                        "total 9 times success. the cnt_acc_error is reset to {}\n".format(cnt_acc_error))
 
             except subprocess.SubprocessError as error:
                 # continually ...
@@ -313,13 +334,16 @@ def main():
                 cnt_acc_error = cnt_acc_error + 1
                 if cnt_error >= 3:
                     cnt_acc_sucess = 0
-                    if args.test_only: print("total 3 times failure. the cnt_acc_sucess is reset to {}\n".format(cnt_acc_sucess))
+                    if args.test_only: print(
+                        "total 3 times failure. the cnt_acc_sucess is reset to {}\n".format(cnt_acc_sucess))
 
                     print('No rclone task detected (possibly done for this '
-                          'account). ({}/3)'.format(int(cnt_acc_error/cnt_error)))
+                          'account). ({}/3)'.format(int(cnt_acc_error / cnt_error)))
                     # Regard continually exit as *all done*.
                     if cnt_acc_error >= 9:
-                        return print('All done (3/3).')
+                        print('All done (3/3).')
+                        print_during(time_start)
+                        return
                     break
                 continue
 
@@ -358,7 +382,7 @@ def main():
                     kill_cmd = 'taskkill /IM "rclone.exe" /F'
                 else:
                     kill_cmd = "screen -r -S %s -X quit" % NAME_SCREEN
-                print("\n" + " "*20 + " {}".format(time.strftime("%H:%M:%S")))
+                print("\n" + " " * 20 + " {}".format(time.strftime("%H:%M:%S")))
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
 
@@ -368,7 +392,8 @@ def main():
                         cnt_exit += 1
                     except:
                         cnt_exit = 1
-                    if args.test_only: print("1 more time for long time waiting. the cnt_exit is added to {}\n".format(cnt_exit))
+                    if args.test_only: print(
+                        "1 more time for long time waiting. the cnt_exit is added to {}\n".format(cnt_exit))
                 else:
                     # clear cnt if there is one time
                     cnt_exit = 0
