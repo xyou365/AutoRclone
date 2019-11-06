@@ -117,7 +117,7 @@ def gen_rclone_cfg(args):
     output_of_config_file = './rclone.conf'
 
     if len(sa_files) == 0:
-        sys.exit('No json files found in {}'.format(args.service_account))
+        sys.exit('No json files found in ./{}'.format(args.service_account))
 
     with open(output_of_config_file, 'w') as fp:
         for i, filename in enumerate(sa_files):
@@ -178,6 +178,7 @@ def gen_rclone_cfg(args):
             except:
                 sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
 
+            # For crypt destination
             if args.crypt:
                 remote_name = '{}{:03d}'.format('dst', i + 1)
                 try:
@@ -185,6 +186,7 @@ def gen_rclone_cfg(args):
                              'type = crypt\n'
                              'remote = {}:\n'
                              'filename_encryption = standard\n'
+                             'password = hfSJiSRFrgyeQ_xNyx-rwOpsN2P2ZHZV\n'
                              'directory_name_encryption = true\n\n'.format(remote_name, remote_name))
                 except:
                     sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
