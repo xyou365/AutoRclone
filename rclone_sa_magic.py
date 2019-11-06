@@ -323,7 +323,9 @@ def main():
 
         response = subprocess.check_output('rclone rc --rc-addr="localhost:{}" core/pid'.format(args.port), shell=True)
         pid = json.loads(response.decode('utf-8').replace('\0', ''))['pid']
-        print('\npid is: {}\n'.format(pid))
+
+        if args.test_only: print('\npid is: {}\n'.format(pid))
+
         global PID
         PID = int(pid)
 
