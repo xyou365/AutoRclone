@@ -54,7 +54,7 @@ def handler(signal_received, frame):
     if is_windows():
         kill_cmd = 'taskkill /PID {} /F'.format(PID)
     else:
-        kill_cmd = "kill -SIGHUP {}".format(PID)
+        kill_cmd = "kill -9 {}".format(PID)
 
     try:
         print("\n" + " " * 20 + " {}".format(time.strftime("%H:%M:%S")))
@@ -88,7 +88,7 @@ def parse_args():
                         help='if check src/dst path or not.')
 
     parser.add_argument('-p', '--port', type=int, default=5572,
-                        help='the port to run rclone rc. ')
+                        help='the port to run rclone rc. set it to different one if you want to run other instance.')
 
     parser.add_argument('-b', '--begin_sa_id', type=int, default=1,
                         help='the begin id of sa for source')
@@ -387,7 +387,7 @@ def main():
                     # kill_cmd = 'taskkill /IM "rclone.exe" /F'
                     kill_cmd = 'taskkill /PID {} /F'.format(PID)
                 else:
-                    kill_cmd = "kill -SIGHUP {}".format(PID)
+                    kill_cmd = "kill -9 {}".format(PID)
                 print("\n" + " " * 20 + " {}".format(time.strftime("%H:%M:%S")))
                 subprocess.check_call(kill_cmd, shell=True)
                 print('\n')
