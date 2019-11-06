@@ -28,7 +28,6 @@ from signal import signal, SIGINT
 
 # =================modify here=================
 logfile = "log_rclone.txt"  # log file: tail -f log_rclone.txt
-NAME_SCREEN = "wrc"  # default value. Will be replaced by parameters input (-n)
 PID = 0
 
 # parameters for this script
@@ -50,14 +49,11 @@ def is_windows():
 
 
 def handler(signal_received, frame):
-    global NAME_SCREEN
     global PID
 
     if is_windows():
-        # kill_cmd = 'taskkill /IM "rclone.exe" /F'
         kill_cmd = 'taskkill /PID {} /F'.format(PID)
     else:
-        # kill_cmd = "screen -r -S %s -X quit" % NAME_SCREEN
         kill_cmd = "kill -SIGHUP {}".format(PID)
 
     try:
@@ -90,9 +86,6 @@ def parse_args():
                         help='the folder path of json files for service accounts.')
     parser.add_argument('-cp', '--check_path', action="store_true",
                         help='if check src/dst path or not.')
-
-    parser.add_argument('-n', '--name_screen', type=str, default="wrc",
-                        help='the name of screen. Set it to different if you want to run more than one instance.')
 
     parser.add_argument('-p', '--port', type=int, default=5572,
                         help='the port to run rclone rc. ')
@@ -234,9 +227,6 @@ def main():
     print("rclone is detected: {}".format(ret))
     args = parse_args()
 
-    global NAME_SCREEN
-    NAME_SCREEN = args.name_screen
-
     id = args.begin_sa_id
     end_id = args.end_sa_id
 
@@ -300,7 +290,6 @@ def main():
                                                                                      dst_full_path)
 
         if not is_windows():
-            # rclone_cmd = "screen -d -m -S {} ".format(NAME_SCREEN) + rclone_cmd
             rclone_cmd = rclone_cmd + " &"
         else:
             rclone_cmd = "start /b " + rclone_cmd
@@ -398,7 +387,6 @@ def main():
                     # kill_cmd = 'taskkill /IM "rclone.exe" /F'
                     kill_cmd = 'taskkill /PID {} /F'.format(PID)
                 else:
-                    # kill_cmd = "screen -r -S %s -X quit" % NAME_SCREEN
                     kill_cmd = "kill -SIGHUP {}".format(PID)
                 print("\n" + " " * 20 + " {}".format(time.strftime("%H:%M:%S")))
                 subprocess.check_call(kill_cmd, shell=True)
