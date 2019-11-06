@@ -392,8 +392,12 @@ def main():
                 else:
                     kill_cmd = "kill -9 {}".format(PID)
                 print("\n" + " " * 20 + " {}".format(time.strftime("%H:%M:%S")))
-                subprocess.check_call(kill_cmd, shell=True)
-                print('\n')
+                try:
+                    subprocess.check_call(kill_cmd, shell=True)
+                    print('\n')
+                except:
+                    if args.test_only: print("\nFailed to kill.")
+                    pass
 
                 # =================Finish it=================
                 if cnt_dead_retry >= CNT_DEAD_RETRY:
