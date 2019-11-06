@@ -366,7 +366,7 @@ def main():
             # except:
             #     print("have some encoding problem to print info")
 
-            print("%s %dGB Done @ %fMB/s | checks: %d files/s" % (dst_label, size_GB_done, speed_now, checks_done), end="\r")
+            print("%s %dGB Done @ %fMB/s | checks: %d files" % (dst_label, size_GB_done, speed_now, checks_done), end="\r")
 
             # continually no ...
             if size_bytes_done - size_bytes_done_before == 0:
