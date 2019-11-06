@@ -330,7 +330,7 @@ def main():
         PID = int(pid)
 
         while True:
-            rc_cmd = 'rclone rc --rc-addr="localhost:5572" core/stats'
+            rc_cmd = 'rclone rc --rc-addr="localhost:{}" core/stats'.format(format(args.port))
             try:
                 response = subprocess.check_output(rc_cmd, shell=True)
                 cnt_acc_sucess += 1
