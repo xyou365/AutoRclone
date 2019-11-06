@@ -310,13 +310,16 @@ def main():
         cnt_acc_sucess = 0
         already_start = False
 
-        response = subprocess.check_output('rclone rc --rc-addr="localhost:{}" core/pid'.format(args.port), shell=True)
-        pid = json.loads(response.decode('utf-8').replace('\0', ''))['pid']
+        try:
+            response = subprocess.check_output('rclone rc --rc-addr="localhost:{}" core/pid'.format(args.port), shell=True)
+            pid = json.loads(response.decode('utf-8').replace('\0', ''))['pid']
+            if args.test_only: print('\npid is: {}\n'.format(pid))
 
-        if args.test_only: print('\npid is: {}\n'.format(pid))
+            global PID
+            PID = int(pid)
 
-        global PID
-        PID = int(pid)
+        except:
+            pass
 
         while True:
             rc_cmd = 'rclone rc --rc-addr="localhost:{}" core/stats'.format(format(args.port))
