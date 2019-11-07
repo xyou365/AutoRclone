@@ -106,7 +106,10 @@ def parse_args():
                         help='for debug. do not use this.')
 
     parser.add_argument('--crypt', action="store_true",
-                        help='crypt remote destination.')
+                        help='for test: crypt remote destination.')
+
+    parser.add_argument('--cache', action="store_true",
+                        help="for test: cache the remote destination.")
 
     args = parser.parse_args()
     return args
@@ -191,6 +194,17 @@ def gen_rclone_cfg(args):
                 except:
                     sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
 
+            # For crypt destination
+            if args.cache:
+                remote_name = '{}{:03d}'.format('dst', i + 1)
+                try:
+                    fp.write('[{}_cache]\n'
+                             'type = cache\n'
+                             'remote = {}:\n'
+                             'chunk_total_size = 1G\n\n'.format(remote_name, remote_name))
+                except:
+                    sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
+
     return output_of_config_file, i
 
 
@@ -259,6 +273,9 @@ def main():
         dst_label = "dst" + "{0:03d}".format(id) + ":"
         if args.crypt:
             dst_label = "dst" + "{0:03d}_crypt".format(id) + ":"
+
+        if args.cache:
+            dst_label = "dst" + "{0:03d}_cache".format(id) + ":"
 
         src_full_path = src_label + args.source_path
         if args.source_id is None:
