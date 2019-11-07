@@ -384,8 +384,10 @@ def main():
             #     print(json.loads(response.decode('utf-8')))
             # except:
             #     print("have some encoding problem to print info")
-
-            print("%s %dGB Done @ %fMB/s | checks: %d files" % (dst_label, size_GB_done, speed_now, checks_done), end="\r")
+            if already_start:
+                print("%s %dGB Done @ %fMB/s | checks: %d files" % (dst_label, size_GB_done, speed_now, checks_done), end="\r")
+            else:
+                print("%s reading source/destination | checks: %d files" % (dst_label, checks_done), end="\r")
 
             # continually no ...
             if size_bytes_done - size_bytes_done_before == 0:
