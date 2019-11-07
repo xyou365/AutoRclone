@@ -69,7 +69,6 @@ for i in sa:
     # group.members().insert(groupKey=gaddr, body=body).execute()
 
     pbar.next()
-
 pbar.finish()
 print('Adding...')
 batch.execute()
