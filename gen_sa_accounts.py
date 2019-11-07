@@ -204,7 +204,8 @@ def serviceaccountfactory(
             else:
                 sys.exit('No, you cannot create %d new project (s).\n'
                       'Please reduce value of --quick-setup.\n'
-                      'Remember that you can totally create %d projects (%d already).\n' % (create_projects, max_projects, current_count))
+                      'Remember that you can totally create %d projects (%d already).\n'
+                      'Please do not delete existing projects unless you know what you are doing' % (create_projects, max_projects, current_count))
         else:
             print('Please specify a number larger than 0.')
     if enable_services:
