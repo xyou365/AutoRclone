@@ -79,7 +79,7 @@ Step 4. Add service accounts or Google Groups into Team Drive
 ---------------------------------
 _If you do not use Team Drive, just skip._
 
-Add the group address `sa@yourdomain.com` or `sa@googlegroups.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
+If you have already created Google Groups (**Step 2**) to manager your service accounts, add the group address `sa@yourdomain.com` or `sa@googlegroups.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
 If you do not care about the member limitation of Team Drive, 
 just use script of `folderclone` to add service accounts directly into Team Drive.
