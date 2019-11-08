@@ -79,8 +79,7 @@ _If you do not use Team Drive, just skip._
 
 If you have already created Google Groups (**Step 2**) to manager your service accounts, add the group address `sa@yourdomain.com` or `sa@googlegroups.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
-If you do not care about the member limitation of Team Drive, 
-just use script of `folderclone` to add service accounts directly into Team Drive.
+Otherwise, add service accounts directly into Team Drive.
 > Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python) 
 and save the `credentials.json` into project root path if you have not done it in **Step 2**.
 > - Add service accounts into your source Team Drive:
