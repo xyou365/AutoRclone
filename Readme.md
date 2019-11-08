@@ -42,9 +42,11 @@ Run `python3 gen_sa_accounts.py --quick-setup 5` to
 * create 600 (6 projects, each with 100) Service Accounts
 * and download their credentials into a new folder accounts
 
-After it is finished, there will be many json files in one folder named `accounts`. 
+_If you want to create service accounts only in newly created projects, add --new-only_
 
+After it is finished, there will be many json files in one folder named `accounts`. 
 Just copy all json files into our folder `accounts`.
+
 
 [What is service account](https://cloud.google.com/iam/docs/service-accounts)
 
