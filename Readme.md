@@ -40,17 +40,15 @@ If you do not have any project in your account, just run `python3 gen_sa_account
 * create 6 projects (project 0 to project 5)
 * enable the required services
 * create 600 (6 projects, each with 100) Service Accounts
-* and download their credentials into a new folder accounts
+* and download their credentials into a folder named `accounts`
 
 If you have already N projects and want to create service accounts only in newly created projects, run `python3 gen_sa_accounts.py --quick-setup 5 --new-only` to 
 * create additional 6 projects (project N, N+1 to project N+6)
 * enable the required services
 * create 600 (6 projects, each with 100) Service Accounts
-* and download their credentials into a new folder accounts
+* and download their credentials into a folder named `accounts`
 
-After it is finished, there will be many json files in one folder named `accounts`. 
-Just copy all json files into our folder `accounts`.
-
+After it is finished, there will be many json files in one folder named `accounts`.
 
 [What is service account](https://cloud.google.com/iam/docs/service-accounts)
 
