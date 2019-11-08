@@ -194,7 +194,7 @@ def gen_rclone_cfg(args):
                 except:
                     sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
 
-            # For crypt destination
+            # For cache destination
             if args.cache:
                 remote_name = '{}{:03d}'.format('dst', i + 1)
                 try:
