@@ -83,14 +83,11 @@ If you have already created Google Groups (**Step 2**) to manager your service a
  
 If you do not care about the member limitation of Team Drive, 
 just use script of `folderclone` to add service accounts directly into Team Drive.
-
-Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python) 
+> Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python) 
 and save the `credentials.json` into project root path if you have not done it in **Step 2**.
-
-- Add service accounts into your source Team Drive:
+> - Add service accounts into your source Team Drive:
 `python3 add_to_team_drive.py -d SharedTeamDriveSrcID`
-
-- Add service accounts into your destination Team Drive:
+> - Add service accounts into your destination Team Drive:
 `python3 add_to_team_drive.py -d SharedTeamDriveDstID`
 
 Step 5. Start your task
