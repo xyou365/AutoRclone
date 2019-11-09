@@ -65,7 +65,7 @@ def handler(signal_received, frame):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Copy from source (publicly local/shared drive/Team Drive/) "
+    parser = argparse.ArgumentParser(description="Copy from source (local/publicly shared drive/Team Drive/) "
                                                  "to destination (publicly shared drive/Team Drive).")
     parser.add_argument('-s', '--source_id', type=str,
                         help='the id of source. Team Drive id or publicly shared folder id')
@@ -337,7 +337,7 @@ def main():
             global PID
             PID = int(pid)
 
-        except:
+        except subprocess.SubprocessError as error:
             pass
 
         while True:
