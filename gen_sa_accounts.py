@@ -195,6 +195,7 @@ def serviceaccountfactory(
     if list_sas:
         return _list_sas(iam,list_sas)
     if create_projects:
+        print("creat projects: {}".format(create_projects))
         if create_projects > 0:
             current_count = len(_get_projects(cloud))
             if current_count + create_projects <= max_projects:
@@ -209,6 +210,8 @@ def serviceaccountfactory(
         else:
             print('Will overwrite all service accounts in existing projects.\n'
                   'So make sure you have some projects already.')
+            input("Press Enter to continue...")
+
     if enable_services:
         ste = []
         ste.append(enable_services)
