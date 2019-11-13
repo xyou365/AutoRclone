@@ -207,7 +207,8 @@ def serviceaccountfactory(
                       'Remember that you can totally create %d projects (%d already).\n'
                       'Please do not delete existing projects unless you know what you are doing' % (create_projects, max_projects, current_count))
         else:
-            print('Please specify a number larger than 0.')
+            print('Will overwrite all service accounts in existing projects.\n'
+                  'So make sure you have some projects already.')
     if enable_services:
         ste = []
         ste.append(enable_services)
