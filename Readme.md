@@ -48,6 +48,9 @@ If you have already N projects and want to create service accounts only in newly
 * create 600 (6 projects, each with 100) Service Accounts
 * and download their credentials into a folder named `accounts`
 
+If you want to create some service accounts using existing projects (do not create more projects), run `python3 gen_sa_accounts.py --quick-setup 0`.
+Note that this will overwrite the existing service accounts.
+
 After it is finished, there will be many json files in one folder named `accounts`.
 
 [What is service account](https://cloud.google.com/iam/docs/service-accounts)
