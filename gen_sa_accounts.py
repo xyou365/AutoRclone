@@ -1,7 +1,7 @@
 from __future__ import print_function
 
 import sys
-
+import errno
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
@@ -12,7 +12,7 @@ from random import choice
 from json import loads
 from time import sleep
 from glob import glob
-import os,pickle 
+import os, pickle
 
 SCOPES = ['https://www.googleapis.com/auth/drive','https://www.googleapis.com/auth/cloud-platform','https://www.googleapis.com/auth/iam']
 project_create_ops = []
@@ -230,8 +230,11 @@ def serviceaccountfactory(
     if download_keys:
         try:
             os.mkdir(path)
-        except FileExistsError:
-            pass
+        except OSError as e:
+            if e.errno == errno.EEXIST:
+                pass
+            else:
+                raise
         std = []
         std.append(download_keys)
         if download_keys == '~':
