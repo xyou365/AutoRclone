@@ -43,7 +43,7 @@ If you do not have any project in your account, just run `python3 gen_sa_account
 * and download their credentials into a folder named `accounts`
 
 If you have already N projects and want to create service accounts only in newly created projects, run `python3 gen_sa_accounts.py --quick-setup 2 --new-only` to 
-* create additional 2 projects (project N+1 to project N+6)
+* create additional 2 projects (project N+1 to project N+2)
 * enable the required services
 * create 200 (2 projects, each with 100) Service Accounts
 * and download their credentials into a folder named `accounts`
