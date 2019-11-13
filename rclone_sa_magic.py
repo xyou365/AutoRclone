@@ -18,7 +18,7 @@ from __future__ import print_function
 import argparse
 import glob
 import json
-import os
+import os, io
 import platform
 import subprocess
 import sys
@@ -266,7 +266,7 @@ def main():
             break
             # id = 1
 
-        with open('current_sa.txt', 'w', encoding='utf-8') as fp:
+        with io.open('current_sa.txt', 'w', encoding='utf-8') as fp:
             fp.write(str(id) + '\n')
 
         src_label = "src" + "{0:03d}".format(id) + ":"
