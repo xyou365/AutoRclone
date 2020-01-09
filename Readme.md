@@ -29,35 +29,49 @@ Then run this command (type in cmd command windows or PowerShell windows) in our
 pip3 install -r requirements.txt
 ```
 
-Step 2. Generate service accounts
+Step 2. Generate service accounts [What is service account](https://cloud.google.com/iam/docs/service-accounts) [How to use service account in rclone](https://rclone.org/drive/#service-account-support).
 ---------------------------------
-Let us create as many service accounts as possible.
+Let us create only the service accounts that we need. 
+**Warning:** abuse of this feature is not the aim of autorclone and we do **NOT** recommend that you make a lot of projects, just one project and 100 sa allow you plenty of use, its also possible that overabuse might get your projects banned by google. 
+
 
 Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/api/v3/quickstart/python)
 and save the file `credentials.json` into project directory.
 
-If you do not have any project in your account, just run `python3 gen_sa_accounts.py --quick-setup 5` to 
-* create 6 projects (project 0 to project 5)
+If you do not have any project in your account then 
+* create 1 projec
 * enable the required services
-* create 600 (6 projects, each with 100) Service Accounts
+* create 100 (1 project, each with 100) Service Accounts
 * and download their credentials into a folder named `accounts`
 
-If you have already N projects and want to create service accounts only in newly created projects, run `python3 gen_sa_accounts.py --quick-setup 2 --new-only` to 
-* create additional 2 projects (project N+1 to project N+2)
+```
+Note: 1 service account can copy around 750gb a day, 1 project makes 100 service accounts so thats 75tb a day, for most users this should easily suffice. 
+```
+
+The command would look something like 
+ `python3 gen_sa_accounts.py --quick-setup 1`
+ replace "1" with the number of projects you want
+
+If you have already N projects and want to create service accounts only in newly created projects,
+
+to 
+* create additional 1 project (project N+1 to project N+2)
 * enable the required services
-* create 200 (2 projects, each with 100) Service Accounts
+* create 100 (1 project, with 100) Service Accounts
 * and download their credentials into a folder named `accounts`
+ 
+run 
 
-If you want to create some service accounts using existing projects (do not create more projects), run `python3 gen_sa_accounts.py --quick-setup -1`.Note that this will overwrite the existing service accounts.
+`python3 gen_sa_accounts.py --quick-setup 1 --new-only` 
 
-After it is finished, there will be many json files in one folder named `accounts`.
+If you want to create some service accounts using existing projects (do not create more projects), run 
+`python3 gen_sa_accounts.py --quick-setup -1`.
+Note that this will overwrite the existing service accounts.
 
-[What is service account](https://cloud.google.com/iam/docs/service-accounts)
-
-[How to use service account in rclone](https://rclone.org/drive/#service-account-support).
+After it is finished, there will be many json files in one folder named `accounts`. 
 
 
-Step 3. Add service accounts to Google Groups (Optional)
+Step 3. Add service accounts to Google Groups (Optional but recommended for hassle free long term use)
 ---------------------------------
 We use Google Groups to manager our service accounts considering the  
 [Official limits to the members of Team Drive](https://support.google.com/a/answer/7338880?hl=en) (Limit for individuals and groups directly added as members: 600).
@@ -74,10 +88,12 @@ _For meaning of above flags, please run `python3 add_to_google_group.py -h`_
 #### For normal user
 
 Create [Google Group](https://groups.google.com/) then add the service accounts as members by hand.
+Limit is 10 at a time, 100 a day but if you read our warning and notes above, you would have 1 project and hence easily in your range. 
 
 Step 4. Add service accounts or Google Groups into Team Drive
 ---------------------------------
 _If you do not use Team Drive, just skip._
+**Warning:** It is **NOT** recommended to use service accounts to clone "to" folders that are not in teamdrives, SA work best for teamdrives. 
 
 If you have already created Google Groups (**Step 2**) to manager your service accounts, add the group address `sa@yourdomain.com` or `sa@googlegroups.com` to your source Team Drive (tdsrc) and destination Team Drive (tddst). 
  
@@ -91,7 +107,8 @@ and save the `credentials.json` into project root path if you have not done it i
 
 Step 5. Start your task
 ---------------------------------
-Let us copy hundreds of TB resource using service accounts.
+Let us copy hundreds of TB resource using service accounts. 
+**Note**: Sarcasm, over abuse of this (regardless of what cloning script you use) may get you noticed by google, we recommend you dont be a glutton and clone what is important instead of downloading entire wikipedia.
 
 #### For server side copy
 - [x] publicly shared folder to Team Drive
@@ -111,7 +128,7 @@ python3 rclone_sa_magic.py -s SourceID -d DestinationID -dp DestinationPathName 
 
 2. ```rclone --config rclone.conf size --disable ListR dst001:```
 
-#### For local to Google Drive (need test)
+#### For local to Google Drive (needs some testing)
 - [x] local to Team Drive
 - [ ] local to private folder
 - [ ] private folder to any (think service accounts cannot do anything about private folder)
