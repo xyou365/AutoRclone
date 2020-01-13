@@ -142,7 +142,8 @@ python3 rclone_sa_magic.py -sp YourLocalPath -d DestinationID -dp DestinationPat
 
 Also let's talk about this project in Telegram Group [AutoRclone](https://t.me/AutoRclone)
 
-[Blog（中文）](https://www.gfan.loan/?p=235) | [Google Drive Group](https://t.me/google_drive) | [Google Drive Channel](https://t.me/gdurl)  
+[Blog（中文）](Blog (中文) 
+https://gsuitems.com/index.php/archives/13/) | [Google Drive Group](https://t.me/google_drive) | [Google Drive Channel](https://t.me/gdurl)  
 
 
 
