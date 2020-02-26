@@ -165,7 +165,7 @@ def gen_rclone_cfg(args):
                 pass
 
             # For destination
-            if len(args.destination_id) == 33:
+            if len(args.destination_id) in [28,33]:
                 folder_or_team_drive_dst = 'root_folder_id'
             elif len(args.destination_id) == 19:
                 folder_or_team_drive_dst = 'team_drive'
