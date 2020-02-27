@@ -39,7 +39,7 @@ Enable the Drive API in [Python Quickstart](https://developers.google.com/drive/
 and save the file `credentials.json` into project directory.
 
 If you do not have any project in your account then 
-* create 1 projec
+* create 1 project
 * enable the required services
 * create 100 (1 project, each with 100) Service Accounts
 * and download their credentials into a folder named `accounts`
