@@ -110,6 +110,10 @@ Step 5. Start your task
 Let us copy hundreds of TB resource using service accounts. 
 **Note**: Sarcasm, over abuse of this (regardless of what cloning script you use) may get you noticed by google, we recommend you dont be a glutton and clone what is important instead of downloading entire wikipedia.
 
+**Notice:** Your service accounts/google group(whichever you are using) should also have access to your "source" folder/teamdrives. 
+Otherwise this will NOT work for you. - Make sure that you also add sa/google group to the teamdrive/folder you are trying to clone from.
+
+
 #### For server side copy
 - [x] publicly shared folder to Team Drive
 - [x] Team Drive to Team Drive
