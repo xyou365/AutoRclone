@@ -111,7 +111,7 @@ def parse_args():
     parser.add_argument('--cache', action="store_true",
                         help="for test: cache the remote destination.")
 
-    parser.add_argument('--password', type=str, default='autorclone',
+    parser.add_argument('-ps', '--password', type=str, default='autorclone',
                         help='the password for crypt')
 
     args = parser.parse_args()
