@@ -41,6 +41,8 @@ CNT_SA_EXIT = 3  # if continually switch account for 3 times stop script
 # especially for tasks with a lot of small files
 TPSLIMIT = 3
 TRANSFERS = 3
+
+
 # =================modify here=================
 
 
@@ -186,8 +188,7 @@ def gen_rclone_cfg(args):
 
             # For crypt destination
             if args.crypt:
-                password = subprocess.Popen(['rclone', 'obscure', args.password],
-                                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                password = obscure(args.password)
                 remote_name = '{}{:03d}'.format('dst', i + 1)
                 try:
                     fp.write('[{}_crypt]\n'
@@ -236,6 +237,15 @@ def check_path(path):
         ret = subprocess.check_output('rclone --config {} --disable ListR size \"{}\"'.format('rclone.conf', path),
                                       shell=True)
         print('It is okay:\n{}'.format(ret.decode('utf-8').replace('\0', '')))
+    except subprocess.SubprocessError as error:
+        sys.exit(str(error))
+
+
+def obscure(text):
+    try:
+        ret = subprocess.check_output('rclone obscure {}'.format(text),
+                                      shell=True)
+        return ret.decode('utf-8').replace('\0', '')
     except subprocess.SubprocessError as error:
         sys.exit(str(error))
 
@@ -306,7 +316,8 @@ def main():
         if args.dry_run:
             rclone_cmd += "--dry-run "
         # --fast-list is default adopted in the latest rclone
-        rclone_cmd += "--drive-server-side-across-configs --rc --rc-addr=\"localhost:{}\" -vv --ignore-existing ".format(args.port)
+        rclone_cmd += "--drive-server-side-across-configs --rc --rc-addr=\"localhost:{}\" -vv --ignore-existing ".format(
+            args.port)
         rclone_cmd += "--tpslimit {} --transfers {} --drive-chunk-size 32M ".format(TPSLIMIT, TRANSFERS)
         if args.disable_list_r:
             rclone_cmd += "--disable ListR "
@@ -335,7 +346,8 @@ def main():
         already_start = False
 
         try:
-            response = subprocess.check_output('rclone rc --rc-addr="localhost:{}" core/pid'.format(args.port), shell=True)
+            response = subprocess.check_output('rclone rc --rc-addr="localhost:{}" core/pid'.format(args.port),
+                                               shell=True)
             pid = json.loads(response.decode('utf-8').replace('\0', ''))['pid']
             if args.test_only: print('\npid is: {}\n'.format(pid))
 
@@ -390,7 +402,8 @@ def main():
             # except:
             #     print("have some encoding problem to print info")
             if already_start:
-                print("%s %dGB Done @ %fMB/s | checks: %d files" % (dst_label, size_GB_done, speed_now, checks_done), end="\r")
+                print("%s %dGB Done @ %fMB/s | checks: %d files" % (dst_label, size_GB_done, speed_now, checks_done),
+                      end="\r")
             else:
                 print("%s reading source/destination | checks: %d files" % (dst_label, checks_done), end="\r")
 
