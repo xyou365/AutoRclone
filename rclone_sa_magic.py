@@ -111,6 +111,9 @@ def parse_args():
     parser.add_argument('--cache', action="store_true",
                         help="for test: cache the remote destination.")
 
+    parser.add_argument('--password', type=str, default='autorclone',
+                        help='the password for crypt')
+
     args = parser.parse_args()
     return args
 
@@ -183,14 +186,16 @@ def gen_rclone_cfg(args):
 
             # For crypt destination
             if args.crypt:
+                password = subprocess.Popen(['rclone', 'obscure', args.password],
+                                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                 remote_name = '{}{:03d}'.format('dst', i + 1)
                 try:
                     fp.write('[{}_crypt]\n'
                              'type = crypt\n'
                              'remote = {}:\n'
                              'filename_encryption = standard\n'
-                             'password = hfSJiSRFrgyeQ_xNyx-rwOpsN2P2ZHZV\n'
-                             'directory_name_encryption = true\n\n'.format(remote_name, remote_name))
+                             'password = {}\n'
+                             'directory_name_encryption = true\n\n'.format(remote_name, remote_name, password))
                 except:
                     sys.exit("failed to write {} to {}".format(args.destination_id, output_of_config_file))
 
