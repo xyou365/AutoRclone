@@ -3,10 +3,11 @@
 #
 # Author Telegram https://t.me/szhu25
 # Inbox  github@stevenz.net
+# Version 0.3
 
 from __future__ import print_function
 
-import os, argparse, time, json, glob, re
+import os, argparse, time, json, glob
 
 stt = time.time()
 
