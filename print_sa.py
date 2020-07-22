@@ -7,7 +7,10 @@
 
 from __future__ import print_function
 
-import os, argparse, time, json, glob
+import argparse
+import glob
+import json
+import time
 
 stt = time.time()
 
@@ -41,10 +44,10 @@ for i in sa:
 
 print('List generated')
 print('Deduping...')
-saList1 = list(dict.fromkeys(saList))
+saList = list(dict.fromkeys(saList))
 if (sa_project != ""):
-   print("Filtering email from %s." % sa_project)
-   saList1 = [n for n in saList1 if sa_project in n]
+    print("Filtering email from %s." % sa_project)
+    saList = [n for n in saList if sa_project in n]
 print('Complete.')
 
 hours, rem = divmod((time.time() - stt), 3600)
@@ -52,7 +55,7 @@ minutes, sec = divmod(rem, 60)
 print("Elapsed Time:\n{:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), sec))
 
 with open(sa_file, 'w') as f:
-    for i in range(len(saList1)):
-        if ((int(sp_num) <= len(saList1)+1) and (int(sp_num) != 0) and (i % int(sp_num) == 0)):
-           print("",  file=f)
-        print(saList1[i], file=f)
+    for i in range(len(saList)):
+        if ((int(sp_num) <= len(saList) + 1) and (int(sp_num) != 0) and (i % int(sp_num) == 0)):
+            print("", file=f)
+        print(saList[i], file=f)
