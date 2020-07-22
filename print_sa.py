@@ -6,7 +6,7 @@
 
 from __future__ import print_function
 
-import os, argparse, time, json, glob
+import os, argparse, time, json, glob, re
 
 stt = time.time()
 
@@ -19,19 +19,21 @@ parse.add_argument('--sa', '-sa', default='salist.txt',
                    help='Specify an alternative path to generate list of your service accounts.')
 parse.add_argument('--seperator', '-sp', default='0',
                    help='Insert a empty line for every x lines to better seperate email adding process.')
-
-# service-account@googlegroups.com
+parse.add_argument('--project', '-project', default='',
+                   help='Project filter, specify this will only output emails that belong to the project you specified.')
 
 args = parse.parse_args()
 acc_dir = args.path
 sa_file = args.sa
 sp_num = args.seperator
+sa_project = args.project
 
 sa = glob.glob('%s/*.json' % acc_dir)
 
 saList = []
 
 print('Generating List')
+
 for i in sa:
     ce = json.loads(open(i, 'r').read())['client_email']
     saList.append(ce)
@@ -39,6 +41,9 @@ for i in sa:
 print('List generated')
 print('Deduping...')
 saList1 = list(dict.fromkeys(saList))
+if (sa_project != ""):
+   print("Filtering email from %s." % sa_project)
+   saList1 = [n for n in saList1 if sa_project in n]
 print('Complete.')
 
 hours, rem = divmod((time.time() - stt), 3600)
