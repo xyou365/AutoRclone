@@ -99,6 +99,8 @@ def parse_args():
 
     parser.add_argument('-c', '--rclone_config_file', type=str,
                         help='config file path of rclone')
+    parser.add_argument('-n', '--custom_config_name', type=str,
+                        help='custom name for generated rclone config file')
     parser.add_argument('-test', '--test_only', action="store_true",
                         help='for test: make rclone print some more information.')
     parser.add_argument('-t', '--dry_run', action="store_true",
@@ -120,9 +122,12 @@ def parse_args():
     return args
 
 
-def gen_rclone_cfg(args):
+def gen_rclone_cfg(args, custom_name):
     sa_files = glob.glob(os.path.join(args.service_account, '*.json'))
-    output_of_config_file = './rclone.conf'
+    if custom_name:
+        output_of_config_file = './{}.conf'.format(custom_name)
+    else:    
+        output_of_config_file = './rclone.conf'
 
     if len(sa_files) == 0:
         sys.exit('No json files found in ./{}'.format(args.service_account))
@@ -264,7 +269,7 @@ def main():
     config_file = args.rclone_config_file
     if config_file is None:
         print('generating rclone config file.')
-        config_file, end_id = gen_rclone_cfg(args)
+        config_file, end_id = gen_rclone_cfg(args, args.custom_config_name)
         print('rclone config file generated.')
     else:
         return print('not supported yet.')
