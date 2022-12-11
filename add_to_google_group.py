@@ -32,7 +32,7 @@ gaddr = args.groupaddr
 credentials = glob.glob(args.credentials)
 
 creds = None
-if os.path.exists('token.pickle') or os.path.exists('token.pickle'):
+if os.path.exists('token.pickle'):
     with open('token.pickle', 'rb') as token:
         creds = pickle.load(token)
 
