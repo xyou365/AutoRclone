@@ -32,9 +32,10 @@ gaddr = args.groupaddr
 credentials = glob.glob(args.credentials)
 
 creds = None
-if os.path.exists('credentials/token.pickle'):
-    with open('credentials/token.pickle', 'rb') as token:
+if os.path.exists('token.pickle'):
+    with open('token.pickle', 'rb') as token:
         creds = pickle.load(token)
+
 # If there are no (valid) credentials available, let the user log in.
 if not creds or not creds.valid:
     if creds and creds.expired and creds.refresh_token:
